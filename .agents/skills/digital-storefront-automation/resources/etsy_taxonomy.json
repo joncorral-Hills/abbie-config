@@ -1,0 +1,208 @@
+{
+  "_description": "Etsy taxonomy IDs for digital product categories. IDs sourced from Etsy Taxonomy API v3.",
+  "_last_updated": "2026-07-14",
+  "categories": [
+    {
+      "taxonomy_id": 69150433,
+      "name": "Digital Prints",
+      "path": "Art & Collectibles > Prints > Digital Prints",
+      "tags": ["printable", "wall art", "digital download", "home decor"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150475,
+      "name": "Clip Art",
+      "path": "Art & Collectibles > Prints > Clip Art",
+      "tags": ["clipart", "digital clipart", "png", "commercial use"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150367,
+      "name": "Digital Planners",
+      "path": "Paper & Party Supplies > Paper > Planners & Calendars",
+      "tags": ["digital planner", "goodnotes", "ipad planner", "planner template"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150385,
+      "name": "Stickers & Labels",
+      "path": "Paper & Party Supplies > Paper > Stickers, Labels & Tags",
+      "tags": ["digital stickers", "goodnotes stickers", "planner stickers"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150451,
+      "name": "SVG Files",
+      "path": "Craft Supplies & Tools > Patterns & How To > Patterns & Blueprints",
+      "tags": ["svg", "cut file", "cricut", "silhouette", "svg bundle"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150398,
+      "name": "Invitations & Announcements",
+      "path": "Paper & Party Supplies > Paper > Invitations & Announcements",
+      "tags": ["digital invitation", "editable template", "canva template"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150312,
+      "name": "Resume Templates",
+      "path": "Paper & Party Supplies > Paper > Stationery",
+      "tags": ["resume template", "cv template", "cover letter", "editable resume"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150488,
+      "name": "Social Media Templates",
+      "path": "Art & Collectibles > Prints > Digital Prints",
+      "tags": ["instagram template", "canva template", "social media kit"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150421,
+      "name": "Workbooks & Worksheets",
+      "path": "Paper & Party Supplies > Paper > Calendars & Planners",
+      "tags": ["printable worksheet", "workbook", "educational", "homeschool"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150505,
+      "name": "Lightroom Presets",
+      "path": "Craft Supplies & Tools > Visual Arts > Photography",
+      "tags": ["lightroom preset", "photo filter", "photo editing", "preset bundle"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150519,
+      "name": "Procreate Brushes",
+      "path": "Craft Supplies & Tools > Visual Arts > Drawing & Illustration",
+      "tags": ["procreate brushes", "ipad brushes", "digital brushes", "brush set"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150466,
+      "name": "Fonts",
+      "path": "Craft Supplies & Tools > Visual Arts > Drawing & Illustration",
+      "tags": ["digital font", "handwritten font", "otf", "ttf", "font bundle"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150334,
+      "name": "Spreadsheet Templates",
+      "path": "Paper & Party Supplies > Paper > Calendars & Planners",
+      "tags": ["spreadsheet", "excel template", "google sheets", "budget tracker"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150445,
+      "name": "Patterns & Tutorials",
+      "path": "Craft Supplies & Tools > Patterns & How To > Tutorials",
+      "tags": ["sewing pattern", "crochet pattern", "knitting pattern", "pdf pattern"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150529,
+      "name": "Notion Templates",
+      "path": "Paper & Party Supplies > Paper > Calendars & Planners",
+      "tags": ["notion template", "notion planner", "digital organizer", "productivity"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150538,
+      "name": "Website Themes",
+      "path": "Craft Supplies & Tools > Visual Arts > Drawing & Illustration",
+      "tags": ["website template", "wordpress theme", "shopify theme", "web design"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    },
+    {
+      "taxonomy_id": 69150347,
+      "name": "Wall Art Bundles",
+      "path": "Art & Collectibles > Prints > Digital Prints",
+      "tags": ["gallery wall set", "art print bundle", "printable art set", "digital art"],
+      "suggested_attributes": {
+        "who_made": "i_did",
+        "is_digital": true,
+        "when_made": "2020_2026"
+      }
+    }
+  ],
+  "common_tags": {
+    "delivery": ["instant download", "digital download", "printable"],
+    "format": ["pdf", "png", "svg", "jpg", "zip"],
+    "usage": ["commercial use", "personal use", "small business use"],
+    "quality": ["high resolution", "300 dpi", "print quality"]
+  },
+  "listing_defaults": {
+    "who_made": "i_did",
+    "is_supply": false,
+    "is_digital": true,
+    "when_made": "2020_2026",
+    "shipping_profile_id": null,
+    "processing_min": 0,
+    "processing_max": 0
+  }
+}

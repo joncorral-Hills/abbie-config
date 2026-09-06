@@ -1,0 +1,128 @@
+[
+  {
+    "program_name": "World of Hyatt",
+    "alliance": "None",
+    "ur_transfer": true,
+    "ur_ratio": "1:1",
+    "venture_transfer": false,
+    "venture_ratio": null,
+    "sweet_spots": [
+      {
+        "route_type": "Category 1-4 Hotels",
+        "points_needed": "5K-15K/night",
+        "cash_value": "150-400",
+        "cpp": "2.5+"
+      }
+    ],
+    "transfer_time": "Instant",
+    "notes": "Consistently the highest value Chase transfer partner."
+  },
+  {
+    "program_name": "United MileagePlus",
+    "alliance": "Star Alliance",
+    "ur_transfer": true,
+    "ur_ratio": "1:1",
+    "venture_transfer": false,
+    "venture_ratio": null,
+    "sweet_spots": [
+      {
+        "route_type": "Domestic Economy",
+        "points_needed": "12.5K",
+        "cash_value": "200-300",
+        "cpp": "1.6"
+      },
+      {
+        "route_type": "Polaris Business",
+        "points_needed": "60K-80K",
+        "cash_value": "3000+",
+        "cpp": "3.75+"
+      }
+    ],
+    "transfer_time": "Instant",
+    "notes": "Good for avoiding fuel surcharges."
+  },
+  {
+    "program_name": "Air Canada Aeroplan",
+    "alliance": "Star Alliance",
+    "ur_transfer": true,
+    "ur_ratio": "1:1",
+    "venture_transfer": true,
+    "venture_ratio": "1:1",
+    "sweet_spots": [
+      {
+        "route_type": "Short-haul NA Economy",
+        "points_needed": "6K",
+        "cash_value": "150",
+        "cpp": "2.5"
+      },
+      {
+        "route_type": "Transatlantic Business",
+        "points_needed": "60K",
+        "cash_value": "2000+",
+        "cpp": "3.3"
+      }
+    ],
+    "transfer_time": "Instant",
+    "notes": "Excellent Star Alliance partner for both UR and Venture."
+  },
+  {
+    "program_name": "Turkish Airlines Miles&Smiles",
+    "alliance": "Star Alliance",
+    "ur_transfer": true,
+    "ur_ratio": "1:1",
+    "venture_transfer": true,
+    "venture_ratio": "1:1",
+    "sweet_spots": [
+      {
+        "route_type": "Domestic US on United",
+        "points_needed": "7.5K-10K",
+        "cash_value": "200-400",
+        "cpp": "3.0+"
+      },
+      {
+        "route_type": "US to Hawaii on United",
+        "points_needed": "10K",
+        "cash_value": "400+",
+        "cpp": "4.0+"
+      }
+    ],
+    "transfer_time": "1-2 days",
+    "notes": "Incredible sweet spots on United metal but can be difficult to book."
+  },
+  {
+    "program_name": "Air France/KLM Flying Blue",
+    "alliance": "SkyTeam",
+    "ur_transfer": true,
+    "ur_ratio": "1:1",
+    "venture_transfer": true,
+    "venture_ratio": "1:1",
+    "sweet_spots": [
+      {
+        "route_type": "US to Europe Promo Awards",
+        "points_needed": "11K-15K Economy",
+        "cash_value": "400-800",
+        "cpp": "3.5+"
+      }
+    ],
+    "transfer_time": "Instant",
+    "notes": "Look out for monthly Promo Rewards."
+  },
+  {
+    "program_name": "British Airways Executive Club",
+    "alliance": "Oneworld",
+    "ur_transfer": true,
+    "ur_ratio": "1:1",
+    "venture_transfer": true,
+    "venture_ratio": "1:1",
+    "sweet_spots": [
+      {
+        "route_type": "Short-haul non-stop on AA/Alaska",
+        "points_needed": "7.5K-9K",
+        "cash_value": "150-250",
+        "cpp": "2.0+"
+      }
+    ],
+    "transfer_time": "Instant",
+    "notes": "Distance-based award chart. Great for short, expensive domestic flights."
+  }
+]

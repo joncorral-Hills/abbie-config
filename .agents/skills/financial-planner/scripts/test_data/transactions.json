@@ -1,0 +1,18 @@
+{
+  "transactions": [
+    { "date": "2026-06-01", "merchant": "HY-VEE", "amount": 127.43, "card": "Chase Freedom Unlimited" },
+    { "date": "2026-06-02", "merchant": "STARBUCKS", "amount": 6.75, "card": "Chase Freedom Flex" },
+    { "date": "2026-06-02", "merchant": "SHELL", "amount": 52.10, "card": "Chase Freedom Flex" },
+    { "date": "2026-06-03", "merchant": "CHIPOTLE", "amount": 14.20, "card": "Chase Sapphire Reserve" },
+    { "date": "2026-06-04", "merchant": "AMAZON.COM", "amount": 89.99, "card": "Chase Freedom Unlimited" },
+    { "date": "2026-06-05", "merchant": "UBER", "amount": 24.50, "card": "Chase Sapphire Reserve" },
+    { "date": "2026-06-05", "merchant": "DOORDASH", "amount": 38.75, "card": "Capital One Venture X" },
+    { "date": "2026-06-06", "merchant": "WALGREENS", "amount": 18.30, "card": "Chase Freedom Flex" },
+    { "date": "2026-06-07", "merchant": "COSTCO", "amount": 215.60, "card": "Capital One Venture X" },
+    { "date": "2026-06-07", "merchant": "NETFLIX", "amount": 15.49, "card": "Chase Freedom Flex" },
+    { "date": "2026-06-08", "merchant": "HOME DEPOT", "amount": 67.20, "card": "Chase Freedom Unlimited" },
+    { "date": "2026-06-08", "merchant": "TACO BELL", "amount": 12.50, "card": "Chase Sapphire Reserve" },
+    { "date": "2026-06-09", "merchant": "TARGET", "amount": 94.30, "card": "Chase Freedom Flex" },
+    { "date": "2026-06-09", "merchant": "SOUTHWEST", "amount": 312.00, "card": "Capital One Venture X" }
+  ]
+}

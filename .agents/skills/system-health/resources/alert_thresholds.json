@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "description": "Configurable alert thresholds for ops-bot system health monitoring. All values can be tuned without modifying SKILL.md.",
+    "last_updated": "2026-08-25"
+  },
+  "infrastructure": {
+    "disk_free_gb_min": 2.0,
+    "ram_used_pct_max": 75,
+    "sqlite_size_warn_mb": 50
+  },
+  "crons": {
+    "missed_tolerance_hours": 2,
+    "stale_output_multiplier": 2.0
+  },
+  "logs": {
+    "log_file_max_mb": 10,
+    "inbox_max_age_days": 30
+  },
+  "notion": {
+    "transactions_row_warn": 500,
+    "default_row_warn": 200,
+    "system_health_row_warn": 200
+  },
+  "project_board": {
+    "stale_on_hold_days": 7,
+    "stale_needs_review_days": 3
+  },
+  "api_keys": {
+    "expiry_warn_days": 7
+  },
+  "hermes_memory": {
+    "memory_store_limit_chars": 2200,
+    "user_profile_limit_chars": 1375,
+    "warn_pct": 80
+  },
+  "llm_endpoints": {
+    "response_timeout_seconds": 10,
+    "slow_threshold_seconds": 5
+  },
+  "self_heal": {
+    "enabled": false,
+    "require_approval": true,
+    "allowed_actions": [
+      "restart_llm",
+      "rotate_logs",
+      "clear_stale_inbox"
+    ]
+  }
+}

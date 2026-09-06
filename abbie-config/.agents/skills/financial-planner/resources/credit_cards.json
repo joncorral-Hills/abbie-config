@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "description": "Complete household credit card portfolio. 6 cards across Chase, Capital One, Amazon, and Crypto.com.",
+    "last_updated": "2026-06-09",
+    "cardinal_rule": "NEVER carry a balance on any card. Pay statement balance in full by due date. Zero interest tolerance policy.",
+    "total_annual_fees": 945,
+    "total_annual_credits": 600,
+    "effective_total_annual_fees": 345
+  },
+
+  "cards": [
+    {
+      "id": "chase_sapphire_reserve",
+      "name": "Chase Sapphire Reserve",
+      "issuer": "Chase",
+      "network": "Visa Infinite",
+      "annual_fee": 550,
+      "credit_limit": null,
+      "current_balance": null,
+      "statement_close_day": null,
+      "payment_due_day": null,
+      "autopay": true,
+      "autopay_setting": "full_statement_balance",
+      "rewards_type": "Chase Ultimate Rewards (UR) Points",
+      "point_value_portal": 0.015,
+      "earning_rates": {
+        "chase_travel_portal": "10x",
+        "dining": "3x",
+        "travel": "3x",
+        "streaming": "3x",
+        "online_grocery": "3x",
+        "everything_else": "1x"
+      },
+      "annual_credits": [
+        { "name": "Travel Credit", "amount": 300, "auto_applied": true },
+        { "name": "DoorDash DashPass", "amount": 0, "type": "membership" },
+        { "name": "Lyft Pink", "amount": 0, "type": "membership" }
+      ],
+      "perks": [
+        "Priority Pass Select (cardholder + 2 guests)",
+        "Global Entry / TSA PreCheck credit ($100 every 4 yrs)",
+        "Primary rental car insurance",
+        "Trip cancellation/interruption insurance",
+        "No foreign transaction fees",
+        "Purchase protection",
+        "Extended warranty"
+      ],
+      "primary_use": "Dining, travel, streaming, online grocery. Points pool hub.",
+      "status": "active"
+    },
+    {
+      "id": "chase_freedom_flex",
+      "name": "Chase Freedom Flex",
+      "issuer": "Chase",
+      "network": "Mastercard World Elite",
+      "annual_fee": 0,
+      "credit_limit": null,
+      "current_balance": null,
+      "statement_close_day": null,
+      "payment_due_day": null,
+      "autopay": true,
+      "autopay_setting": "full_statement_balance",
+      "rewards_type": "Chase Ultimate Rewards (UR) Points",
+      "earning_rates": {
+        "quarterly_rotating_5x": "5% ($1,500/quarter cap, must activate)",
+        "dining": "3%",
+        "drugstores": "3%",
+        "everything_else": "1%"
+      },
+      "primary_use": "Quarterly 5% categories, drugstores, recurring subscriptions (for 1% UR pool).",
+      "subscription_charges": [
+        "Google Fiber", "Netflix", "Spotify+Hulu", "SimpliSafe", "Pet Insurance",
+        "Choice Home Warranty", "Atmos Energy", "KCP&L", "Sterling Wellness",
+        "B'nai Jehudah", "Schwab auto-invest", "Jack IRA"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "chase_freedom_unlimited",
+      "name": "Chase Freedom Unlimited",
+      "issuer": "Chase",
+      "network": "Visa",
+      "annual_fee": 0,
+      "credit_limit": null,
+      "current_balance": null,
+      "statement_close_day": null,
+      "payment_due_day": null,
+      "autopay": true,
+      "autopay_setting": "full_statement_balance",
+      "rewards_type": "Chase Ultimate Rewards (UR) Points",
+      "earning_rates": {
+        "dining": "3%",
+        "drugstores": "3%",
+        "everything_else": "1.5%"
+      },
+      "primary_use": "Default catch-all card for any purchase not earning more on another card.",
+      "status": "active"
+    },
+    {
+      "id": "capital_one_venture_x",
+      "name": "Capital One Venture X",
+      "issuer": "Capital One",
+      "network": "Visa Infinite",
+      "annual_fee": 395,
+      "status": "upgrade_in_progress_from_quicksilver",
+      "credit_limit": null,
+      "current_balance": null,
+      "statement_close_day": null,
+      "payment_due_day": null,
+      "autopay": null,
+      "rewards_type": "Capital One Miles",
+      "mile_value": 0.01,
+      "earning_rates": {
+        "capital_one_travel_portal": "10x",
+        "hotels_cars_via_portal": "10x",
+        "everything_else": "2x"
+      },
+      "annual_credits": [
+        { "name": "Travel Credit", "amount": 300, "auto_applied": true }
+      ],
+      "anniversary_bonus": 10000,
+      "perks": [
+        "Priority Pass Select",
+        "Capital One Lounges",
+        "Global Entry / TSA PreCheck credit",
+        "No foreign transaction fees"
+      ],
+      "primary_use": "Non-Chase travel bookings, backup 2x catch-all, lounge access diversity.",
+      "notes": "Upgrade from Quicksilver in progress. Verify when active."
+    },
+    {
+      "id": "amazon_prime_visa",
+      "name": "Amazon Prime Visa",
+      "issuer": "Chase",
+      "network": "Visa Signature",
+      "annual_fee": 0,
+      "credit_limit": null,
+      "current_balance": null,
+      "statement_close_day": null,
+      "payment_due_day": null,
+      "autopay": true,
+      "autopay_setting": "full_statement_balance",
+      "rewards_type": "Amazon Cashback",
+      "earning_rates": {
+        "amazon": "5%",
+        "whole_foods": "5%",
+        "restaurants": "2%",
+        "gas_stations": "2%",
+        "drugstores": "2%",
+        "everything_else": "1%"
+      },
+      "requires": "Active Amazon Prime membership",
+      "primary_use": "ALL Amazon.com and Whole Foods purchases exclusively.",
+      "status": "active"
+    },
+    {
+      "id": "crypto_com_ruby",
+      "name": "Crypto.com Ruby Steel MCO Visa",
+      "issuer": "Crypto.com",
+      "network": "Visa",
+      "annual_fee": 0,
+      "stake_required": {
+        "amount": 400,
+        "currency": "CRO",
+        "lockup_days": 180
+      },
+      "credit_limit": null,
+      "current_balance": null,
+      "rewards_type": "CRO cryptocurrency",
+      "earning_rates": {
+        "everything": "2% (paid in CRO)"
+      },
+      "perks": [
+        "Spotify rebate (up to $13.99/mo reimbursed in CRO)"
+      ],
+      "primary_use": "Spotify subscription ONLY. Do not use for other purchases.",
+      "notes": "2% CRO cashback has crypto volatility risk. Spotify rebate is the sole reason to keep this card.",
+      "status": "active"
+    }
+  ],
+
+  "chase_ur_pool": {
+    "description": "All Chase UR points from Sapphire Reserve, Freedom Flex, and Freedom Unlimited pool into the Sapphire Reserve account.",
+    "transfer_direction": "Freedom Flex → Sapphire Reserve, Freedom Unlimited → Sapphire Reserve",
+    "redemption_options": [
+      { "method": "Chase Travel Portal", "value_per_point": 0.015 },
+      { "method": "Pay Yourself Back", "value_per_point": 0.015, "categories": "dining, travel" },
+      { "method": "Transfer to Partners", "value_per_point": "variable, often 0.015-0.025" },
+      { "method": "Cash Back", "value_per_point": 0.01, "note": "WORST option — never do this" },
+      { "method": "Amazon Checkout", "value_per_point": 0.008, "note": "TERRIBLE value — never do this" }
+    ],
+    "transfer_partners": {
+      "airlines": ["United MileagePlus", "Southwest Rapid Rewards", "British Airways Avios", "Air France/KLM Flying Blue", "Singapore KrisFlyer", "Virgin Atlantic", "JetBlue TrueBlue", "Iberia Avios", "Aer Lingus Avios", "Emirates Skywards", "Air Canada Aeroplan"],
+      "hotels": ["World of Hyatt", "Marriott Bonvoy", "IHG One Rewards"]
+    },
+    "best_transfer_values": [
+      { "partner": "World of Hyatt", "typical_value": "0.017-0.025", "notes": "Consistently best hotel transfer" },
+      { "partner": "United MileagePlus", "typical_value": "0.013-0.020", "notes": "Good for domestic flights" },
+      { "partner": "Southwest Rapid Rewards", "typical_value": "0.014-0.017", "notes": "Good for KC-based travel" }
+    ]
+  }
+}

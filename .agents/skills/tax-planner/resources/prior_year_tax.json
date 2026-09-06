@@ -1,0 +1,12 @@
+{
+  "_comment": "Please fill in these values based on your prior year tax return (Form 1040) for safe harbor calculations.",
+  "tax_year_reference": 2025,
+  "filing_status": "MFJ",
+  "prior_year_agi": null,
+  "federal_tax": null,
+  "state_tax": null,
+  "total_withholding_federal": null,
+  "total_withholding_state": null,
+  "standard_deduction_taken": null,
+  "itemized_amount": null
+}

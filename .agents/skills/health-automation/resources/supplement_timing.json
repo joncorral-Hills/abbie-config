@@ -1,0 +1,395 @@
+{
+  "_version": "1.0.0",
+  "_description": "Supplement timing rules, optimal dosing, and interaction constraints. Used by the Supplement Stack Manager to generate daily schedules and conflict alerts.",
+  "supplements": {
+    "creatine_monohydrate": {
+      "name": "Creatine Monohydrate",
+      "typical_dose": "5g",
+      "timing": "any",
+      "take_with": ["water"],
+      "notes": "Timing does not matter for creatine. Consistency is key. Take daily even on rest days. Loading phase optional (20g/day for 5-7 days).",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "carbohydrates",
+          "note": "Insulin spike from carbs may enhance creatine uptake into muscle cells."
+        },
+        {
+          "type": "caution",
+          "with": "caffeine",
+          "note": "Some research suggests high caffeine may reduce creatine efficacy. Separate by 1+ hour if concerned."
+        }
+      ]
+    },
+    "vitamin_d3": {
+      "name": "Vitamin D3 (Cholecalciferol)",
+      "typical_dose": "5000 IU",
+      "timing": "with_meal",
+      "take_with": ["fat"],
+      "notes": "Fat-soluble vitamin — must be taken with a meal containing dietary fat for absorption. Pair with K2 for calcium metabolism synergy. Test 25(OH)D levels every 6 months; target 40-60 ng/mL.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "vitamin_k2",
+          "note": "D3 increases calcium absorption; K2 directs calcium to bones instead of arteries. Always pair."
+        },
+        {
+          "type": "synergy",
+          "with": "magnesium",
+          "note": "Magnesium is required to convert D3 to its active form. Deficiency impairs D3 utilization."
+        }
+      ]
+    },
+    "magnesium_glycinate": {
+      "name": "Magnesium Glycinate",
+      "typical_dose": "400mg elemental magnesium",
+      "timing": "bedtime",
+      "take_with": ["water"],
+      "notes": "Glycinate form is highly bioavailable and least likely to cause GI distress. Promotes relaxation and sleep quality. Can also take divided doses (200mg AM + 200mg PM).",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "separation",
+          "with": "calcium",
+          "note": "Calcium and magnesium compete for absorption. Separate by 2+ hours.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "separation",
+          "with": "iron",
+          "note": "Magnesium can reduce iron absorption. Separate by 2+ hours.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "synergy",
+          "with": "vitamin_d3",
+          "note": "Required cofactor for vitamin D metabolism."
+        }
+      ]
+    },
+    "omega3_fish_oil": {
+      "name": "Omega-3 Fish Oil (EPA/DHA)",
+      "typical_dose": "2-3g combined EPA+DHA",
+      "timing": "with_meal",
+      "take_with": ["fat"],
+      "notes": "Take with largest meal for best absorption and to minimize fishy burps. Look for triglyceride form over ethyl ester. Store in fridge/freezer. Check for IFOS certification.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "caution",
+          "with": "blood_thinners",
+          "note": "Omega-3s have mild anticoagulant effects. Consult physician if on warfarin, aspirin, or other anticoagulants."
+        },
+        {
+          "type": "synergy",
+          "with": "vitamin_d3",
+          "note": "Fat in fish oil aids D3 absorption. Good to take together."
+        }
+      ]
+    },
+    "zinc": {
+      "name": "Zinc (Picolinate or Bisglycinate)",
+      "typical_dose": "30mg",
+      "timing": "evening",
+      "take_with": ["food"],
+      "notes": "Take with food to avoid nausea. Zinc picolinate and bisglycinate have superior absorption vs zinc oxide. Long-term use (>8 weeks at 30mg+) should include copper supplementation.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "separation",
+          "with": "copper",
+          "note": "Zinc and copper compete for absorption. If supplementing both, take at different meals.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "separation",
+          "with": "iron",
+          "note": "Zinc and iron compete for absorption via DMT1 transporter. Take at different times.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "competition",
+          "with": "calcium",
+          "note": "High-dose calcium can reduce zinc absorption. Separate if possible."
+        },
+        {
+          "type": "synergy",
+          "with": "vitamin_c",
+          "note": "Vitamin C may modestly improve zinc absorption."
+        }
+      ]
+    },
+    "vitamin_k2_mk7": {
+      "name": "Vitamin K2 (MK-7)",
+      "typical_dose": "100mcg",
+      "timing": "with_meal",
+      "take_with": ["fat"],
+      "notes": "Fat-soluble. MK-7 has longer half-life than MK-4, so once daily is sufficient. Critical companion to D3 for directing calcium to bones and teeth. Take with same fat-containing meal as D3.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "vitamin_d3",
+          "note": "Essential pair — D3 increases calcium absorption, K2 ensures proper calcium deposition in bones."
+        },
+        {
+          "type": "caution",
+          "with": "warfarin",
+          "note": "Vitamin K directly antagonizes warfarin. Contraindicated for patients on vitamin K antagonist anticoagulants."
+        }
+      ]
+    },
+    "ashwagandha": {
+      "name": "Ashwagandha (KSM-66)",
+      "typical_dose": "600mg KSM-66 full-spectrum root extract",
+      "timing": "morning",
+      "take_with": ["food"],
+      "notes": "Adaptogen for stress, cortisol reduction, and testosterone support. Can also take at bedtime for sleep. KSM-66 is the most clinically studied extract. Take with food to improve absorption.",
+      "cycle": "8 weeks on / 4 weeks off",
+      "interactions": [
+        {
+          "type": "caution",
+          "with": "thyroid_medications",
+          "note": "Ashwagandha may increase thyroid hormone levels. Monitor TSH if on levothyroxine."
+        },
+        {
+          "type": "caution",
+          "with": "sedatives",
+          "note": "May potentiate sedative effects of benzodiazepines and sleep medications."
+        },
+        {
+          "type": "synergy",
+          "with": "magnesium",
+          "note": "Both support stress reduction and sleep quality. Complementary mechanisms."
+        }
+      ]
+    },
+    "vitamin_c": {
+      "name": "Vitamin C (Ascorbic Acid)",
+      "typical_dose": "500-1000mg",
+      "timing": "morning",
+      "take_with": ["food", "water"],
+      "notes": "Water-soluble — excess is excreted, so split doses if taking >500mg. Enhances iron absorption significantly. Antioxidant support for immune function and collagen synthesis.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "iron",
+          "note": "Vitamin C dramatically enhances non-heme iron absorption (up to 6x). Take together."
+        },
+        {
+          "type": "synergy",
+          "with": "collagen",
+          "note": "Vitamin C is a required cofactor for collagen synthesis. Take together."
+        },
+        {
+          "type": "separation",
+          "with": "vitamin_b12",
+          "note": "High-dose vitamin C may reduce B12 absorption. Separate by 2+ hours if taking both at high doses.",
+          "min_separation_hours": 2
+        }
+      ]
+    },
+    "vitamin_b_complex": {
+      "name": "Vitamin B Complex",
+      "typical_dose": "1 capsule (varies by formulation)",
+      "timing": "morning",
+      "take_with": ["food"],
+      "notes": "Take in the morning — B vitamins are energizing and can cause vivid dreams or insomnia if taken at night. B6 should not exceed 100mg/day long-term (risk of peripheral neuropathy). Look for methylated forms (methylfolate, methylcobalamin).",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "separation",
+          "with": "vitamin_c",
+          "note": "High-dose C may interfere with B12. Take B-complex in morning and C later if doses are high.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "synergy",
+          "with": "magnesium",
+          "note": "B6 enhances intracellular magnesium accumulation."
+        }
+      ]
+    },
+    "probiotics": {
+      "name": "Probiotics",
+      "typical_dose": "10-50 billion CFU",
+      "timing": "morning",
+      "take_with": ["empty_stomach"],
+      "notes": "Take first thing in the morning on an empty stomach, 30 minutes before food. Stomach acid is lowest before eating, improving survival of bacteria. Look for multi-strain formulas with Lactobacillus and Bifidobacterium. Refrigerate if label requires.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "separation",
+          "with": "antibiotics",
+          "note": "If on antibiotics, take probiotics 2-3 hours after antibiotic dose to avoid killing beneficial bacteria.",
+          "min_separation_hours": 3
+        },
+        {
+          "type": "synergy",
+          "with": "prebiotics",
+          "note": "Prebiotic fiber feeds probiotic bacteria. Take together or close together."
+        }
+      ]
+    },
+    "collagen_peptides": {
+      "name": "Collagen Peptides (Types I & III)",
+      "typical_dose": "10-15g",
+      "timing": "any",
+      "take_with": ["water"],
+      "notes": "Hydrolyzed collagen dissolves in hot or cold liquids. Can add to coffee, smoothies, or water. Take with vitamin C to support collagen synthesis. No specific timing requirement.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "vitamin_c",
+          "note": "Vitamin C is an essential cofactor for collagen synthesis. Take together for maximum benefit."
+        }
+      ]
+    },
+    "iron": {
+      "name": "Iron (Ferrous Bisglycinate)",
+      "typical_dose": "18-27mg elemental iron",
+      "timing": "morning",
+      "take_with": ["empty_stomach", "vitamin_c"],
+      "notes": "Best absorbed on an empty stomach. Ferrous bisglycinate (chelated) is gentler on the GI tract than ferrous sulfate. Only supplement if ferritin is low (<30 ng/mL for men). Recheck ferritin every 3-6 months. Excessive iron is dangerous — never supplement without lab confirmation.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "vitamin_c",
+          "note": "Take with 200mg+ vitamin C to dramatically improve absorption (up to 6x)."
+        },
+        {
+          "type": "separation",
+          "with": "calcium",
+          "note": "Calcium significantly inhibits iron absorption. Separate by 2+ hours.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "separation",
+          "with": "zinc",
+          "note": "Iron and zinc compete for DMT1 transporter. Take at different meals.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "separation",
+          "with": "magnesium",
+          "note": "Magnesium can inhibit iron absorption. Separate by 2+ hours.",
+          "min_separation_hours": 2
+        },
+        {
+          "type": "separation",
+          "with": "coffee_tea",
+          "note": "Tannins and polyphenols in coffee/tea inhibit iron absorption by up to 60%. Separate by 1+ hour.",
+          "min_separation_hours": 1
+        }
+      ]
+    },
+    "melatonin": {
+      "name": "Melatonin",
+      "typical_dose": "0.5-3mg",
+      "timing": "bedtime",
+      "take_with": ["water"],
+      "notes": "Take 30-60 minutes before target sleep time. Start with lowest effective dose (0.5mg). Higher doses are not more effective and may cause grogginess. Not intended for long-term nightly use — use for circadian rhythm reset, jet lag, or occasional insomnia. Sublingual form acts faster.",
+      "cycle": "Use as needed, not daily long-term. 2-4 weeks max, then reassess.",
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "magnesium_glycinate",
+          "note": "Both support sleep via different mechanisms. Complementary."
+        },
+        {
+          "type": "caution",
+          "with": "sedatives",
+          "note": "May potentiate sedative effects. Use caution combining with sleep aids or alcohol."
+        },
+        {
+          "type": "caution",
+          "with": "caffeine",
+          "note": "Caffeine suppresses natural melatonin production. Avoid caffeine within 6 hours of bedtime."
+        }
+      ]
+    },
+    "l_theanine": {
+      "name": "L-Theanine",
+      "typical_dose": "200mg",
+      "timing": "morning",
+      "take_with": ["water"],
+      "notes": "Amino acid from green tea. Promotes calm focus without drowsiness. Stack with caffeine (1:2 ratio — 200mg theanine + 100mg caffeine) for focused energy. Can also take 200mg at bedtime for sleep onset support without next-day grogginess.",
+      "cycle": null,
+      "interactions": [
+        {
+          "type": "synergy",
+          "with": "caffeine",
+          "note": "Classic nootropic stack. Theanine smooths caffeine jitters and enhances focus. 2:1 theanine:caffeine ratio."
+        },
+        {
+          "type": "synergy",
+          "with": "magnesium",
+          "note": "Both promote GABA activity and relaxation. Good bedtime stack."
+        }
+      ]
+    },
+    "berberine": {
+      "name": "Berberine HCl",
+      "typical_dose": "500mg, 2-3x/day",
+      "timing": "with_meal",
+      "take_with": ["food"],
+      "notes": "Take with meals to reduce GI side effects and because it works by modulating post-meal glucose response. Mechanism overlaps with metformin (AMPK activation). Monitor fasting glucose and HbA1c. Can lower blood sugar — watch for hypoglycemia symptoms especially if combined with other glucose-lowering agents.",
+      "cycle": "8-12 weeks on, 4 weeks off. Long-term safety data is limited.",
+      "interactions": [
+        {
+          "type": "caution",
+          "with": "metformin",
+          "note": "Similar mechanism of action. Combining may cause excessive blood sugar lowering. Consult physician."
+        },
+        {
+          "type": "caution",
+          "with": "cyclosporine",
+          "note": "Berberine inhibits CYP3A4 and P-glycoprotein, potentially increasing levels of many drugs."
+        },
+        {
+          "type": "separation",
+          "with": "medications_general",
+          "note": "Berberine can affect drug metabolism. Take 2+ hours apart from prescription medications.",
+          "min_separation_hours": 2
+        }
+      ]
+    }
+  },
+  "timing_groups": {
+    "morning_empty_stomach": {
+      "window": "6:00-7:00 AM",
+      "description": "First thing upon waking, 30 min before food",
+      "typical_supplements": ["probiotics", "iron"]
+    },
+    "morning_with_breakfast": {
+      "window": "7:00-8:00 AM",
+      "description": "With first meal containing fat and protein",
+      "typical_supplements": ["vitamin_d3", "vitamin_k2_mk7", "omega3_fish_oil", "vitamin_b_complex", "vitamin_c", "ashwagandha", "l_theanine"]
+    },
+    "with_lunch": {
+      "window": "12:00-1:00 PM",
+      "description": "With midday meal",
+      "typical_supplements": ["berberine"]
+    },
+    "evening_with_dinner": {
+      "window": "6:00-7:00 PM",
+      "description": "With evening meal",
+      "typical_supplements": ["zinc", "berberine", "collagen_peptides"]
+    },
+    "bedtime": {
+      "window": "9:00-10:00 PM",
+      "description": "30-60 minutes before sleep",
+      "typical_supplements": ["magnesium_glycinate", "melatonin", "l_theanine"]
+    },
+    "any_time": {
+      "window": "Flexible",
+      "description": "No specific timing requirement — consistency matters more",
+      "typical_supplements": ["creatine_monohydrate", "collagen_peptides"]
+    }
+  }
+}

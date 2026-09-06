@@ -1,0 +1,609 @@
+{
+  "_version": "1.0.0",
+  "_description": "Comprehensive lab reference ranges for adult males. Includes standard clinical ranges and tighter functional/preventive medicine optimal ranges. Used by the Lab Results Interpreter for flagging and trend analysis.",
+  "_sex": "male",
+  "_age_group": "adult",
+  "markers": {
+    "lipid_panel": [
+      {
+        "name": "Total Cholesterol",
+        "category": "Lipid Panel",
+        "unit": "mg/dL",
+        "normal_low": 0,
+        "normal_high": 200,
+        "optimal_low": 120,
+        "optimal_high": 180,
+        "priority": "important",
+        "notes": "Borderline high 200-239, high ≥240. Context matters — HDL:LDL ratio is more informative than total alone."
+      },
+      {
+        "name": "LDL Cholesterol",
+        "category": "Lipid Panel",
+        "unit": "mg/dL",
+        "normal_low": 0,
+        "normal_high": 130,
+        "optimal_low": 0,
+        "optimal_high": 100,
+        "priority": "critical",
+        "notes": "Direct LDL preferred over calculated. <70 for high cardiovascular risk. Particle count (LDL-P) is more predictive than LDL-C alone."
+      },
+      {
+        "name": "HDL Cholesterol",
+        "category": "Lipid Panel",
+        "unit": "mg/dL",
+        "normal_low": 40,
+        "normal_high": 100,
+        "optimal_low": 50,
+        "optimal_high": 90,
+        "priority": "important",
+        "notes": "Higher is generally better for cardiovascular protection. Exercise, omega-3s, and moderate alcohol raise HDL. Very high HDL (>90) may lose protective effect."
+      },
+      {
+        "name": "Triglycerides",
+        "category": "Lipid Panel",
+        "unit": "mg/dL",
+        "normal_low": 0,
+        "normal_high": 150,
+        "optimal_low": 0,
+        "optimal_high": 80,
+        "priority": "important",
+        "notes": "Must be fasting. <80 is optimal. Highly responsive to diet (sugar, refined carbs, alcohol). Triglyceride:HDL ratio <2 is ideal."
+      },
+      {
+        "name": "VLDL Cholesterol",
+        "category": "Lipid Panel",
+        "unit": "mg/dL",
+        "normal_low": 2,
+        "normal_high": 30,
+        "optimal_low": 5,
+        "optimal_high": 20,
+        "priority": "routine",
+        "notes": "Usually calculated as triglycerides/5. Elevated VLDL correlates with metabolic syndrome."
+      },
+      {
+        "name": "Total Cholesterol / HDL Ratio",
+        "category": "Lipid Panel",
+        "unit": "ratio",
+        "normal_low": 0,
+        "normal_high": 5.0,
+        "optimal_low": 0,
+        "optimal_high": 3.5,
+        "priority": "important",
+        "notes": "Better predictor of CVD risk than total cholesterol alone. <3.5 is ideal for men."
+      }
+    ],
+    "metabolic": [
+      {
+        "name": "Glucose (Fasting)",
+        "category": "Metabolic",
+        "unit": "mg/dL",
+        "normal_low": 65,
+        "normal_high": 99,
+        "optimal_low": 72,
+        "optimal_high": 86,
+        "priority": "critical",
+        "notes": "Must be fasting 8-12 hours. Pre-diabetes: 100-125. Diabetes: ≥126. Functional range 72-86 indicates excellent insulin sensitivity."
+      },
+      {
+        "name": "HbA1c",
+        "category": "Metabolic",
+        "unit": "%",
+        "normal_low": 4.0,
+        "normal_high": 5.6,
+        "optimal_low": 4.5,
+        "optimal_high": 5.2,
+        "priority": "critical",
+        "notes": "3-month average blood sugar. Pre-diabetes: 5.7-6.4. Diabetes: ≥6.5. <5.2% indicates excellent glycemic control."
+      },
+      {
+        "name": "Insulin (Fasting)",
+        "category": "Metabolic",
+        "unit": "µIU/mL",
+        "normal_low": 2.6,
+        "normal_high": 24.9,
+        "optimal_low": 2.6,
+        "optimal_high": 8.0,
+        "priority": "critical",
+        "notes": "Fasting insulin is an early marker of insulin resistance — rises before glucose. <8 is optimal. Lab 'normal' range is too wide."
+      },
+      {
+        "name": "HOMA-IR",
+        "category": "Metabolic",
+        "unit": "index",
+        "normal_low": 0,
+        "normal_high": 2.5,
+        "optimal_low": 0,
+        "optimal_high": 1.0,
+        "priority": "important",
+        "notes": "Calculated: (fasting glucose × fasting insulin) / 405. <1.0 indicates excellent insulin sensitivity. >2.5 suggests insulin resistance."
+      },
+      {
+        "name": "BUN (Blood Urea Nitrogen)",
+        "category": "Metabolic",
+        "unit": "mg/dL",
+        "normal_low": 6,
+        "normal_high": 20,
+        "optimal_low": 10,
+        "optimal_high": 16,
+        "priority": "routine",
+        "notes": "Kidney function marker. Can be elevated by high protein intake or dehydration. BUN:Creatinine ratio 10-20:1 is normal."
+      },
+      {
+        "name": "Creatinine",
+        "category": "Metabolic",
+        "unit": "mg/dL",
+        "normal_low": 0.7,
+        "normal_high": 1.3,
+        "optimal_low": 0.8,
+        "optimal_high": 1.1,
+        "priority": "important",
+        "notes": "Kidney function marker. Higher in muscular individuals. Trend is more important than single value."
+      },
+      {
+        "name": "eGFR",
+        "category": "Metabolic",
+        "unit": "mL/min/1.73m²",
+        "normal_low": 90,
+        "normal_high": 120,
+        "optimal_low": 90,
+        "optimal_high": 120,
+        "priority": "important",
+        "notes": "Estimated glomerular filtration rate. >90 is normal. 60-89 is mildly decreased. <60 warrants nephrology referral. Calculated from creatinine."
+      },
+      {
+        "name": "Uric Acid",
+        "category": "Metabolic",
+        "unit": "mg/dL",
+        "normal_low": 3.0,
+        "normal_high": 7.2,
+        "optimal_low": 3.5,
+        "optimal_high": 5.5,
+        "priority": "routine",
+        "notes": "Elevated levels associated with gout, kidney stones, and cardiovascular risk. Reduce with limiting purines, fructose, and alcohol."
+      }
+    ],
+    "liver": [
+      {
+        "name": "AST (SGOT)",
+        "category": "Liver",
+        "unit": "U/L",
+        "normal_low": 0,
+        "normal_high": 40,
+        "optimal_low": 10,
+        "optimal_high": 26,
+        "priority": "important",
+        "notes": "Liver enzyme also found in muscle and heart. Can be transiently elevated after intense exercise. ALT is more liver-specific."
+      },
+      {
+        "name": "ALT (SGPT)",
+        "category": "Liver",
+        "unit": "U/L",
+        "normal_low": 0,
+        "normal_high": 44,
+        "optimal_low": 10,
+        "optimal_high": 26,
+        "priority": "important",
+        "notes": "Most liver-specific enzyme. Functional medicine target <26. Elevated by alcohol, medications, fatty liver, and supplements like high-dose niacin."
+      },
+      {
+        "name": "ALP (Alkaline Phosphatase)",
+        "category": "Liver",
+        "unit": "U/L",
+        "normal_low": 44,
+        "normal_high": 147,
+        "optimal_low": 50,
+        "optimal_high": 100,
+        "priority": "routine",
+        "notes": "Found in liver, bone, and intestine. Low ALP can indicate zinc or magnesium deficiency."
+      },
+      {
+        "name": "GGT (Gamma-GT)",
+        "category": "Liver",
+        "unit": "U/L",
+        "normal_low": 0,
+        "normal_high": 65,
+        "optimal_low": 10,
+        "optimal_high": 30,
+        "priority": "important",
+        "notes": "Sensitive marker for bile duct issues and alcohol consumption. Also an independent cardiovascular risk factor. Optimal <30."
+      },
+      {
+        "name": "Bilirubin (Total)",
+        "category": "Liver",
+        "unit": "mg/dL",
+        "normal_low": 0.1,
+        "normal_high": 1.2,
+        "optimal_low": 0.2,
+        "optimal_high": 1.0,
+        "priority": "routine",
+        "notes": "Mild elevation (Gilbert syndrome) is common and benign. Bilirubin is actually an antioxidant. >1.2 with elevated liver enzymes warrants workup."
+      },
+      {
+        "name": "Albumin",
+        "category": "Liver",
+        "unit": "g/dL",
+        "normal_low": 3.5,
+        "normal_high": 5.5,
+        "optimal_low": 4.0,
+        "optimal_high": 5.0,
+        "priority": "important",
+        "notes": "Marker of liver synthetic function and nutritional status. Low albumin indicates chronic illness, malnutrition, or liver disease."
+      }
+    ],
+    "thyroid": [
+      {
+        "name": "TSH",
+        "category": "Thyroid",
+        "unit": "mIU/L",
+        "normal_low": 0.45,
+        "normal_high": 4.5,
+        "optimal_low": 1.0,
+        "optimal_high": 2.5,
+        "priority": "critical",
+        "notes": "Pituitary hormone — inverse relationship with thyroid hormones. Functional optimal 1.0-2.5. Standard range is too wide; subclinical hypothyroidism often missed."
+      },
+      {
+        "name": "Free T4 (Thyroxine)",
+        "category": "Thyroid",
+        "unit": "ng/dL",
+        "normal_low": 0.82,
+        "normal_high": 1.77,
+        "optimal_low": 1.0,
+        "optimal_high": 1.5,
+        "priority": "important",
+        "notes": "Inactive thyroid hormone. Converted to T3 (active) in peripheral tissues. Mid-range is optimal."
+      },
+      {
+        "name": "Free T3 (Triiodothyronine)",
+        "category": "Thyroid",
+        "unit": "pg/mL",
+        "normal_low": 2.0,
+        "normal_high": 4.4,
+        "optimal_low": 3.0,
+        "optimal_high": 4.0,
+        "priority": "important",
+        "notes": "Active thyroid hormone. Upper half of range is optimal. Low Free T3 with normal TSH may indicate poor T4→T3 conversion (check selenium, zinc, iron)."
+      },
+      {
+        "name": "Reverse T3",
+        "category": "Thyroid",
+        "unit": "ng/dL",
+        "normal_low": 9.2,
+        "normal_high": 24.1,
+        "optimal_low": 9.2,
+        "optimal_high": 18.0,
+        "priority": "routine",
+        "notes": "Inactive metabolite of T4. Elevated during illness, stress, caloric restriction, and high cortisol. Free T3:Reverse T3 ratio >0.2 is healthy."
+      },
+      {
+        "name": "TPO Antibodies",
+        "category": "Thyroid",
+        "unit": "IU/mL",
+        "normal_low": 0,
+        "normal_high": 34,
+        "optimal_low": 0,
+        "optimal_high": 15,
+        "priority": "important",
+        "notes": "Marker for autoimmune thyroiditis (Hashimoto's). Elevated antibodies may precede clinical hypothyroidism by years. Recheck annually if positive."
+      }
+    ],
+    "hormones": [
+      {
+        "name": "Total Testosterone",
+        "category": "Hormone",
+        "unit": "ng/dL",
+        "normal_low": 264,
+        "normal_high": 916,
+        "optimal_low": 500,
+        "optimal_high": 900,
+        "priority": "critical",
+        "notes": "Draw between 7-10 AM when levels peak. Upper half of range is optimal for men. Declines ~1-2% per year after age 30. Support with sleep, exercise, zinc, D3, body composition."
+      },
+      {
+        "name": "Free Testosterone",
+        "category": "Hormone",
+        "unit": "pg/mL",
+        "normal_low": 6.8,
+        "normal_high": 21.5,
+        "optimal_low": 12.0,
+        "optimal_high": 21.5,
+        "priority": "critical",
+        "notes": "Bioavailable fraction — more clinically relevant than total. Upper half of range is optimal. Low free T with normal total T suggests elevated SHBG."
+      },
+      {
+        "name": "Estradiol (E2)",
+        "category": "Hormone",
+        "unit": "pg/mL",
+        "normal_low": 8,
+        "normal_high": 35,
+        "optimal_low": 15,
+        "optimal_high": 30,
+        "priority": "important",
+        "notes": "Men need some estradiol for bone health, brain function, and cardiovascular protection. Too low (from aromatase inhibitors) is as problematic as too high."
+      },
+      {
+        "name": "SHBG",
+        "category": "Hormone",
+        "unit": "nmol/L",
+        "normal_low": 16.5,
+        "normal_high": 55.9,
+        "optimal_low": 20,
+        "optimal_high": 45,
+        "priority": "routine",
+        "notes": "Sex Hormone Binding Globulin — binds testosterone making it unavailable. Elevated by: hyperthyroidism, low carb diets, aging. Lowered by: obesity, insulin resistance, hypothyroidism."
+      },
+      {
+        "name": "DHEA-S",
+        "category": "Hormone",
+        "unit": "µg/dL",
+        "normal_low": 138,
+        "normal_high": 475,
+        "optimal_low": 200,
+        "optimal_high": 400,
+        "priority": "routine",
+        "notes": "Adrenal androgen precursor. Declines with age. Low levels may indicate adrenal fatigue/insufficiency. Mid-range is optimal."
+      },
+      {
+        "name": "Cortisol (AM)",
+        "category": "Hormone",
+        "unit": "µg/dL",
+        "normal_low": 6.2,
+        "normal_high": 19.4,
+        "optimal_low": 10,
+        "optimal_high": 15,
+        "priority": "important",
+        "notes": "Draw 7-9 AM. Follows circadian rhythm (highest in morning, lowest at midnight). Chronic elevation indicates HPA axis dysfunction. Low AM cortisol suggests adrenal insufficiency."
+      },
+      {
+        "name": "IGF-1",
+        "category": "Hormone",
+        "unit": "ng/mL",
+        "normal_low": 115,
+        "normal_high": 307,
+        "optimal_low": 150,
+        "optimal_high": 250,
+        "priority": "routine",
+        "notes": "Growth hormone mediator. Correlates with GH secretion. Responds to sleep quality, exercise, and protein intake. Very high levels may increase cancer risk."
+      },
+      {
+        "name": "Prolactin",
+        "category": "Hormone",
+        "unit": "ng/mL",
+        "normal_low": 4.0,
+        "normal_high": 15.2,
+        "optimal_low": 4.0,
+        "optimal_high": 12.0,
+        "priority": "routine",
+        "notes": "Elevated prolactin in men can indicate pituitary adenoma, hypothyroidism, or medication side effect. Inversely related to testosterone."
+      }
+    ],
+    "vitamins_minerals": [
+      {
+        "name": "Vitamin D (25-OH)",
+        "category": "Vitamin",
+        "unit": "ng/mL",
+        "normal_low": 20,
+        "normal_high": 100,
+        "optimal_low": 40,
+        "optimal_high": 60,
+        "priority": "critical",
+        "notes": "Most common deficiency worldwide. Lab 'normal' starts at 20 but functional optimal is 40-60. Supplement with D3 (not D2) + K2. Recheck 3 months after dose change."
+      },
+      {
+        "name": "Vitamin B12",
+        "category": "Vitamin",
+        "unit": "pg/mL",
+        "normal_low": 232,
+        "normal_high": 1245,
+        "optimal_low": 500,
+        "optimal_high": 1000,
+        "priority": "important",
+        "notes": "Neurological symptoms can occur even within 'normal' range if <500. Methylcobalamin preferred over cyanocobalamin. Check methylmalonic acid (MMA) for functional deficiency."
+      },
+      {
+        "name": "Folate",
+        "category": "Vitamin",
+        "unit": "ng/mL",
+        "normal_low": 2.7,
+        "normal_high": 17.0,
+        "optimal_low": 8.0,
+        "optimal_high": 15.0,
+        "priority": "routine",
+        "notes": "Important for DNA synthesis and methylation. Check MTHFR status if persistently low despite supplementation. Use methylfolate (5-MTHF) not folic acid."
+      },
+      {
+        "name": "Ferritin",
+        "category": "Vitamin",
+        "unit": "ng/mL",
+        "normal_low": 30,
+        "normal_high": 400,
+        "optimal_low": 50,
+        "optimal_high": 150,
+        "priority": "important",
+        "notes": "Iron storage protein. Also an acute phase reactant (rises with inflammation). Optimal 50-150 for men. <30 indicates iron deficiency even with normal hemoglobin. >300 warrants hemochromatosis screening."
+      },
+      {
+        "name": "Iron (Serum)",
+        "category": "Vitamin",
+        "unit": "µg/dL",
+        "normal_low": 38,
+        "normal_high": 169,
+        "optimal_low": 60,
+        "optimal_high": 120,
+        "priority": "routine",
+        "notes": "Fluctuates significantly throughout the day and with meals. Best interpreted alongside ferritin, TIBC, and transferrin saturation."
+      },
+      {
+        "name": "TIBC (Total Iron-Binding Capacity)",
+        "category": "Vitamin",
+        "unit": "µg/dL",
+        "normal_low": 250,
+        "normal_high": 370,
+        "optimal_low": 260,
+        "optimal_high": 340,
+        "priority": "routine",
+        "notes": "Rises when iron stores are depleted (body makes more transferrin to capture available iron). Inversely related to ferritin in iron deficiency."
+      }
+    ],
+    "cbc": [
+      {
+        "name": "WBC (White Blood Cells)",
+        "category": "CBC",
+        "unit": "×10³/µL",
+        "normal_low": 3.4,
+        "normal_high": 10.8,
+        "optimal_low": 4.5,
+        "optimal_high": 7.5,
+        "priority": "important",
+        "notes": "Elevated: infection, inflammation, stress, smoking. Low: immunosuppression, autoimmune. Persistent elevation >10 warrants workup."
+      },
+      {
+        "name": "RBC (Red Blood Cells)",
+        "category": "CBC",
+        "unit": "×10⁶/µL",
+        "normal_low": 4.14,
+        "normal_high": 5.80,
+        "optimal_low": 4.5,
+        "optimal_high": 5.5,
+        "priority": "routine",
+        "notes": "Low with low hemoglobin = anemia. High (polycythemia) can be caused by dehydration, testosterone therapy, altitude, or smoking."
+      },
+      {
+        "name": "Hemoglobin",
+        "category": "CBC",
+        "unit": "g/dL",
+        "normal_low": 13.0,
+        "normal_high": 17.7,
+        "optimal_low": 14.0,
+        "optimal_high": 16.5,
+        "priority": "important",
+        "notes": "Oxygen-carrying capacity. Low = anemia. High = polycythemia. Monitor if on TRT — testosterone stimulates erythropoiesis."
+      },
+      {
+        "name": "Hematocrit",
+        "category": "CBC",
+        "unit": "%",
+        "normal_low": 37.5,
+        "normal_high": 51.0,
+        "optimal_low": 40,
+        "optimal_high": 48,
+        "priority": "important",
+        "notes": "Percentage of blood volume that is red blood cells. >54% increases clotting risk. Donate blood if chronically elevated (especially on TRT)."
+      },
+      {
+        "name": "MCV (Mean Corpuscular Volume)",
+        "category": "CBC",
+        "unit": "fL",
+        "normal_low": 79,
+        "normal_high": 97,
+        "optimal_low": 82,
+        "optimal_high": 92,
+        "priority": "routine",
+        "notes": "RBC size. Low MCV = microcytic (iron deficiency). High MCV = macrocytic (B12/folate deficiency). Normal MCV doesn't rule out combined deficiency."
+      },
+      {
+        "name": "Platelets",
+        "category": "CBC",
+        "unit": "×10³/µL",
+        "normal_low": 150,
+        "normal_high": 379,
+        "optimal_low": 175,
+        "optimal_high": 300,
+        "priority": "important",
+        "notes": "Low: bleeding risk, possible ITP. High: reactive (infection, inflammation) or myeloproliferative. Omega-3s may mildly lower platelet count."
+      }
+    ],
+    "inflammation": [
+      {
+        "name": "hs-CRP (High-Sensitivity C-Reactive Protein)",
+        "category": "Inflammation",
+        "unit": "mg/L",
+        "normal_low": 0,
+        "normal_high": 3.0,
+        "optimal_low": 0,
+        "optimal_high": 1.0,
+        "priority": "critical",
+        "notes": "Systemic inflammation and cardiovascular risk marker. <1.0 low risk, 1-3 moderate, >3 high risk. >10 suggests acute infection (not useful for CVD risk). Reduce with omega-3, exercise, weight loss, statin."
+      },
+      {
+        "name": "ESR (Erythrocyte Sedimentation Rate)",
+        "category": "Inflammation",
+        "unit": "mm/hr",
+        "normal_low": 0,
+        "normal_high": 22,
+        "optimal_low": 0,
+        "optimal_high": 10,
+        "priority": "routine",
+        "notes": "Non-specific inflammation marker. Rises with age. Useful for monitoring autoimmune conditions (RA, lupus, PMR). Slower to change than CRP."
+      },
+      {
+        "name": "Homocysteine",
+        "category": "Inflammation",
+        "unit": "µmol/L",
+        "normal_low": 0,
+        "normal_high": 15,
+        "optimal_low": 5,
+        "optimal_high": 8,
+        "priority": "important",
+        "notes": "Independent cardiovascular risk factor and methylation marker. Elevated by B12/folate/B6 deficiency and MTHFR mutations. >8 warrants B-vitamin optimization."
+      }
+    ],
+    "electrolytes": [
+      {
+        "name": "Sodium",
+        "category": "Electrolyte",
+        "unit": "mEq/L",
+        "normal_low": 134,
+        "normal_high": 144,
+        "optimal_low": 137,
+        "optimal_high": 142,
+        "priority": "important",
+        "notes": "Tightly regulated. Low (hyponatremia): overhydration, SIADH, adrenal insufficiency. High (hypernatremia): dehydration. Critical <130 or >150."
+      },
+      {
+        "name": "Potassium",
+        "category": "Electrolyte",
+        "unit": "mEq/L",
+        "normal_low": 3.5,
+        "normal_high": 5.2,
+        "optimal_low": 4.0,
+        "optimal_high": 4.8,
+        "priority": "critical",
+        "notes": "Critical for cardiac rhythm. Both hypo- and hyperkalemia are dangerous. Hemolyzed samples give falsely elevated results. Recheck if unexpected."
+      },
+      {
+        "name": "Magnesium (RBC)",
+        "category": "Electrolyte",
+        "unit": "mg/dL",
+        "normal_low": 4.2,
+        "normal_high": 6.8,
+        "optimal_low": 5.0,
+        "optimal_high": 6.5,
+        "priority": "important",
+        "notes": "RBC magnesium is far more accurate than serum magnesium (which remains normal until severely depleted). Subclinical deficiency is extremely common. Involved in 300+ enzymatic reactions."
+      },
+      {
+        "name": "Calcium (Total)",
+        "category": "Electrolyte",
+        "unit": "mg/dL",
+        "normal_low": 8.7,
+        "normal_high": 10.2,
+        "optimal_low": 9.0,
+        "optimal_high": 10.0,
+        "priority": "important",
+        "notes": "Adjust for albumin: corrected calcium = total calcium + 0.8 × (4.0 - albumin). Elevated calcium: hyperparathyroidism, malignancy, excess D3."
+      },
+      {
+        "name": "Phosphorus",
+        "category": "Electrolyte",
+        "unit": "mg/dL",
+        "normal_low": 2.5,
+        "normal_high": 4.5,
+        "optimal_low": 3.0,
+        "optimal_high": 4.0,
+        "priority": "routine",
+        "notes": "Inversely related to calcium. Low phosphorus can cause muscle weakness and bone pain. High phosphorus with low calcium suggests kidney disease."
+      }
+    ]
+  }
+}

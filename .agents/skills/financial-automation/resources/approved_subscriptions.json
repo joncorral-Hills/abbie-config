@@ -1,0 +1,81 @@
+{
+  "_meta": {
+    "description": "All recurring charges, fixed obligations, and investment contributions. Allie uses this for subscription audits, bill verification, and cash flow modeling.",
+    "last_updated": "2026-06-09",
+    "source": "Reconciled from Notion Bills & Budget DB (5225799b) + Financial Roadmap + manual corrections",
+    "rule": "Any recurring charge NOT on this list gets flagged as an anomaly."
+  },
+
+  "usb_autopay": [
+    { "name": "Mortgage", "amount": 2160.57, "day_of_month": 1, "account": "US Bank Checking", "notes": "Primary residence. Bi-weekly payment strategy under evaluation." },
+    { "name": "Honda Financial", "amount": 670, "day_of_month": 16, "account": "US Bank Checking", "notes": "Bills DB shows $670. Budgets DB shows $604. Confirm with Jon." },
+    { "name": "Tesla Car Note", "amount": 435, "day_of_month": 19, "account": "US Bank Checking" },
+    { "name": "Progressive Auto Insurance", "amount": 441, "day_of_month": 20, "account": "US Bank Checking", "notes": "Auto insurance for both vehicles" },
+    { "name": "Jaime's Loan", "amount": 312, "day_of_month": 16, "account": "US Bank Checking", "notes": "Wife's loan — type and rate TBD" },
+    { "name": "AT&T", "amount": 280, "day_of_month": 1, "account": "US Bank Checking", "notes": "Family phone plan" },
+    { "name": "WaterOne", "amount": 150, "day_of_month": 19, "account": "US Bank Checking" },
+    { "name": "JoCo Wastewater", "amount": 111.13, "day_of_month": 5, "account": "US Bank Checking", "notes": "Johnson County wastewater" },
+    { "name": "Northwestern Mutual", "amount": 95.46, "day_of_month": 19, "account": "US Bank Checking", "notes": "Whole life / IBC policy. $1M coverage, 30yr term. Has cash value component." }
+  ],
+  "usb_autopay_subtotal": 4655.16,
+
+  "flex_autopay": [
+    { "name": "Sterling Wellness (Ozempic)", "amount": 216.67, "account": "Chase Flex", "notes": "Wife's medical — non-negotiable" },
+    { "name": "B'nai Jehudah", "amount": 162.50, "day_of_month": 24, "account": "Chase Flex", "notes": "Community commitment. Bills DB shows $162.50 (was $200)." },
+    { "name": "KCP&L / Arcadia", "amount": 150, "day_of_month": 27, "account": "Chase Flex", "notes": "Electric utility" },
+    { "name": "Atmos Energy", "amount_range": [58, 225], "day_of_month": 13, "account": "Chase Flex", "notes": "Gas utility — seasonal. Summer ~$58, Winter ~$225. Budgets DB shows $224.76." },
+    { "name": "Google Fiber", "amount": 70, "day_of_month": 3, "account": "Chase Flex", "notes": "Internet — essential" },
+    { "name": "Choice Home Warranty", "amount": 55.55, "day_of_month": 14, "account": "Chase Flex", "notes": "Bills DB shows $55.55 (was $107.70)" },
+    { "name": "SimpliSafe", "amount": 32, "day_of_month": 30, "account": "Chase Flex", "notes": "Home security" },
+    { "name": "Pet Insurance (Pets Best)", "amount": 24, "day_of_month": 12, "account": "Chase Flex", "notes": "Bills DB shows $24 (was $11)" },
+    { "name": "Netflix", "amount": 17.99, "day_of_month": 30, "account": "Chase Flex" },
+    { "name": "Spotify & Hulu", "amount": 12, "day_of_month": 28, "account": "Chase Flex", "notes": "Bundled. Bills DB shows $12 (was $16.65)." },
+    { "name": "Abacus.AI", "amount": 20, "account": "Chase Flex", "notes": "Allie's LLM router" },
+    { "name": "Google One", "amount": 1.99, "account": "Chase Flex", "notes": "Storage" }
+  ],
+  "flex_autopay_subtotal": 762.70,
+
+  "sapphire_spending": {
+    "card": "Chase Sapphire Reserve",
+    "estimated_monthly": 1385,
+    "primary_categories": ["Groceries", "Dining", "General spending"],
+    "notes": "Bills DB shows $1,385/mo total on Sapphire. Groceries budgeted at $1,000."
+  },
+
+  "paused_or_uncertain": [
+    { "name": "YouTube TV", "amount": 90.75, "status": "CONFLICT", "notes": "Skill says paused May 2026. Bills DB has it active at $73. Budgets DB shows $90.75. Needs Jon confirmation." },
+    { "name": "HBO Max", "amount": 20.22, "status": "CONFLICT", "notes": "Skill says paused May 2026. Budgets DB shows $20.22 budgeted for June." },
+    { "name": "Apple TV+", "amount": 12.99, "status": "CONFLICT", "notes": "Skill says paused May 2026. Budgets DB shows $12.99 budgeted for June." },
+    { "name": "Blue Valley Food (school meals)", "amount": 96, "paused_date": "2026-05-26", "resume_review": "September 2026", "notes": "School meal plan — resumes with school year. Budgets DB has it at $96 for June." }
+  ],
+
+  "investments_and_savings": [
+    { "name": "Charles Schwab", "amount": 10, "day_of_month": 15, "notes": "Auto-investment. Account type TBD." },
+    { "name": "Jack Custodial IRA (Schwab)", "amount": 3, "day_of_month": 7, "notes": "From Jack's Current account. Routing: 091302966, Acct: 2128359231014." },
+    { "name": "Jaime 401k", "amount": null, "notes": "Via Alight. Contribution rate and employer match TBD — deducted pre-tax from paycheck." },
+    { "name": "Jon 401k", "amount": null, "notes": "Provider TBD. Contribution rate and employer match TBD." },
+    { "name": "ER Payment Plan", "amount": 150, "account": "Savings", "notes": "Auto-draft from savings. ~16 months remaining (~$2,400). 0% interest." }
+  ],
+
+  "annual": [
+    { "name": "HOA Dues", "amount": 550, "frequency": "annual", "notes": "Due date unclear — last entry shows 2020. Confirm if still active." },
+    { "name": "Vehicle Registration", "amount": 598, "frequency": "annual" },
+    { "name": "Scout Dues", "amount": 360, "frequency": "annual" },
+    { "name": "Amazon Prime", "amount": 139, "frequency": "annual", "notes": "Needed for 5% Amazon Prime Card cashback" },
+    { "name": "PTO Dues", "amount": 175, "frequency": "annual" },
+    { "name": "GoDaddy", "amount": 20, "frequency": "annual" },
+    { "name": "Bitwarden", "amount": 14, "frequency": "annual", "notes": "Jan 1st" },
+    { "name": "Colgate-Palmolive (pet food)", "amount": 89.78, "frequency": "every_2_months", "notes": "Next shipment: July 2026" },
+    { "name": "Chase Sapphire Reserve", "amount": 550, "frequency": "annual", "notes": "Offset by $300 travel credit = effective $250/yr" },
+    { "name": "Capital One Venture X", "amount": 395, "frequency": "annual", "notes": "Upgrade in progress. Offset by $300 travel credit = effective $95/yr" }
+  ],
+
+  "credit_cards": [
+    { "name": "Chase Sapphire Reserve", "type": "rewards", "annual_fee": 550, "network": "Visa", "notes": "Primary rewards card. 3x dining/travel, 10x Chase portal. Points worth 1.5¢ via portal." },
+    { "name": "Chase Freedom Flex", "type": "rewards", "annual_fee": 0, "network": "Mastercard", "notes": "Rotating 5% quarterly, 3% dining/drugstores" },
+    { "name": "Chase Freedom Unlimited", "type": "rewards", "annual_fee": 0, "network": "Visa", "notes": "Flat 1.5x, 3% dining/drugstores. Catch-all card." },
+    { "name": "Capital One Venture X", "type": "rewards", "annual_fee": 395, "network": "Visa", "notes": "Upgrade in progress from Quicksilver. 2x everything, 10x hotels/cars." },
+    { "name": "Amazon Prime Card", "type": "rewards", "annual_fee": 0, "network": "Visa", "notes": "5% Amazon/Whole Foods, 2% restaurants/gas/drugstores" },
+    { "name": "Crypto.com Ruby MCO", "type": "rewards", "annual_fee": 0, "network": "Visa", "notes": "2% cashback, Spotify rebate. $400 CRO stake." }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "HVAC": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Plumbing": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Electrician": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Roofing": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Pest Control": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Lawn Care": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Tree Service": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Chimney Sweep": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Gutter Cleaning": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  },
+  "Appliance Repair": {
+    "name": "",
+    "phone": "",
+    "cost_history": [],
+    "notes": "",
+    "last_used": null
+  }
+}

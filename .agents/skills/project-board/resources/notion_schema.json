@@ -1,0 +1,174 @@
+{
+  "_meta": {
+    "description": "Notion database schema for Allie's Project Board (Kanban). Create as an inline database under the ALLIE page.",
+    "parent_page": "ALLIE (36d63d55-66c5-8163-8bc9-c438cb43ce3b)",
+    "creation_order": ["projects"],
+    "post_creation": "Create Board view grouped by Status, then Active and By Skill table views."
+  },
+
+  "projects": {
+    "title": "📋 Project Board",
+    "icon": "📋",
+    "properties": {
+      "Project": { "title": {} },
+      "Status": {
+        "select": {
+          "options": [
+            { "name": "📋 Backlog", "color": "default" },
+            { "name": "🔄 In Progress", "color": "blue" },
+            { "name": "⏸️ On Hold", "color": "yellow" },
+            { "name": "👀 Needs Review", "color": "orange" },
+            { "name": "✅ Done", "color": "green" }
+          ]
+        }
+      },
+      "Priority": {
+        "select": {
+          "options": [
+            { "name": "🔴 High", "color": "red" },
+            { "name": "🟡 Medium", "color": "yellow" },
+            { "name": "🟢 Low", "color": "green" }
+          ]
+        }
+      },
+      "Skill": {
+        "select": {
+          "options": [
+            { "name": "Financial", "color": "green" },
+            { "name": "Health", "color": "red" },
+            { "name": "Invention", "color": "purple" },
+            { "name": "Infrastructure", "color": "blue" },
+            { "name": "Research", "color": "yellow" },
+            { "name": "Other", "color": "default" }
+          ]
+        }
+      },
+      "Owner": {
+        "select": {
+          "options": [
+            { "name": "Allie", "color": "blue" },
+            { "name": "Jon", "color": "orange" },
+            { "name": "Both", "color": "purple" }
+          ]
+        }
+      },
+      "Description": { "rich_text": {} },
+      "Jon's Notes": { "rich_text": {} },
+      "Allie's Notes": { "rich_text": {} },
+      "Blocked By": { "rich_text": {} },
+      "Outcome": { "rich_text": {} },
+      "Due Date": { "date": {} },
+      "Last Touched": { "date": {} },
+      "Created": { "created_time": {} }
+    },
+
+    "views": {
+      "board": {
+        "type": "board",
+        "name": "Board",
+        "group_by": "Status",
+        "sort": [{ "property": "Priority", "direction": "ascending" }],
+        "visible_properties": ["Priority", "Skill", "Owner", "Due Date"],
+        "column_order": ["📋 Backlog", "🔄 In Progress", "⏸️ On Hold", "👀 Needs Review", "✅ Done"]
+      },
+      "active": {
+        "type": "table",
+        "name": "Active",
+        "filter": {
+          "or": [
+            { "property": "Status", "select": { "equals": "🔄 In Progress" } },
+            { "property": "Status", "select": { "equals": "👀 Needs Review" } }
+          ]
+        },
+        "sort": [{ "property": "Priority", "direction": "ascending" }]
+      },
+      "by_skill": {
+        "type": "table",
+        "name": "By Skill",
+        "group_by": "Skill",
+        "sort": [{ "property": "Status", "direction": "ascending" }]
+      }
+    },
+
+    "seed_data": [
+      {
+        "Project": "Rotate Notion API Key",
+        "Status": "📋 Backlog",
+        "Priority": "🔴 High",
+        "Skill": "Infrastructure",
+        "Owner": "Jon",
+        "Description": "Notion integration API key was exposed in conversation transcript on 2026-06-08. Needs rotation via notion.so/my-integrations, then update .notion_config.json and Allie's env.",
+        "Blocked By": "Jon must access Notion integrations settings"
+      },
+      {
+        "Project": "Financial Planner — Provide Missing Data",
+        "Status": "📋 Backlog",
+        "Priority": "🔴 High",
+        "Skill": "Financial",
+        "Owner": "Jon",
+        "Description": "Financial planner skill needs: interest rates for all debts, current balances, both 401(k) details, Schwab account type, NW Mutual cash value, credit limits for 6 cards, home value, vehicle values, Venture X upgrade status.",
+        "Blocked By": "Jon needs to gather and provide this data"
+      },
+      {
+        "Project": "Financial Planner — Verify 7 Crons",
+        "Status": "📋 Backlog",
+        "Priority": "🟡 Medium",
+        "Skill": "Financial",
+        "Owner": "Allie",
+        "Description": "Confirm that the 7 financial-planner crons (#8-#14: Cash Flow Forecast, Net Worth Snapshot, Debt Progress, Flex Q Activation, Weekly Rewards, Health Score, Bonus Paycheck Alert) are actually deployed and running."
+      },
+      {
+        "Project": "Health System — Complete Setup",
+        "Status": "⏸️ On Hold",
+        "Priority": "🟡 Medium",
+        "Skill": "Health",
+        "Owner": "Both",
+        "Description": "Bring the health-automation and health-planner skills online. Requires 3 setup steps before Allie can begin.",
+        "Blocked By": "1) Jon: install Health Auto Export on iPhone ($24.99). 2) Confirm VM HTTPS endpoint accessible. 3) Provide HEVY_API_KEY to Allie's env."
+      },
+      {
+        "Project": "Bridge Auto-Poll for Outbound Messages",
+        "Status": "📋 Backlog",
+        "Priority": "🟢 Low",
+        "Skill": "Infrastructure",
+        "Owner": "Both",
+        "Description": "Add automated polling for Allie's outbound relay messages. Currently requires manual `notion_bridge.py read`. Options: macOS launchd agent, Antigravity /schedule cron, or Notion webhook."
+      },
+      {
+        "Project": "Hermes Version Check & Update",
+        "Status": "📋 Backlog",
+        "Priority": "🟢 Low",
+        "Skill": "Infrastructure",
+        "Owner": "Allie",
+        "Description": "Check if Hermes v0.11.0 has been superseded. Update if available. Also clean up .env duplicate entries (old @JonCorr line, double TELEGRAM_ALLOW_ALL_USERS)."
+      },
+      {
+        "Project": "Monthly Financial Update Cron",
+        "Status": "✅ Done",
+        "Priority": "🟡 Medium",
+        "Skill": "Financial",
+        "Owner": "Allie",
+        "Description": "Monthly Financial Update cron running on 1st of month @ 9am.",
+        "Outcome": "Deployed and operational since 2026-05-27."
+      },
+      {
+        "Project": "Invention Processor",
+        "Status": "✅ Done",
+        "Priority": "🟡 Medium",
+        "Skill": "Invention",
+        "Owner": "Allie",
+        "Description": "#invent trigger skill for IP/market analysis pipeline.",
+        "Outcome": "Live since 2026-05-27. Tested with real pipeline: IP score 4/10, market 6/10, cross-referenced 273 existing ideas."
+      },
+      {
+        "Project": "Antigravity ↔ Allie Bridge",
+        "Status": "✅ Done",
+        "Priority": "🔴 High",
+        "Skill": "Infrastructure",
+        "Owner": "Both",
+        "Description": "Notion relay pattern for bidirectional Antigravity ↔ Allie communication.",
+        "Outcome": "Operational since 2026-06-08. Inbound/Outbound/Knowledge Index all functional. Bridge hardened with env var support on 2026-07-06."
+      }
+    ]
+  }
+}

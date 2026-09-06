@@ -1,0 +1,225 @@
+{
+  "_meta": {
+    "description": "Credit card rewards optimization rules. Chase trifecta + household card portfolio.",
+    "last_updated": "2026-06-09",
+    "strategy": "Pool all Chase UR points into Sapphire Reserve for 1.5¢/point portal redemption or transfer to airline/hotel partners. Use the highest-earning card per category."
+  },
+
+  "chase_trifecta": {
+    "strategy_summary": "Freedom Flex and Freedom Unlimited earn UR points that transfer to the Sapphire Reserve, where they're worth 1.5¢ each through the Chase Travel portal or can be transferred 1:1 to airline/hotel partners.",
+
+    "sapphire_reserve": {
+      "full_name": "Chase Sapphire Reserve",
+      "annual_fee": 550,
+      "annual_credits": {
+        "travel_credit": { "amount": 300, "resets": "cardmember_year", "auto_applied": true },
+        "doordash_dashpass": { "amount": 0, "notes": "Free DashPass membership" },
+        "lyft_pink": { "amount": 0, "notes": "Complimentary Lyft Pink" }
+      },
+      "effective_annual_fee": 250,
+      "earning_rates": {
+        "chase_travel_portal": { "rate": 10, "unit": "points_per_dollar" },
+        "dining": { "rate": 3, "unit": "points_per_dollar" },
+        "travel": { "rate": 3, "unit": "points_per_dollar", "includes": ["airlines", "hotels", "car_rentals", "tolls", "parking", "transit", "ride_share"] },
+        "streaming": { "rate": 3, "unit": "points_per_dollar", "note": "Added 2024" },
+        "online_grocery": { "rate": 3, "unit": "points_per_dollar", "excludes": ["in_store_grocery", "Target", "Walmart"] },
+        "everything_else": { "rate": 1, "unit": "points_per_dollar" }
+      },
+      "point_value": {
+        "portal_redemption": 0.015,
+        "cash_back": 0.01,
+        "transfer_partners": "variable — often 0.015-0.025 per point"
+      },
+      "perks": [
+        "Priority Pass Select lounge access (cardholder + 2 guests)",
+        "$100 Global Entry / TSA PreCheck credit every 4 years",
+        "Trip cancellation/interruption insurance",
+        "Primary rental car insurance",
+        "No foreign transaction fees"
+      ],
+      "fee_roi_breakeven": {
+        "after_travel_credit": 250,
+        "dining_spend_to_break_even": "$12,500/yr at 3x (earns 37,500 pts = $562 via portal)",
+        "notes": "With $500/mo dining + $300 travel credit, ROI is strongly positive."
+      }
+    },
+
+    "freedom_flex": {
+      "full_name": "Chase Freedom Flex",
+      "annual_fee": 0,
+      "earning_rates": {
+        "quarterly_rotating": {
+          "rate": 5,
+          "unit": "percent",
+          "quarterly_cap": 1500,
+          "must_activate": true,
+          "activation_reminder": "Activate at chase.com/freedom or Chase app within first month of each quarter"
+        },
+        "dining": { "rate": 3, "unit": "percent" },
+        "drugstores": { "rate": 3, "unit": "percent" },
+        "everything_else": { "rate": 1, "unit": "percent" }
+      },
+      "quarterly_categories_2026": {
+        "Q1_jan_mar": { "categories": ["Gas stations", "EV charging"], "status": "completed" },
+        "Q2_apr_jun": { "categories": ["Amazon.com", "Select streaming services"], "status": "active" },
+        "Q3_jul_sep": { "categories": ["TBD"], "status": "not_announced", "check_date": "2026-06-15" },
+        "Q4_oct_dec": { "categories": ["TBD"], "status": "not_announced", "check_date": "2026-09-15" }
+      },
+      "notes": "Points transfer to Sapphire Reserve pool. 5% quarterly categories are the highest-earning opportunity in the trifecta."
+    },
+
+    "freedom_unlimited": {
+      "full_name": "Chase Freedom Unlimited",
+      "annual_fee": 0,
+      "earning_rates": {
+        "dining": { "rate": 3, "unit": "percent" },
+        "drugstores": { "rate": 3, "unit": "percent" },
+        "everything_else": { "rate": 1.5, "unit": "percent" }
+      },
+      "notes": "Flat 1.5% catch-all. Use this for any purchase that doesn't earn more on another card. Points transfer to Sapphire Reserve pool."
+    }
+  },
+
+  "other_cards": {
+    "amazon_prime": {
+      "full_name": "Amazon Prime Visa",
+      "annual_fee": 0,
+      "requires": "Amazon Prime membership",
+      "earning_rates": {
+        "amazon": { "rate": 5, "unit": "percent" },
+        "whole_foods": { "rate": 5, "unit": "percent" },
+        "restaurants": { "rate": 2, "unit": "percent" },
+        "gas_stations": { "rate": 2, "unit": "percent" },
+        "drugstores": { "rate": 2, "unit": "percent" },
+        "everything_else": { "rate": 1, "unit": "percent" }
+      },
+      "reward_type": "Amazon cashback (statement credit or Amazon balance)",
+      "notes": "Always use for Amazon and Whole Foods. Do NOT use for dining (Sapphire Reserve 3x is better at 1.5¢/point = 4.5% effective)."
+    },
+
+    "capital_one_venture_x": {
+      "full_name": "Capital One Venture X",
+      "status": "upgrade_in_progress_from_quicksilver",
+      "annual_fee": 395,
+      "annual_credits": {
+        "travel_credit": { "amount": 300, "resets": "cardmember_year", "auto_applied": true, "covers": "Capital One Travel portal bookings" }
+      },
+      "effective_annual_fee": 95,
+      "earning_rates": {
+        "capital_one_travel_portal": { "rate": 10, "unit": "miles_per_dollar" },
+        "hotels_and_car_rentals_via_portal": { "rate": 10, "unit": "miles_per_dollar" },
+        "everything_else": { "rate": 2, "unit": "miles_per_dollar" }
+      },
+      "mile_value": 0.01,
+      "perks": [
+        "Priority Pass lounge access (cardholder + 2 guests)",
+        "Capital One Lounges",
+        "$100 Global Entry / TSA PreCheck credit",
+        "No foreign transaction fees",
+        "10,000 anniversary bonus miles yearly"
+      ],
+      "notes": "Use for non-Chase travel bookings and as a 2x catch-all when 1.5x Chase isn't available. Anniversary bonus + travel credit make effective fee negative."
+    },
+
+    "crypto_com_ruby": {
+      "full_name": "Crypto.com Ruby Steel MCO Visa",
+      "annual_fee": 0,
+      "stake_required": { "amount": 400, "currency": "CRO", "lockup": "180_days" },
+      "earning_rates": {
+        "everything": { "rate": 2, "unit": "percent", "paid_in": "CRO" }
+      },
+      "perks": [
+        "Spotify rebate (up to $13.99/mo reimbursed in CRO)"
+      ],
+      "notes": "Niche use. Spotify rebate is the main value. 2% CRO cashback has volatility risk. Don't use as primary card."
+    }
+  },
+
+  "optimal_card_selection": {
+    "_instructions": "For each purchase, select the card that maximizes effective return. Chase UR points are valued at 1.5¢/point when redeemed through Sapphire Reserve portal.",
+
+    "by_category": [
+      {
+        "category": "Amazon.com purchases",
+        "best_card": "Amazon Prime Card",
+        "effective_rate": "5%",
+        "override": "Freedom Flex during Q2 2026 (Apr-Jun) when Amazon is a 5% category — use Flex to earn transferable UR points instead of Amazon cashback"
+      },
+      {
+        "category": "Whole Foods",
+        "best_card": "Amazon Prime Card",
+        "effective_rate": "5%"
+      },
+      {
+        "category": "Dining / Restaurants",
+        "best_card": "Chase Sapphire Reserve",
+        "effective_rate": "4.5% (3x × 1.5¢/pt)",
+        "runner_up": "Freedom Flex / Freedom Unlimited at 3% (but 3x × 1.5¢ = 4.5% via CSR is same; CSR wins for travel insurance)"
+      },
+      {
+        "category": "Travel (flights, hotels, car rentals)",
+        "best_card": "Chase Sapphire Reserve (via Chase Travel portal for 10x)",
+        "effective_rate": "15% via portal, 4.5% direct",
+        "notes": "Book through Chase Travel portal for 10x. Direct purchases earn 3x = 4.5% effective."
+      },
+      {
+        "category": "Gas stations",
+        "best_card": "Freedom Flex (during Q1 rotating category)",
+        "effective_rate": "7.5% (5x × 1.5¢/pt) during Q1",
+        "fallback": "Amazon Prime Card at 2%, or Capital One Venture X at 2%"
+      },
+      {
+        "category": "Streaming services",
+        "best_card": "Freedom Flex (during Q2 2026 rotating category)",
+        "effective_rate": "7.5% (5x × 1.5¢/pt) during Q2",
+        "fallback": "Chase Sapphire Reserve at 4.5% (3x streaming)"
+      },
+      {
+        "category": "Drugstores / Pharmacies",
+        "best_card": "Chase Freedom Flex or Freedom Unlimited",
+        "effective_rate": "4.5% (3x × 1.5¢/pt)"
+      },
+      {
+        "category": "Groceries (in-store, non-Whole Foods)",
+        "best_card": "Capital One Venture X",
+        "effective_rate": "2%",
+        "notes": "No card in the portfolio earns bonus on in-store grocery. Venture X 2x or Freedom Unlimited 1.5x UR (=2.25% effective) are close. CFU wins if counting UR transfer value."
+      },
+      {
+        "category": "Online grocery delivery",
+        "best_card": "Chase Sapphire Reserve",
+        "effective_rate": "4.5% (3x × 1.5¢/pt)",
+        "notes": "CSR earns 3x on online grocery orders"
+      },
+      {
+        "category": "Everything else (general spend)",
+        "best_card": "Chase Freedom Unlimited",
+        "effective_rate": "2.25% (1.5x × 1.5¢/pt)",
+        "runner_up": "Capital One Venture X at 2%"
+      },
+      {
+        "category": "Spotify subscription",
+        "best_card": "Crypto.com Ruby",
+        "effective_rate": "100% (full rebate in CRO up to $13.99/mo)",
+        "notes": "Spotify rebate is the primary value prop of the Ruby card"
+      },
+      {
+        "category": "Rotating quarterly (Freedom Flex)",
+        "best_card": "Chase Freedom Flex",
+        "effective_rate": "7.5% (5x × 1.5¢/pt)",
+        "cap": "$1,500/quarter spending",
+        "critical": "MUST activate each quarter at chase.com/freedom"
+      }
+    ],
+
+    "wrong_card_alerts": [
+      { "mistake": "Using Amazon Prime Card for dining", "correct": "Use Sapphire Reserve (4.5% effective vs 2%)" },
+      { "mistake": "Using Sapphire Reserve for Amazon purchases", "correct": "Use Amazon Prime Card (5% vs 1.5%)" },
+      { "mistake": "Using Freedom Unlimited for drugstores", "correct": "Use Freedom Flex (same 3%, but Flex also builds toward rotating bonus)" },
+      { "mistake": "Using any card for Spotify except Crypto.com Ruby", "correct": "Ruby gives full rebate in CRO" },
+      { "mistake": "Booking travel outside Chase portal", "correct": "Book via Chase Travel for 10x instead of 3x" },
+      { "mistake": "Using Sapphire Reserve for general non-bonus spend", "correct": "Use Freedom Unlimited (1.5x vs 1x)" },
+      { "mistake": "Forgetting to activate Freedom Flex quarterly categories", "correct": "Set reminder: 1st of Jan/Apr/Jul/Oct" }
+    ]
+  }
+}

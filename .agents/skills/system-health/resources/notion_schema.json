@@ -1,0 +1,79 @@
+{
+  "_meta": {
+    "description": "Notion database schema for 📡 System Health DB. Created under ALLIE page.",
+    "parent_page": "ALLIE (36d63d55-66c5-8163-8bc9-c438cb43ce3b)",
+    "creation_order": ["system_health"],
+    "post_creation": "Create 'Timeline' (default table, sorted by Date desc) and 'Incidents Only' (filtered where Incidents is not empty) views."
+  },
+  "system_health": {
+    "title": "📡 System Health",
+    "icon": "📡",
+    "properties": {
+      "Date": { "title": {} },
+      "Ops Score": {
+        "number": { "format": "number" }
+      },
+      "Uptime %": {
+        "number": { "format": "percent" }
+      },
+      "Crons OK": {
+        "number": { "format": "number" }
+      },
+      "Crons Failed": {
+        "number": { "format": "number" }
+      },
+      "APIs Healthy": {
+        "number": { "format": "number" }
+      },
+      "APIs Degraded": {
+        "number": { "format": "number" }
+      },
+      "Disk Free GB": {
+        "number": { "format": "number" }
+      },
+      "RAM Used %": {
+        "number": { "format": "percent" }
+      },
+      "Tokens Used": {
+        "number": { "format": "number" }
+      },
+      "Incidents": {
+        "rich_text": {}
+      },
+      "Remediations": {
+        "rich_text": {}
+      },
+      "Recommendations": {
+        "rich_text": {}
+      },
+      "WoW Change": {
+        "number": { "format": "number" }
+      },
+      "Trend": {
+        "select": {
+          "options": [
+            { "name": "Healthy", "color": "green" },
+            { "name": "Degraded", "color": "yellow" },
+            { "name": "Critical", "color": "red" }
+          ]
+        }
+      }
+    },
+    "views": {
+      "timeline": {
+        "type": "table",
+        "name": "Timeline",
+        "sort": [{ "property": "Date", "direction": "descending" }]
+      },
+      "incidents_only": {
+        "type": "table",
+        "name": "Incidents Only",
+        "filter": {
+          "property": "Incidents",
+          "rich_text": { "is_not_empty": true }
+        },
+        "sort": [{ "property": "Date", "direction": "descending" }]
+      }
+    }
+  }
+}

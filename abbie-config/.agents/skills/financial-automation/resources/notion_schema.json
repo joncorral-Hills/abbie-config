@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "description": "Notion database schemas for Abbie's financial automation system.",
+    "parent_page": "FINANCE (existing page in Jon's Notion workspace)",
+    "creation_order": ["accounts", "budgets", "statements", "transactions"],
+    "post_creation": "After all 4 DBs exist, add relation and rollup properties that reference other DBs."
+  },
+
+  "accounts": {
+    "title": "🏦 Accounts",
+    "icon": "🏦",
+    "properties": {
+      "Account Name": { "title": {} },
+      "Current Balance": { "number": { "format": "dollar" } },
+      "Type": {
+        "select": {
+          "options": [
+            { "name": "Checking", "color": "blue" },
+            { "name": "Savings", "color": "green" },
+            { "name": "Credit", "color": "red" }
+          ]
+        }
+      },
+      "Bank": {
+        "select": {
+          "options": [
+            { "name": "Chase", "color": "blue" },
+            { "name": "US Bank", "color": "purple" }
+          ]
+        }
+      },
+      "Last Updated": { "date": {} },
+      "Notes": { "rich_text": {} }
+    },
+    "seed_data": [
+      {
+        "Account Name": "Chase Checking",
+        "Current Balance": 3100,
+        "Type": "Checking",
+        "Bank": "Chase",
+        "Notes": "Primary spending account"
+      },
+      {
+        "Account Name": "Emergency Savings",
+        "Current Balance": 8250,
+        "Type": "Savings",
+        "Bank": "Chase",
+        "Notes": "Target: hold above $5,000"
+      },
+      {
+        "Account Name": "Chase Flex",
+        "Current Balance": 0,
+        "Type": "Credit",
+        "Bank": "Chase",
+        "Notes": "Paid in full monthly — no interest ever"
+      },
+      {
+        "Account Name": "US Bank Checking",
+        "Current Balance": null,
+        "Type": "Checking",
+        "Bank": "US Bank",
+        "Notes": "Balance TBD — confirm with Jon"
+      }
+    ]
+  },
+
+  "budgets": {
+    "title": "📊 Budgets",
+    "icon": "📊",
+    "properties": {
+      "Category": { "title": {} },
+      "Month": {
+        "select": {
+          "options": [
+            { "name": "June 2026", "color": "blue" },
+            { "name": "July 2026", "color": "green" },
+            { "name": "August 2026", "color": "yellow" },
+            { "name": "September 2026", "color": "orange" },
+            { "name": "October 2026", "color": "red" }
+          ]
+        }
+      },
+      "Budget Amount": { "number": { "format": "dollar" } }
+    },
+    "post_creation_properties": {
+      "Transactions": {
+        "type": "relation",
+        "target_db": "transactions",
+        "note": "Add after Transactions DB is created"
+      },
+      "Spent": {
+        "type": "rollup",
+        "relation_property": "Transactions",
+        "rollup_property": "Amount",
+        "function": "sum"
+      },
+      "Remaining": {
+        "type": "formula",
+        "expression": "prop(\"Budget Amount\") - abs(prop(\"Spent\"))"
+      },
+      "Status": {
+        "type": "formula",
+        "expression": "if(abs(prop(\"Spent\")) / prop(\"Budget Amount\") > 1, \"🔴\", if(abs(prop(\"Spent\")) / prop(\"Budget Amount\") > 0.8, \"🟡\", \"🟢\"))"
+      }
+    },
+    "seed_data": [
+      { "Category": "Dining / Takeout", "Month": "June 2026", "Budget Amount": 500 },
+      { "Category": "Groceries", "Month": "June 2026", "Budget Amount": 550 },
+      { "Category": "Household / Target / Walmart", "Month": "June 2026", "Budget Amount": 300 },
+      { "Category": "Kids Extras / Activities", "Month": "June 2026", "Budget Amount": 200 },
+      { "Category": "Shopping / Personal", "Month": "June 2026", "Budget Amount": 200 },
+      { "Category": "Entertainment / Random", "Month": "June 2026", "Budget Amount": 0 },
+      { "Category": "Gas", "Month": "June 2026", "Budget Amount": 250 }
+    ]
+  },
+
+  "statements": {
+    "title": "📄 Statements",
+    "icon": "📄",
+    "properties": {
+      "Name": { "title": {} },
+      "File": { "files": {} },
+      "Account": {
+        "select": {
+          "options": [
+            { "name": "Chase Flex", "color": "blue" },
+            { "name": "Chase Checking", "color": "blue" },
+            { "name": "US Bank Checking", "color": "purple" },
+            { "name": "US Bank Savings", "color": "green" }
+          ]
+        }
+      },
+      "Statement Period": { "date": {} },
+      "Status": {
+        "select": {
+          "options": [
+            { "name": "Uploaded", "color": "yellow" },
+            { "name": "Processing", "color": "blue" },
+            { "name": "Parsed", "color": "green" },
+            { "name": "Error", "color": "red" }
+          ]
+        }
+      }
+    },
+    "post_creation_properties": {
+      "Transactions": {
+        "type": "relation",
+        "target_db": "transactions",
+        "note": "Add after Transactions DB is created"
+      },
+      "Transactions Imported": {
+        "type": "rollup",
+        "relation_property": "Transactions",
+        "rollup_property": "Description",
+        "function": "count"
+      },
+      "Total Amount": {
+        "type": "rollup",
+        "relation_property": "Transactions",
+        "rollup_property": "Amount",
+        "function": "sum"
+      }
+    }
+  },
+
+  "transactions": {
+    "title": "🧾 Transactions",
+    "icon": "🧾",
+    "properties": {
+      "Description": { "title": {} },
+      "Amount": { "number": { "format": "dollar" } },
+      "Date": { "date": {} },
+      "Account": {
+        "select": {
+          "options": [
+            { "name": "Chase Flex", "color": "blue" },
+            { "name": "Chase Checking", "color": "blue" },
+            { "name": "US Bank Checking", "color": "purple" },
+            { "name": "US Bank Savings", "color": "green" }
+          ]
+        }
+      },
+      "Source": {
+        "select": {
+          "options": [
+            { "name": "PDF Import", "color": "purple" },
+            { "name": "Manual", "color": "gray" }
+          ]
+        }
+      },
+      "Recurring": { "checkbox": {} },
+      "Notes": { "rich_text": {} }
+    },
+    "post_creation_properties": {
+      "Budget": {
+        "type": "relation",
+        "target_db": "budgets",
+        "note": "Links each transaction to a budget category for rollup calculations"
+      },
+      "Statement": {
+        "type": "relation",
+        "target_db": "statements",
+        "note": "Links transaction back to the source statement"
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "description": "Household investment and retirement accounts. Many fields TBD — Jon needs to provide details.",
+    "last_updated": "2026-06-09",
+    "action_required": [
+      "Jon: Provide 401k provider, contribution rate, and employer match details for both Jon and Jaime",
+      "Jon: Confirm Schwab account type and current balance",
+      "Jon: Provide Northwestern Mutual policy details and current cash value"
+    ]
+  },
+
+  "accounts": [
+    {
+      "id": "jack_custodial_ira",
+      "name": "Jack's Custodial IRA",
+      "type": "custodial_roth_ira",
+      "custodian": "Charles Schwab",
+      "beneficiary": "Jack Corral",
+      "monthly_contribution": 3.00,
+      "contribution_day": 7,
+      "payment_method": "Chase Freedom Flex",
+      "current_balance": null,
+      "advisor": {
+        "name": "Kirk Schildgen",
+        "phone": "913-253-3242",
+        "firm": "Charles Schwab"
+      },
+      "notes": "Custodial IRA — requires child to have earned income. Verify Jack has qualifying income. $3/mo is minimal; increase when budget allows.",
+      "2026_contribution_limit": 7000,
+      "status": "active"
+    },
+    {
+      "id": "schwab_investment",
+      "name": "Charles Schwab Account",
+      "type": "TBD",
+      "custodian": "Charles Schwab",
+      "monthly_contribution": 10.00,
+      "contribution_day": 15,
+      "payment_method": "Chase Freedom Flex",
+      "current_balance": null,
+      "account_type_options": ["individual_brokerage", "roth_ira", "traditional_ira"],
+      "notes": "Need to confirm account type. If this is Jon's IRA, 2026 limit is $7,000.",
+      "status": "needs_data"
+    },
+    {
+      "id": "jaime_401k",
+      "name": "Jaime's 401(k)",
+      "type": "401k",
+      "provider": "Alight Solutions",
+      "employer": "TBD",
+      "contribution_rate_percent": null,
+      "employer_match": {
+        "formula": null,
+        "vesting_schedule": null
+      },
+      "current_balance": null,
+      "notes": "Critical: Ensure contribution rate captures FULL employer match. Free money left on the table is the #1 financial mistake.",
+      "2026_contribution_limit": 23500,
+      "2026_catch_up_limit": 0,
+      "status": "needs_data"
+    },
+    {
+      "id": "jon_401k",
+      "name": "Jon's 401(k)",
+      "type": "401k",
+      "provider": null,
+      "employer": "TBD",
+      "contribution_rate_percent": null,
+      "employer_match": {
+        "formula": null,
+        "vesting_schedule": null
+      },
+      "current_balance": null,
+      "notes": "Need provider name and login details. Verify employer match is fully captured.",
+      "2026_contribution_limit": 23500,
+      "2026_catch_up_limit": 0,
+      "status": "needs_data"
+    },
+    {
+      "id": "northwestern_mutual",
+      "name": "Northwestern Mutual Life Policy",
+      "type": "whole_life_ibc",
+      "provider": "Northwestern Mutual",
+      "policy_type": "Whole Life / Infinite Banking Concept (IBC)",
+      "death_benefit": 1000000,
+      "term_years": 30,
+      "monthly_premium": 95.46,
+      "payment_day": 19,
+      "autopay_source": "US Bank Checking",
+      "cash_value": {
+        "current": null,
+        "growth_rate": null,
+        "loan_available": null
+      },
+      "notes": "IBC policy — cash value grows tax-deferred and can be borrowed against. Track cash value quarterly. Premium is both insurance cost and forced savings.",
+      "status": "needs_data"
+    }
+  ],
+
+  "roadmap_goals_2026": {
+    "priority_1": {
+      "goal": "Capture full employer 401k match (both Jon and Jaime)",
+      "rationale": "100% guaranteed return. Non-negotiable.",
+      "status": "verify",
+      "action": "Confirm both contribution rates meet or exceed employer match threshold"
+    },
+    "priority_2": {
+      "goal": "Build emergency fund to 3 months expenses (~$28,000)",
+      "rationale": "Financial stability foundation. Currently well below target.",
+      "target": 28000,
+      "current": null,
+      "status": "in_progress"
+    },
+    "priority_3": {
+      "goal": "Max Roth IRA contributions ($7,000/yr per person)",
+      "rationale": "Tax-free growth. 2026 deadline is April 15, 2027.",
+      "limit_per_person": 7000,
+      "household_limit": 14000,
+      "monthly_needed_per_person": 583.33,
+      "status": "not_started",
+      "notes": "Not feasible until emergency fund is solid and high-interest debt is eliminated."
+    },
+    "priority_4": {
+      "goal": "Max 401k contributions ($23,500/yr per person)",
+      "rationale": "Tax-deferred growth + employer match.",
+      "limit_per_person": 23500,
+      "household_limit": 47000,
+      "status": "aspirational",
+      "notes": "Long-term goal. Current budget doesn't support max contributions."
+    },
+    "priority_5": {
+      "goal": "Buy I-Bonds ($10,000/yr per person)",
+      "rationale": "Inflation-protected, government-backed. Good for emergency fund overflow.",
+      "limit_per_person": 10000,
+      "household_limit": 20000,
+      "purchase_url": "https://www.treasurydirect.gov",
+      "status": "aspirational",
+      "notes": "Consider after emergency fund is fully funded."
+    }
+  },
+
+  "investment_priority_order": [
+    "1. Employer 401k match (free money — ALWAYS max this first)",
+    "2. Pay off high-interest debt (anything above ~7%)",
+    "3. Emergency fund (3-6 months expenses)",
+    "4. Roth IRA ($7,000/yr)",
+    "5. Additional 401k contributions toward max ($23,500/yr)",
+    "6. I-Bonds ($10,000/yr)",
+    "7. Taxable brokerage account",
+    "8. 529 plans for kids' education"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "target_thresholds": {
+    "chase_portal_cpp": 1.5,
+    "venture_portal_cpp": 1.0,
+    "transfer_good_cpp": 1.8,
+    "transfer_great_cpp": 2.5,
+    "transfer_exceptional_cpp": 4.0
+  },
+  "decision_matrix": {
+    "cpp_below_1_5": {
+      "action": "Use Cash",
+      "strategy": "Pay cash and earn points on the booking using the optimal card (e.g., CSR via portal for 10x)."
+    },
+    "cpp_between_1_5_and_2_0": {
+      "action": "Use Chase Portal or Transfer",
+      "strategy": "If CPP is exactly 1.5, book via Chase Portal with CSR. If closer to 2.0, consider transferring to a partner if cash is tight, but cash + earning points might still be better."
+    },
+    "cpp_above_2_0": {
+      "action": "Transfer to Partner",
+      "strategy": "Excellent value. Transfer UR or Venture miles to the partner and book the award ticket/stay."
+    }
+  }
+}

@@ -1,0 +1,111 @@
+skills:
+  - name: allie-skill-builder
+    status: dev-only
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: calendar-automation
+    status: active
+    blocker: null
+    cron_count: 1
+    last_deployed: '2026-07-28'
+  - name: digital-storefront-automation
+    status: pending
+    blocker: Etsy API keys and Google Chat Webhook
+    cron_count: 4
+    last_deployed: '2026-07-14'
+  - name: digital-storefront-planner
+    status: pending
+    blocker: Etsy API keys and Google Chat Webhook
+    cron_count: 4
+    last_deployed: '2026-07-14'
+  - name: financial-automation
+    status: active
+    blocker: null
+    cron_count: 7
+    last_deployed: '2026-05-26'
+  - name: financial-planner
+    status: pending
+    blocker: Missing interest rates, debt balances, 401(k) details
+    cron_count: 7
+    last_deployed: '2026-06-09'
+  - name: health-automation
+    status: active
+    blocker: null
+    cron_count: 5
+    last_deployed: '2026-06-10'
+  - name: health-planner
+    status: active
+    blocker: null
+    cron_count: 5
+    last_deployed: '2026-06-10'
+  - name: home-maintenance
+    status: active
+    blocker: null
+    cron_count: 2
+    last_deployed: '2026-07-28'
+  - name: invention-processor
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: '2026-05-27'
+  - name: life-score
+    status: active
+    blocker: null
+    cron_count: 1
+    last_deployed: '2026-07-28'
+  - name: plaid-budget-sentinel
+    status: active
+    blocker: null
+    cron_count: 1
+    last_deployed: '2026-05-26'
+  - name: project-board
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: stock-fundamentals
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: stock-market-macro
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: stock-sentiment
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: stock-technicals
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: stock-weekly-briefing
+    status: active
+    blocker: null
+    cron_count: 1
+    last_deployed: null
+  - name: tax-planner
+    status: active
+    blocker: null
+    cron_count: 3
+    last_deployed: null
+  - name: travel-planner
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: work-context-handoff
+    status: active
+    blocker: null
+    cron_count: 0
+    last_deployed: null
+  - name: world-intelligence
+    status: parked
+    blocker: WORLDMONITOR_API_KEY needed
+    cron_count: 4
+    last_deployed: '2026-07-27'

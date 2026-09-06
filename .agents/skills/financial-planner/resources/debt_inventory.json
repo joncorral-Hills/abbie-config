@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "description": "Household debt inventory. Balances and rates marked TBD must be filled by Jon.",
+    "last_updated": "2026-06-09",
+    "action_required": [
+      "Jon: Provide current balance and interest rate for each TBD item",
+      "Jon: Confirm payoff dates for auto loans",
+      "Jon: Provide mortgage details (original amount, start date, term)"
+    ],
+    "strategy_options": {
+      "avalanche": "Pay minimums on all debts, throw extra at highest-rate debt first. Minimizes total interest paid.",
+      "snowball": "Pay minimums on all debts, throw extra at smallest-balance debt first. Maximizes psychological wins.",
+      "hybrid": "Avalanche by default, but knock out any debt under $2,000 first for quick wins."
+    }
+  },
+
+  "debts": [
+    {
+      "id": "mortgage",
+      "name": "Mortgage",
+      "type": "mortgage",
+      "monthly_payment": 2160.57,
+      "interest_rate": null,
+      "current_balance": null,
+      "original_amount": null,
+      "term_years": null,
+      "start_date": null,
+      "lender": "TBD",
+      "payment_day": 1,
+      "autopay_source": "US Bank Checking",
+      "escrow_included": true,
+      "principal_and_interest_only": null,
+      "notes": "Bi-weekly payment option could save significant interest. Ask lender about switching.",
+      "biweekly_savings_estimate": {
+        "formula": "26 half-payments/yr = 13 full payments vs 12 — one extra payment/yr to principal",
+        "biweekly_amount": 1080.29,
+        "extra_annual_principal": 2160.57,
+        "estimated_years_saved": "4-7 years depending on rate and remaining term"
+      },
+      "status": "needs_data"
+    },
+    {
+      "id": "honda",
+      "name": "Honda Car Note",
+      "type": "auto_loan",
+      "monthly_payment": 670.00,
+      "interest_rate": null,
+      "current_balance": null,
+      "original_amount": null,
+      "term_months": null,
+      "start_date": null,
+      "lender": "Honda Financial Services",
+      "payment_day": 16,
+      "autopay_source": "US Bank Checking",
+      "vehicle": "TBD — ask Jon for year/model",
+      "status": "needs_data"
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla Car Note",
+      "type": "auto_loan",
+      "monthly_payment": 435.00,
+      "interest_rate": null,
+      "current_balance": null,
+      "original_amount": null,
+      "term_months": null,
+      "start_date": null,
+      "lender": "Tesla Finance",
+      "payment_day": 19,
+      "autopay_source": "US Bank Checking",
+      "vehicle": "TBD — ask Jon for year/model",
+      "status": "needs_data"
+    },
+    {
+      "id": "student_loan",
+      "name": "Student Loan",
+      "type": "student_loan",
+      "monthly_payment": 217.00,
+      "interest_rate": null,
+      "current_balance": null,
+      "original_amount": null,
+      "servicer": "TBD",
+      "payment_day": null,
+      "autopay_source": "TBD",
+      "federal_or_private": null,
+      "income_driven_eligible": null,
+      "notes": "Check if auto-pay rate discount applies (typically 0.25% reduction for federal loans).",
+      "status": "needs_data"
+    },
+    {
+      "id": "jaime_loan",
+      "name": "Jaime's Loan",
+      "type": "personal_loan",
+      "monthly_payment": 312.00,
+      "interest_rate": null,
+      "current_balance": null,
+      "original_amount": null,
+      "lender": "TBD",
+      "payment_day": 16,
+      "autopay_source": "US Bank Checking",
+      "notes": "Need to determine loan type (personal, consolidation, etc.) and remaining term.",
+      "status": "needs_data"
+    },
+    {
+      "id": "er_payment",
+      "name": "ER Payment Plan",
+      "type": "medical_debt",
+      "monthly_payment": 150.00,
+      "interest_rate": 0.0,
+      "current_balance": 2400.00,
+      "remaining_months": 16,
+      "estimated_payoff_date": "2027-10",
+      "lender": "Hospital/Medical Provider",
+      "payment_day": null,
+      "autopay_source": "US Bank Savings",
+      "notes": "0% interest — do NOT pay extra. Minimum payments only. Money is better in savings or paying higher-rate debt.",
+      "status": "active"
+    }
+  ],
+
+  "total_monthly_minimum_payments": 3944.57,
+  "total_monthly_minimum_excl_mortgage": 1784.00,
+
+  "debt_free_milestones": [
+    { "milestone": "ER Payment paid off", "est_date": "2027-10", "frees_up": 150.00 },
+    { "milestone": "All non-mortgage debt paid off", "est_date": "TBD — need rates/balances", "frees_up": 1784.00 },
+    { "milestone": "Mortgage paid off", "est_date": "TBD — need rate/balance/term", "frees_up": 2160.57 }
+  ],
+
+  "amortization_formulas": {
+    "monthly_payment": "M = P * [r(1+r)^n] / [(1+r)^n - 1] where P=principal, r=monthly_rate, n=total_months",
+    "remaining_balance": "B = P * [(1+r)^n - (1+r)^k] / [(1+r)^n - 1] where k=payments_made",
+    "total_interest": "I = (M * n) - P",
+    "extra_payment_savings": "Compare total interest with vs without extra monthly principal payment"
+  }
+}

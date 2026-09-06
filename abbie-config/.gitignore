@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Sensitive data - never commit
+*.pdf
+*.csv
+secrets/
+credentials/
+
+# Scratch/temp files
+scratch/
+*.tmp
+*.bak
+
+# Antigravity brain data (conversation-specific, stays local)
+# Don't ignore .agents/ — that's Abbie's skill configs
+
+# Notion bridge config (contains API key)
+scripts/.notion_config.json

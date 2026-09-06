@@ -1,0 +1,31 @@
+{
+  "_comment": "Estimated 2026 Tax Brackets. Values will need to be officially updated when IRS releases final 2026 numbers.",
+  "tax_year": 2026,
+  "standard_deduction": {
+    "MFJ": 30000,
+    "Single": 15000
+  },
+  "salt_cap": 10000,
+  "student_loan_interest_cap": 2500,
+  "medical_floor_pct": 0.075,
+  "ss_wage_base": 175000,
+  "max_401k": 24000,
+  "federal_2026": {
+    "MFJ": [
+      {"bracket": 0.10, "min": 0, "max": 24000},
+      {"bracket": 0.12, "min": 24001, "max": 97000},
+      {"bracket": 0.22, "min": 97001, "max": 208000},
+      {"bracket": 0.24, "min": 208001, "max": 400000},
+      {"bracket": 0.32, "min": 400001, "max": 505000},
+      {"bracket": 0.35, "min": 505001, "max": 760000},
+      {"bracket": 0.37, "min": 760001, "max": 999999999}
+    ]
+  },
+  "kansas_2026": {
+    "MFJ": [
+      {"bracket": 0.031, "min": 0, "max": 30000},
+      {"bracket": 0.0525, "min": 30001, "max": 60000},
+      {"bracket": 0.057, "min": 60001, "max": 999999999}
+    ]
+  }
+}

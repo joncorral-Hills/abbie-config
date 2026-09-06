@@ -1,0 +1,52 @@
+{
+  "debts": [
+    {
+      "name": "Mortgage",
+      "balance": 283000,
+      "rate": 0.0699,
+      "min_payment": 2161,
+      "type": "mortgage",
+      "lender": "US Bank"
+    },
+    {
+      "name": "Honda",
+      "balance": 18500,
+      "rate": 0.0549,
+      "min_payment": 670,
+      "type": "auto",
+      "lender": "Honda Financial"
+    },
+    {
+      "name": "Tesla",
+      "balance": 22000,
+      "rate": 0.0399,
+      "min_payment": 435,
+      "type": "auto",
+      "lender": "Tesla Finance"
+    },
+    {
+      "name": "Student Loan",
+      "balance": 12500,
+      "rate": 0.045,
+      "min_payment": 217,
+      "type": "student",
+      "lender": "Nelnet"
+    },
+    {
+      "name": "Jaime Loan",
+      "balance": 8400,
+      "rate": 0.0,
+      "min_payment": 312,
+      "type": "personal",
+      "lender": "Family"
+    },
+    {
+      "name": "ER Payment",
+      "balance": 2100,
+      "rate": 0.0,
+      "min_payment": 150,
+      "type": "medical",
+      "lender": "Hospital"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "weights": {
+    "demand": 0.30,
+    "low_competition": 0.25,
+    "profit_margin": 0.25,
+    "trend_momentum": 0.20
+  },
+  "thresholds": {
+    "high_potential": 75,
+    "validated": 60,
+    "marginal": 40,
+    "reject": 25
+  },
+  "demand_scoring": {
+    "tiers": [
+      {
+        "label": "explosive",
+        "min_monthly_searches": 50000,
+        "score": 100,
+        "description": "Massive search volume indicating huge market demand"
+      },
+      {
+        "label": "high",
+        "min_monthly_searches": 20000,
+        "score": 85,
+        "description": "Strong sustained demand with proven buyer intent"
+      },
+      {
+        "label": "moderate",
+        "min_monthly_searches": 5000,
+        "score": 65,
+        "description": "Solid demand sufficient for profitable niche entry"
+      },
+      {
+        "label": "emerging",
+        "min_monthly_searches": 1000,
+        "score": 45,
+        "description": "Growing demand with potential upside"
+      },
+      {
+        "label": "low",
+        "min_monthly_searches": 0,
+        "score": 20,
+        "description": "Minimal demand — risky unless highly targeted"
+      }
+    ]
+  },
+  "competition_scoring": {
+    "tiers": [
+      {
+        "label": "wide_open",
+        "max_competing_listings": 500,
+        "score": 100,
+        "description": "Almost no competition — first-mover advantage"
+      },
+      {
+        "label": "low",
+        "max_competing_listings": 5000,
+        "score": 80,
+        "description": "Few competitors, easy to differentiate"
+      },
+      {
+        "label": "moderate",
+        "max_competing_listings": 25000,
+        "score": 55,
+        "description": "Competitive but room for quality entries"
+      },
+      {
+        "label": "high",
+        "max_competing_listings": 100000,
+        "score": 30,
+        "description": "Crowded market — requires strong differentiation"
+      },
+      {
+        "label": "saturated",
+        "max_competing_listings": 999999999,
+        "score": 10,
+        "description": "Extremely saturated — avoid unless unique angle exists"
+      }
+    ]
+  },
+  "profitability_scoring": {
+    "tiers": [
+      {
+        "label": "high_margin",
+        "min_avg_price": 15.0,
+        "score": 100,
+        "description": "High price point with strong margins for digital goods"
+      },
+      {
+        "label": "good_margin",
+        "min_avg_price": 8.0,
+        "score": 75,
+        "description": "Solid pricing that supports sustainable revenue"
+      },
+      {
+        "label": "moderate_margin",
+        "min_avg_price": 4.0,
+        "score": 50,
+        "description": "Mid-range pricing — viable with volume"
+      },
+      {
+        "label": "thin_margin",
+        "min_avg_price": 2.0,
+        "score": 25,
+        "description": "Low pricing — requires high volume or bundling"
+      },
+      {
+        "label": "unprofitable",
+        "min_avg_price": 0.0,
+        "score": 10,
+        "description": "Price too low for sustainable business"
+      }
+    ]
+  },
+  "trend_momentum_scoring": {
+    "method": "percentage_change_90d",
+    "tiers": [
+      {
+        "label": "surging",
+        "min_growth_pct": 50,
+        "score": 100,
+        "description": "Explosive growth — act now"
+      },
+      {
+        "label": "growing",
+        "min_growth_pct": 20,
+        "score": 80,
+        "description": "Strong upward trajectory"
+      },
+      {
+        "label": "stable",
+        "min_growth_pct": -5,
+        "score": 55,
+        "description": "Steady demand with no significant change"
+      },
+      {
+        "label": "declining",
+        "min_growth_pct": -25,
+        "score": 30,
+        "description": "Losing momentum — proceed with caution"
+      },
+      {
+        "label": "collapsing",
+        "min_growth_pct": -100,
+        "score": 10,
+        "description": "Rapid decline — avoid"
+      }
+    ]
+  }
+}

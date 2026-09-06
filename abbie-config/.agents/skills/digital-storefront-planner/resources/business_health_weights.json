@@ -1,0 +1,144 @@
+{
+  "metrics": {
+    "revenue_growth": {
+      "weight": 0.25,
+      "target": 15.0,
+      "unit": "percent_mom",
+      "description": "Month-over-month revenue growth rate",
+      "benchmarks": {
+        "excellent": 25,
+        "good": 15,
+        "fair": 5,
+        "poor": -5
+      }
+    },
+    "conversion_rate": {
+      "weight": 0.20,
+      "target": 3.0,
+      "unit": "percent",
+      "description": "Percentage of shop visitors who complete a purchase",
+      "benchmarks": {
+        "excellent": 5.0,
+        "good": 3.0,
+        "fair": 1.5,
+        "poor": 0.5
+      }
+    },
+    "avg_order_value": {
+      "weight": 0.15,
+      "target": 10.0,
+      "unit": "usd",
+      "description": "Average revenue per completed order",
+      "benchmarks": {
+        "excellent": 15.0,
+        "good": 10.0,
+        "fair": 6.0,
+        "poor": 3.0
+      }
+    },
+    "review_rating": {
+      "weight": 0.15,
+      "target": 4.8,
+      "unit": "stars",
+      "description": "Average customer review rating (1-5 stars)",
+      "benchmarks": {
+        "excellent": 4.9,
+        "good": 4.7,
+        "fair": 4.3,
+        "poor": 3.5
+      }
+    },
+    "listing_quality": {
+      "weight": 0.15,
+      "target": 80.0,
+      "unit": "score_0_100",
+      "description": "Average SEO audit score across all active listings",
+      "benchmarks": {
+        "excellent": 90,
+        "good": 80,
+        "fair": 60,
+        "poor": 40
+      }
+    },
+    "product_diversity": {
+      "weight": 0.10,
+      "target": 5.0,
+      "unit": "categories",
+      "description": "Number of distinct product categories with active listings",
+      "benchmarks": {
+        "excellent": 8,
+        "good": 5,
+        "fair": 3,
+        "poor": 1
+      }
+    }
+  },
+  "score_interpretation": {
+    "thriving": {
+      "min_score": 80,
+      "max_score": 100,
+      "label": "Thriving",
+      "color": "#22c55e",
+      "description": "Business is performing excellently across all dimensions. Focus on scaling and optimizing.",
+      "recommended_actions": [
+        "Expand into adjacent niches",
+        "Launch premium product bundles",
+        "Invest in advanced SEO optimization",
+        "Consider cross-platform expansion"
+      ]
+    },
+    "growing": {
+      "min_score": 60,
+      "max_score": 79,
+      "label": "Growing",
+      "color": "#3b82f6",
+      "description": "Solid foundation with room for improvement. Target the weakest metrics for highest ROI.",
+      "recommended_actions": [
+        "Audit and improve lowest-scoring listings",
+        "Increase product variety in proven niches",
+        "Optimize pricing based on competitor analysis",
+        "Establish consistent review generation strategy"
+      ]
+    },
+    "developing": {
+      "min_score": 40,
+      "max_score": 59,
+      "label": "Developing",
+      "color": "#f59e0b",
+      "description": "Early stage with significant growth potential. Focus on fundamentals before scaling.",
+      "recommended_actions": [
+        "Perfect SEO on all existing listings",
+        "Research and validate 2-3 high-potential niches",
+        "Build review base through excellent customer service",
+        "Study and learn from top competitors"
+      ]
+    },
+    "critical": {
+      "min_score": 0,
+      "max_score": 39,
+      "label": "Critical",
+      "color": "#ef4444",
+      "description": "Urgent attention needed. Core business fundamentals require immediate improvement.",
+      "recommended_actions": [
+        "Complete full listing audit and fix all SEO issues",
+        "Re-evaluate niche selection with fresh research",
+        "Review and adjust all pricing",
+        "Consider pivoting product strategy entirely"
+      ]
+    }
+  },
+  "report_format": {
+    "sections": [
+      "executive_summary",
+      "metric_breakdown",
+      "trend_analysis",
+      "top_performing_products",
+      "underperforming_products",
+      "competitive_position",
+      "recommendations",
+      "next_month_goals"
+    ],
+    "comparison_periods": ["month_over_month", "quarter_over_quarter", "year_over_year"],
+    "visualization_types": ["sparkline", "bar_chart", "gauge"]
+  }
+}

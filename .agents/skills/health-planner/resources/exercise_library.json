@@ -1,0 +1,696 @@
+{
+  "_meta": {
+    "description": "Exercise form cues, technique tips, warmup recommendations, and common mistakes for gym exercises. Matches Hevy naming conventions.",
+    "last_updated": "2026-06-10",
+    "total_exercises": 41,
+    "muscle_groups": ["chest", "back", "shoulders", "quadriceps", "hamstrings", "glutes", "calves", "biceps", "triceps", "abdominals"],
+    "usage": "Triggered when Hevy sync detects a user performing an exercise for the first time (no prior history). Sent as form coaching via Telegram."
+  },
+
+  "exercises": [
+    {
+      "exercise_name": "Bench Press (Barbell)",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Retract and depress shoulder blades — pinch them together and down",
+        "Plant feet flat on the floor, drive through heels for leg drive",
+        "Grip bar slightly wider than shoulder width — wrists stacked over elbows",
+        "Lower bar to nipple line with controlled tempo (2-3 seconds down)",
+        "Press up and slightly back toward the rack — bar path is a slight J-curve"
+      ],
+      "common_mistakes": [
+        "Flaring elbows to 90° (keep ~45-75° angle to protect shoulders)",
+        "Bouncing bar off chest instead of pausing briefly at bottom",
+        "Lifting hips off the bench — maintain arch but keep glutes planted"
+      ],
+      "warmup_recommendation": "2 sets of 10 with empty bar, then 1 set at 50% working weight, 1 set at 75%",
+      "muscle_activation": "Chest stretch at the bottom, strong chest and tricep squeeze at lockout"
+    },
+    {
+      "exercise_name": "Bench Press (Dumbbell)",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Start with dumbbells on thighs, kick them up one at a time as you lie back",
+        "Retract shoulder blades and maintain a slight arch",
+        "Lower dumbbells to chest level with palms facing forward",
+        "Press up, allowing a slight inward arc at the top for chest squeeze",
+        "Keep wrists neutral — don't let them bend backward"
+      ],
+      "common_mistakes": [
+        "Going too deep and overstretching the shoulder joint",
+        "Using asymmetric range of motion (one arm lower than the other)",
+        "Dropping dumbbells to the side at end of set — kick knees up, sit forward"
+      ],
+      "warmup_recommendation": "1 set of 12 at 50% working weight, 1 set of 8 at 75%",
+      "muscle_activation": "Deep chest stretch at bottom, peak contraction when dumbbells come together at top"
+    },
+    {
+      "exercise_name": "Incline Bench Press (Barbell)",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Set bench to 30-45° angle — lower angle = more chest, higher = more shoulders",
+        "Retract shoulder blades against the bench pad",
+        "Lower bar to upper chest / clavicle area",
+        "Press straight up — bar path is more vertical than flat bench",
+        "Keep feet planted and maintain back contact with bench"
+      ],
+      "common_mistakes": [
+        "Setting bench too steep (>45°) which turns it into a shoulder press",
+        "Letting the bar drift forward over the face",
+        "Losing shoulder blade retraction as the set progresses"
+      ],
+      "warmup_recommendation": "1 set of 10 with empty bar on incline, 1 set at 60% working weight",
+      "muscle_activation": "Upper chest and front delts — feel the stretch across upper pecs at bottom"
+    },
+    {
+      "exercise_name": "Incline Bench Press (Dumbbell)",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Set bench to 30-45° incline",
+        "Kick dumbbells up and press to start position before beginning reps",
+        "Lower with control to upper chest level, elbows at ~45° from torso",
+        "Press up with slight inward arc for upper chest contraction",
+        "Maintain shoulder blade retraction throughout"
+      ],
+      "common_mistakes": [
+        "Using momentum to swing dumbbells up instead of controlled press",
+        "Flaring elbows to 90° on the descent",
+        "Arching excessively — keep lower back on the bench"
+      ],
+      "warmup_recommendation": "1 set of 12 at 50% working weight",
+      "muscle_activation": "Strong upper chest and front deltoid engagement throughout the press"
+    },
+    {
+      "exercise_name": "Cable Fly",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Set cables to appropriate height — high for lower chest, mid for mid, low for upper",
+        "Step forward into a staggered stance for stability",
+        "Maintain a slight bend in elbows throughout — arms should look like hugging a tree",
+        "Squeeze chest hard at the midpoint, control the return",
+        "Focus on the stretch — feel pecs lengthening on the eccentric"
+      ],
+      "common_mistakes": [
+        "Bending elbows too much, turning it into a press instead of a fly",
+        "Using too much weight and losing the stretch/squeeze",
+        "Leaning too far forward and using body momentum"
+      ],
+      "warmup_recommendation": "1 light set of 15 to establish mind-muscle connection",
+      "muscle_activation": "Deep chest stretch at full extension, intense chest squeeze at contraction point"
+    },
+    {
+      "exercise_name": "Dips (Chest)",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Lean torso forward ~30° to target chest over triceps",
+        "Grip bars slightly wider than shoulder width if adjustable",
+        "Lower until upper arms are parallel to floor or slight stretch in chest",
+        "Press up by squeezing chest — don't just push with triceps",
+        "Keep elbows angled slightly outward (not flared, not tucked)"
+      ],
+      "common_mistakes": [
+        "Staying upright (this targets triceps instead of chest)",
+        "Going too deep and stressing the shoulder joint",
+        "Swinging or kipping — keep movement controlled"
+      ],
+      "warmup_recommendation": "1 set of 8-10 bodyweight dips at controlled tempo",
+      "muscle_activation": "Lower chest stretch at bottom, chest and tricep engagement at top"
+    },
+    {
+      "exercise_name": "Push Up",
+      "primary_muscle_group": "chest",
+      "technique_cues": [
+        "Hands slightly wider than shoulder width, fingers pointing forward",
+        "Body forms a straight line from head to heels — engage core and glutes",
+        "Lower chest to 1 inch from floor with elbows at ~45° angle",
+        "Push through palms, fully extend arms at top",
+        "Protract shoulder blades at top for serratus anterior activation"
+      ],
+      "common_mistakes": [
+        "Sagging hips or piking them up — maintain rigid plank position",
+        "Flaring elbows straight out to the sides (injury risk)",
+        "Only doing partial reps — go to full depth"
+      ],
+      "warmup_recommendation": "Perform as warmup exercise: 2 sets of 10-15 before pressing movements",
+      "muscle_activation": "Chest, front delts, and triceps — should feel across the entire chest"
+    },
+    {
+      "exercise_name": "Deadlift (Barbell)",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Feet hip-width apart, bar over mid-foot — shins nearly touching bar",
+        "Hinge at hips and grip bar just outside knees (double overhand or mixed grip)",
+        "Flatten back, chest up, take slack out of the bar before pulling",
+        "Drive through the floor with legs first, then extend hips — bar stays close to body",
+        "Lock out by squeezing glutes at top — don't hyperextend the lower back"
+      ],
+      "common_mistakes": [
+        "Rounding the lower back — this is the #1 injury risk, keep it neutral",
+        "Starting with hips too low (it's not a squat) or too high (stiff-leg)",
+        "Jerking the bar off the floor instead of building tension first"
+      ],
+      "warmup_recommendation": "Hip hinges × 10, then 135 lbs × 5, then 60% × 5, then 80% × 3",
+      "muscle_activation": "Entire posterior chain — hamstrings and glutes drive the lift, erectors stabilize"
+    },
+    {
+      "exercise_name": "Bent Over Row (Barbell)",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Hinge at hips to ~45° torso angle, slight knee bend",
+        "Grip bar shoulder-width, pull to lower chest/upper abs",
+        "Lead with elbows — drive them behind you, squeeze shoulder blades together",
+        "Control the negative — don't just let the weight drop",
+        "Keep core braced to protect lower back throughout"
+      ],
+      "common_mistakes": [
+        "Standing too upright, turning it into an upright row",
+        "Using momentum and body English to swing the weight up",
+        "Not fully contracting at the top — row until bar touches torso"
+      ],
+      "warmup_recommendation": "1 set of 10 with just the bar, 1 set at 50% working weight",
+      "muscle_activation": "Lats, rhomboids, and rear delts — feel the squeeze between shoulder blades at top"
+    },
+    {
+      "exercise_name": "Lat Pulldown (Cable)",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Grip bar slightly wider than shoulder width — overhand grip",
+        "Sit tall, lean back slightly (~10-15°), chest up",
+        "Pull bar to upper chest, driving elbows down and back",
+        "Squeeze lats at the bottom — imagine putting your elbows in your back pockets",
+        "Control the bar back up — full stretch at top, feel lats lengthening"
+      ],
+      "common_mistakes": [
+        "Leaning too far back and turning it into a row",
+        "Pulling with biceps instead of initiating with lats",
+        "Using momentum — yanking the weight down and letting it snap back up"
+      ],
+      "warmup_recommendation": "1 set of 12-15 at light weight to feel the lat stretch and contraction",
+      "muscle_activation": "Lats primarily — you should feel the stretch at the top and contraction at the bottom"
+    },
+    {
+      "exercise_name": "Pull Up",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Grip bar slightly wider than shoulder width, overhand grip",
+        "Start from a dead hang — full arm extension, shoulders engaged (not relaxed)",
+        "Pull by driving elbows down — chin clears the bar at the top",
+        "Control the descent — don't just drop down",
+        "Avoid excessive kipping — strict form builds more strength"
+      ],
+      "common_mistakes": [
+        "Not going to full extension at the bottom (partial reps)",
+        "Craning neck to get chin over bar instead of actually pulling higher",
+        "Swinging and using momentum (unless intentionally doing kipping pull-ups)"
+      ],
+      "warmup_recommendation": "Dead hangs for 15-20 seconds, then 1 set of scapular pull-ups (just shrug up from hang)",
+      "muscle_activation": "Lats, biceps, and rear delts — feel lats engage as primary mover"
+    },
+    {
+      "exercise_name": "Seated Cable Row",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Sit upright with slight lean forward to start — knees slightly bent",
+        "Pull handle to lower chest/upper abs, driving elbows straight back",
+        "Squeeze shoulder blades together at peak contraction — 1 second hold",
+        "Return with control, allowing a slight stretch forward but don't round the back",
+        "Keep chest proud throughout the movement"
+      ],
+      "common_mistakes": [
+        "Excessive body rocking back and forth to generate momentum",
+        "Rounding the back on the stretch portion",
+        "Shrugging shoulders up instead of pulling elbows back"
+      ],
+      "warmup_recommendation": "1 set of 12-15 at light weight focusing on the squeeze",
+      "muscle_activation": "Mid-back (rhomboids), lats, and rear delts — feel the contraction between shoulder blades"
+    },
+    {
+      "exercise_name": "T-Bar Row",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Straddle the bar, hinge at hips to ~45° torso angle",
+        "Use a close-grip handle — pull toward chest",
+        "Drive elbows past torso, squeeze at the top",
+        "Keep core tight to protect lower back",
+        "Control the eccentric — don't bounce at the bottom"
+      ],
+      "common_mistakes": [
+        "Standing too upright, reducing back engagement",
+        "Using lower back to jerk the weight up instead of pulling with lats",
+        "Not getting full range of motion — pull until handle touches chest"
+      ],
+      "warmup_recommendation": "1 set of 10 at 50% working weight, focus on lat engagement",
+      "muscle_activation": "Thick mid-back contraction — lats, rhomboids, traps, and rear delts"
+    },
+    {
+      "exercise_name": "Single Arm Dumbbell Row",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "One hand and knee on bench, opposite foot on floor for stability",
+        "Let the dumbbell hang straight down, then row to hip/lower rib",
+        "Drive elbow up and back — think pulling a lawn mower cord",
+        "Rotate torso slightly at top for extra range of motion",
+        "Lower with control — full stretch at bottom, lat fully lengthened"
+      ],
+      "common_mistakes": [
+        "Twisting the torso excessively to cheat the weight up",
+        "Rowing to the armpit instead of the hip (too much shoulder, not enough lat)",
+        "Using too heavy a weight and losing control of the movement"
+      ],
+      "warmup_recommendation": "1 set of 10 per side at light weight to establish the movement pattern",
+      "muscle_activation": "Unilateral lat engagement — feel the stretch at bottom and squeeze at hip level"
+    },
+    {
+      "exercise_name": "Overhead Press (Barbell)",
+      "primary_muscle_group": "shoulders",
+      "technique_cues": [
+        "Grip bar just outside shoulder width, bar resting on front delts",
+        "Brace core hard — squeeze glutes to prevent lower back arch",
+        "Press straight up, moving head slightly back to let bar pass, then forward once bar clears",
+        "Lock out directly overhead — bar should be over mid-foot at top",
+        "Lower with control back to front delt starting position"
+      ],
+      "common_mistakes": [
+        "Excessive lower back arch — this means the weight is too heavy or core isn't braced",
+        "Pressing the bar forward instead of straight overhead",
+        "Not using full range of motion — bar should touch delts at bottom"
+      ],
+      "warmup_recommendation": "Empty bar × 10, then 50% × 8, then 75% × 5. Include arm circles and band pull-aparts.",
+      "muscle_activation": "Front and lateral delts, with triceps at lockout — shoulders should burn, not lower back"
+    },
+    {
+      "exercise_name": "Lateral Raise (Dumbbell)",
+      "primary_muscle_group": "shoulders",
+      "technique_cues": [
+        "Stand with slight forward lean, dumbbells at sides",
+        "Raise arms out to the sides until parallel with floor — lead with elbows",
+        "Slight bend in elbows throughout (not straight arms, not bent rows)",
+        "Think about pouring water out of a pitcher at the top (pinkies slightly higher)",
+        "Lower with control — 2-3 second negative for maximum tension"
+      ],
+      "common_mistakes": [
+        "Using too much weight and swinging — this is a light, controlled exercise",
+        "Shrugging traps to get the weight up (keep shoulders down)",
+        "Raising too high above shoulder level — parallel is sufficient"
+      ],
+      "warmup_recommendation": "1 set of 15-20 with very light weight (5-10 lbs) to pre-exhaust and warm the joint",
+      "muscle_activation": "Lateral deltoid burn — should feel it on the outside of the shoulder cap"
+    },
+    {
+      "exercise_name": "Face Pull (Cable)",
+      "primary_muscle_group": "shoulders",
+      "technique_cues": [
+        "Set cable at upper chest to face height with rope attachment",
+        "Pull rope toward face, separating the ends as you pull",
+        "At end position, hands should be beside your ears, elbows high and back",
+        "Squeeze rear delts and external rotators at peak contraction — 2 second hold",
+        "Keep upper arms parallel to the floor throughout"
+      ],
+      "common_mistakes": [
+        "Using too much weight and turning it into a row",
+        "Not separating the rope — just pulling it straight to the face",
+        "Leaning back excessively to move the weight"
+      ],
+      "warmup_recommendation": "Use face pulls as a warmup: 2 sets of 15-20 before any pressing day",
+      "muscle_activation": "Rear delts, rhomboids, and external rotators — essential for shoulder health"
+    },
+    {
+      "exercise_name": "Arnold Press (Dumbbell)",
+      "primary_muscle_group": "shoulders",
+      "technique_cues": [
+        "Start with dumbbells at shoulder height, palms facing you (like the top of a curl)",
+        "As you press up, rotate palms outward so they face forward at the top",
+        "Full lockout overhead with palms facing away from you",
+        "Reverse the rotation on the way down — palms face you at bottom",
+        "Keep the rotation smooth and continuous — don't pause mid-rotation"
+      ],
+      "common_mistakes": [
+        "Rushing the rotation — the controlled twist IS the exercise",
+        "Not pressing to full lockout overhead",
+        "Arching the lower back — keep core tight, use a bench with back support if needed"
+      ],
+      "warmup_recommendation": "1 set of 10 with light dumbbells (10-15 lbs) to groove the rotation pattern",
+      "muscle_activation": "All three deltoid heads through the rotation — front delts, lateral delts at top"
+    },
+    {
+      "exercise_name": "Reverse Fly (Dumbbell)",
+      "primary_muscle_group": "shoulders",
+      "technique_cues": [
+        "Hinge at hips, torso nearly parallel to floor (or use an incline bench face-down)",
+        "Let dumbbells hang below with slight elbow bend",
+        "Raise arms out to the sides, squeezing shoulder blades together at top",
+        "Lead with elbows — think spreading your wings",
+        "Lower slowly — 2-3 second eccentric for maximum rear delt work"
+      ],
+      "common_mistakes": [
+        "Standing too upright (turns into a lateral raise)",
+        "Using momentum to swing the weight up",
+        "Shrugging traps instead of isolating rear delts"
+      ],
+      "warmup_recommendation": "1 set of 15 with very light weight — rear delts are small muscles",
+      "muscle_activation": "Rear deltoids and upper back — feel the squeeze between shoulder blades"
+    },
+    {
+      "exercise_name": "Squat (Barbell)",
+      "primary_muscle_group": "quadriceps",
+      "technique_cues": [
+        "Bar position: high bar (on traps) or low bar (on rear delts) — pick one and be consistent",
+        "Feet shoulder-width or slightly wider, toes angled out 15-30°",
+        "Brace core hard — big breath into belly, hold it throughout rep (valsalva)",
+        "Break at hips and knees simultaneously, sit down between your legs",
+        "Hit parallel (hip crease at or below knee) — drive up through mid-foot"
+      ],
+      "common_mistakes": [
+        "Knees caving inward (valgus) — push knees out in line with toes",
+        "Rising hips first causing a 'good morning squat' — keep chest up",
+        "Not hitting depth — half squats don't count and overload the knees"
+      ],
+      "warmup_recommendation": "Bodyweight squats × 15, empty bar × 10, 50% × 8, 75% × 5, 90% × 2",
+      "muscle_activation": "Quads, glutes, and adductors — feel quads stretch at bottom, glutes drive at top"
+    },
+    {
+      "exercise_name": "Romanian Deadlift (Barbell)",
+      "primary_muscle_group": "hamstrings",
+      "technique_cues": [
+        "Hinge at hips, not waist — push hips back as if closing a car door with your butt",
+        "Keep bar close to shins and thighs throughout the descent",
+        "Slight knee bend (15-20°) — this is NOT a stiff-leg deadlift",
+        "Feel the deep stretch in hamstrings at the bottom — go as low as flexibility allows",
+        "Squeeze glutes hard to return to standing — lock out hips at top"
+      ],
+      "common_mistakes": [
+        "Rounding the lower back — maintain neutral spine, keep chest proud",
+        "Going too heavy too soon — master the hip hinge pattern first",
+        "Bending knees too much, turning it into a conventional deadlift"
+      ],
+      "warmup_recommendation": "2 sets of 10 bodyweight hip hinges, then 1 set of 8 at 50% working weight",
+      "muscle_activation": "Deep hamstring stretch at the bottom, strong glute squeeze at the top"
+    },
+    {
+      "exercise_name": "Leg Press",
+      "primary_muscle_group": "quadriceps",
+      "technique_cues": [
+        "Foot placement: mid-platform shoulder-width for balanced quad/glute work",
+        "Higher feet = more glute/hamstring; lower feet = more quad (but more knee stress)",
+        "Lower sled until knees are at ~90° — don't let lower back round off the pad",
+        "Press through the whole foot — don't just push with toes",
+        "Don't lock out knees at top — keep slight bend to maintain tension"
+      ],
+      "common_mistakes": [
+        "Going too deep and letting the lower back curl off the pad (butt wink)",
+        "Locking out knees completely at the top (dangerous under heavy load)",
+        "Using a too-narrow foot stance that stresses the knees"
+      ],
+      "warmup_recommendation": "1 set of 15 at 40% working weight to warm up the knee joint",
+      "muscle_activation": "Quads primarily (with lower foot placement) or quads + glutes (higher placement)"
+    },
+    {
+      "exercise_name": "Leg Extension (Machine)",
+      "primary_muscle_group": "quadriceps",
+      "technique_cues": [
+        "Adjust pad to sit just above your ankles, not on the shins",
+        "Sit back fully in the seat, grip the handles",
+        "Extend legs to full lockout — squeeze quads hard at the top for 1 second",
+        "Lower with control — 3 second negative for maximum quad tension",
+        "Keep hips planted — don't use momentum to swing the weight"
+      ],
+      "common_mistakes": [
+        "Using too much weight and swinging — this is an isolation exercise",
+        "Not reaching full extension at the top — lock it out for peak contraction",
+        "Lifting hips off the seat to generate momentum"
+      ],
+      "warmup_recommendation": "1 set of 15 at light weight — great as a pre-activation exercise before squats",
+      "muscle_activation": "Pure quadriceps isolation — burn should be in the front of the thigh"
+    },
+    {
+      "exercise_name": "Leg Curl (Machine)",
+      "primary_muscle_group": "hamstrings",
+      "technique_cues": [
+        "Adjust pad to sit just above your heels (Achilles area)",
+        "Lying: lie flat, grab handles, keep hips pressed into pad",
+        "Curl heels toward glutes — squeeze hamstrings at peak contraction",
+        "Lower slowly — 3 second eccentric for full stretch",
+        "Don't let hips rise off the pad to assist the curl"
+      ],
+      "common_mistakes": [
+        "Lifting hips off the pad to help curl (means weight is too heavy)",
+        "Only doing partial reps — full range from nearly straight to full curl",
+        "Rushing the negative — the eccentric is where growth happens"
+      ],
+      "warmup_recommendation": "1 set of 15 at light weight to warm up hamstrings before heavy leg work",
+      "muscle_activation": "Hamstring isolation — feel the contraction behind the thigh, especially at peak curl"
+    },
+    {
+      "exercise_name": "Bulgarian Split Squat",
+      "primary_muscle_group": "quadriceps",
+      "technique_cues": [
+        "Rear foot on bench, laces down — front foot about 2 feet ahead of bench",
+        "Lower straight down until rear knee nearly touches floor",
+        "Front shin should stay relatively vertical — knee over ankle, not past toes",
+        "Drive up through the front heel — focus on the front leg doing all the work",
+        "Keep torso upright — slight forward lean is OK for glute emphasis"
+      ],
+      "common_mistakes": [
+        "Standing too close to the bench (knee goes past toes, stresses joint)",
+        "Standing too far from the bench (hip flexor strain on rear leg)",
+        "Losing balance — use a fixed bench, start with bodyweight to find position"
+      ],
+      "warmup_recommendation": "1 set of 8 per leg bodyweight only, then light dumbbells for 1 set of 8",
+      "muscle_activation": "Front leg quads and glutes — you should feel this in the working leg, not the rear one"
+    },
+    {
+      "exercise_name": "Hip Thrust (Barbell)",
+      "primary_muscle_group": "glutes",
+      "technique_cues": [
+        "Upper back against bench, feet flat on floor about hip-width apart",
+        "Bar padded and positioned in hip crease — roll it into position",
+        "Drive hips up by squeezing glutes — full hip extension at top",
+        "Hold top position for 1-2 seconds with maximal glute squeeze",
+        "Chin tucked slightly — look forward, not up at the ceiling"
+      ],
+      "common_mistakes": [
+        "Hyperextending the lower back at the top instead of using glutes",
+        "Feet too close or too far from body — knees should be ~90° at top",
+        "Not reaching full hip extension — squeeze until you feel glutes cramp"
+      ],
+      "warmup_recommendation": "1 set of 15 bodyweight glute bridges, then 1 set at 50% working weight",
+      "muscle_activation": "Pure glute contraction — if you feel lower back, you're hyperextending"
+    },
+    {
+      "exercise_name": "Calf Raise (Standing)",
+      "primary_muscle_group": "calves",
+      "technique_cues": [
+        "Balls of feet on the edge of the platform, heels hanging off",
+        "Rise up onto toes as high as possible — full contraction at the top",
+        "Hold the top for 1-2 seconds — squeeze the calves",
+        "Lower slowly — let heels drop below the platform level for full stretch",
+        "Keep knees straight (slight bend OK) to target the gastrocnemius"
+      ],
+      "common_mistakes": [
+        "Bouncing at the bottom instead of controlled full range of motion",
+        "Not going through full range — both the stretch and the contraction matter",
+        "Bending knees excessively (shifts work to soleus — do seated calf raise for that)"
+      ],
+      "warmup_recommendation": "20 bodyweight calf raises to warm up the Achilles tendon",
+      "muscle_activation": "Gastrocnemius (upper calf) — feel the stretch at bottom and peak contraction at top"
+    },
+    {
+      "exercise_name": "Barbell Curl",
+      "primary_muscle_group": "biceps",
+      "technique_cues": [
+        "Stand upright, grip bar shoulder-width with underhand grip",
+        "Keep elbows pinned to your sides — they should not drift forward",
+        "Curl the bar up in an arc, squeezing biceps at the top",
+        "Lower with control — 2-3 second eccentric, full extension at bottom",
+        "Don't swing your body — if you need to, the weight is too heavy"
+      ],
+      "common_mistakes": [
+        "Swinging the torso back to cheat the weight up",
+        "Elbows drifting forward (shifts work to front delts)",
+        "Not going to full extension at the bottom — stretch the biceps"
+      ],
+      "warmup_recommendation": "1 set of 12 with just the bar or very light weight",
+      "muscle_activation": "Biceps peak contraction at the top, full stretch at the bottom"
+    },
+    {
+      "exercise_name": "Hammer Curl (Dumbbell)",
+      "primary_muscle_group": "biceps",
+      "technique_cues": [
+        "Hold dumbbells with neutral grip (palms facing each other) at sides",
+        "Curl up keeping palms facing each other throughout — no rotation",
+        "Can alternate arms or curl both simultaneously",
+        "Squeeze at the top — feel the brachialis and forearm engagement",
+        "Lower with control — don't let gravity do the work"
+      ],
+      "common_mistakes": [
+        "Rotating wrists during the curl (that's a regular dumbbell curl)",
+        "Swinging dumbbells with body momentum",
+        "Not using full range of motion at the bottom"
+      ],
+      "warmup_recommendation": "Part of arm day warmup: 1 set of 12 at light weight",
+      "muscle_activation": "Brachialis (under the biceps) and brachioradialis (forearm) — builds arm thickness"
+    },
+    {
+      "exercise_name": "Preacher Curl (Dumbbell)",
+      "primary_muscle_group": "biceps",
+      "technique_cues": [
+        "Sit at preacher bench, upper arm flat against the angled pad",
+        "Start with arm fully extended — feel the biceps stretch at the bottom",
+        "Curl dumbbell up, squeezing biceps at the top",
+        "Lower slowly — the stretch at the bottom is where the magic happens",
+        "Don't let the elbow lift off the pad at any point"
+      ],
+      "common_mistakes": [
+        "Not going to full extension (scared of the stretch — use lighter weight)",
+        "Lifting elbows off the pad to cheat the weight up",
+        "Going too heavy — this is a strict isolation movement"
+      ],
+      "warmup_recommendation": "1 set of 12 per arm at light weight — the preacher curl stretch requires warm biceps",
+      "muscle_activation": "Biceps long head emphasis — strong stretch at bottom, peak contraction at top"
+    },
+    {
+      "exercise_name": "Tricep Pushdown (Cable)",
+      "primary_muscle_group": "triceps",
+      "technique_cues": [
+        "Stand close to the cable, slight forward lean, elbows pinned to sides",
+        "Push the bar/rope down until arms are fully extended — squeeze triceps",
+        "Only the forearms should move — upper arms stay stationary",
+        "Return with control to ~90° elbow bend — don't let the weight stack slam",
+        "If using rope, split the ends apart at the bottom for extra contraction"
+      ],
+      "common_mistakes": [
+        "Elbows flaring forward or drifting away from the body",
+        "Leaning over the weight and using body weight to push down",
+        "Not reaching full lockout — extend completely for peak tricep contraction"
+      ],
+      "warmup_recommendation": "1 set of 15 at light weight — great warmup before heavy pressing",
+      "muscle_activation": "Triceps lateral and medial heads — feel the squeeze at full extension"
+    },
+    {
+      "exercise_name": "Skull Crusher (Barbell)",
+      "primary_muscle_group": "triceps",
+      "technique_cues": [
+        "Lie on flat bench, press bar up to start — arms extended over upper chest",
+        "Keep upper arms perpendicular to the floor (or slightly tilted back toward head)",
+        "Bend only at elbows — lower bar toward forehead or just behind the top of head",
+        "Extend arms back to start by squeezing triceps — don't flare elbows",
+        "Use EZ bar to reduce wrist strain"
+      ],
+      "common_mistakes": [
+        "Elbows flaring out wide (stresses the joint, reduces tricep isolation)",
+        "Moving the upper arm — only the forearm should move at the elbow joint",
+        "Using too much weight — this exercise stresses the elbow joint, go moderate"
+      ],
+      "warmup_recommendation": "1 set of 10 with just the EZ bar to warm up elbows, then 1 set at 50%",
+      "muscle_activation": "Triceps long head emphasis — feel the stretch when bar is behind the head"
+    },
+    {
+      "exercise_name": "Plank",
+      "primary_muscle_group": "abdominals",
+      "technique_cues": [
+        "Forearms on floor, elbows directly under shoulders",
+        "Body forms a perfectly straight line from head to heels",
+        "Engage core by pulling belly button toward spine — brace like expecting a punch",
+        "Squeeze glutes to prevent hip sag",
+        "Breathe steadily — don't hold your breath"
+      ],
+      "common_mistakes": [
+        "Hips sagging toward the floor (means core is fatigued — stop or regress)",
+        "Piking hips up too high (easier but defeats the purpose)",
+        "Looking forward/up instead of down (strains the neck)"
+      ],
+      "warmup_recommendation": "Use as a core activation drill: 2 × 20-30 seconds before compound lifts",
+      "muscle_activation": "Entire core — transverse abdominis, rectus abdominis, obliques, and erectors"
+    },
+    {
+      "exercise_name": "Hanging Leg Raise",
+      "primary_muscle_group": "abdominals",
+      "technique_cues": [
+        "Hang from pull-up bar with overhand grip, arms fully extended",
+        "Curl pelvis up by raising legs — focus on posterior pelvic tilt, not just lifting legs",
+        "Raise legs to at least parallel with floor — higher is better for lower abs",
+        "Lower with control — 3 second negative, don't just swing down",
+        "Minimize body swing — if swinging, slow down or use a captain's chair"
+      ],
+      "common_mistakes": [
+        "Just lifting legs without curling the pelvis (hip flexors do the work, not abs)",
+        "Swinging and using momentum — this should be slow and controlled",
+        "Dropping legs quickly on the descent"
+      ],
+      "warmup_recommendation": "Dead hangs for 15 seconds, then 1 set of knee raises (bent-leg version) × 10",
+      "muscle_activation": "Lower abdominals and hip flexors — feel the abs contract when the pelvis tilts"
+    },
+    {
+      "exercise_name": "Cable Crunch",
+      "primary_muscle_group": "abdominals",
+      "technique_cues": [
+        "Kneel in front of cable, hold rope behind head at forehead level",
+        "Crunch down by flexing the spine — bring elbows toward knees",
+        "Focus on curling the torso, not just bending at the hips",
+        "Squeeze the abs at the bottom of the crunch — hold 1 second",
+        "Return to starting position with control — feel the abs stretch"
+      ],
+      "common_mistakes": [
+        "Sitting back onto heels (makes it a hip flexion, not a crunch)",
+        "Using arms to pull the weight instead of crunching with abs",
+        "Not controlling the movement — using momentum to swing"
+      ],
+      "warmup_recommendation": "1 set of 15 at light weight to establish the mind-muscle connection",
+      "muscle_activation": "Upper and mid abs — the loaded crunch pattern under resistance"
+    },
+    {
+      "exercise_name": "Ab Wheel Rollout",
+      "primary_muscle_group": "abdominals",
+      "technique_cues": [
+        "Start on knees, hands gripping the ab wheel directly under shoulders",
+        "Brace core HARD — this is a full anti-extension exercise",
+        "Roll out as far as you can while maintaining a flat back — no lower back sag",
+        "Arms extend overhead as you roll out — full body stretch",
+        "Pull back by contracting abs — imagine pulling your belly button to spine"
+      ],
+      "common_mistakes": [
+        "Lower back sagging during the rollout (means you went too far — shorten range)",
+        "Using arms to pull back instead of abs",
+        "Going too far too soon — build up range of motion gradually"
+      ],
+      "warmup_recommendation": "Start with partial rollouts (only go out halfway) for the first set of 5-8",
+      "muscle_activation": "Full anterior core — abs work hard to prevent spinal extension under load"
+    },
+    {
+      "exercise_name": "Lat Pulldown (Close Grip)",
+      "primary_muscle_group": "back",
+      "technique_cues": [
+        "Use a V-bar or close-grip handle attachment",
+        "Sit tall, lean back slightly, chest up",
+        "Pull handle to upper chest, driving elbows down to your sides",
+        "Squeeze lats hard at the bottom — 1 second hold",
+        "Control the weight back up — full stretch at the top"
+      ],
+      "common_mistakes": [
+        "Using too much body lean to move the weight",
+        "Pulling with biceps instead of initiating with lats",
+        "Not getting full range of motion — stretch at top, squeeze at bottom"
+      ],
+      "warmup_recommendation": "1 set of 12 at light weight to feel the lat engagement",
+      "muscle_activation": "Lower lats with more bicep involvement due to close grip — feel contraction low on the back"
+    },
+    {
+      "exercise_name": "Leg Press (Single Leg)",
+      "primary_muscle_group": "quadriceps",
+      "technique_cues": [
+        "Place one foot in the center of the platform, other foot off to the side",
+        "Lower sled with control until knee reaches ~90° bend",
+        "Press through the heel and mid-foot — full extension without lockout",
+        "Keep hips even — don't let the working side rotate",
+        "Use significantly less weight than bilateral leg press"
+      ],
+      "common_mistakes": [
+        "Going too heavy — start with 40% of bilateral leg press weight per leg",
+        "Letting the knee cave inward — push knee out in line with toes",
+        "Not using full range of motion to each side equally"
+      ],
+      "warmup_recommendation": "1 set of 10 per leg at very light weight to warm up unilaterally",
+      "muscle_activation": "Unilateral quad and glute engagement — exposes and corrects strength imbalances"
+    }
+  ]
+}

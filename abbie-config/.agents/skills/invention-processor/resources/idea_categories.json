@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "description": "Taxonomy for auto-categorizing invention ideas. Used by the LLM to assign a Category property to new ideas in the INVENT database.",
+    "instructions": "Match the idea against the keywords list. If multiple categories match, pick the primary one. If truly hybrid, use 'Combination / System'."
+  },
+
+  "categories": [
+    {
+      "name": "Hardware / Physical Product",
+      "description": "Tangible devices, gadgets, tools, materials, or physical inventions",
+      "keywords": ["device", "gadget", "tool", "wearable", "sensor", "material", "hardware", "build", "fabricate", "3D print", "mechanical", "electrical", "circuit", "prototype", "physical"]
+    },
+    {
+      "name": "Software / App",
+      "description": "Mobile apps, web applications, desktop software, algorithms",
+      "keywords": ["app", "software", "website", "algorithm", "code", "mobile", "web app", "SaaS", "platform", "API", "AI model", "machine learning", "automation", "bot", "digital"]
+    },
+    {
+      "name": "Service / Platform",
+      "description": "Service businesses, marketplaces, platforms connecting people",
+      "keywords": ["service", "marketplace", "platform", "connect", "matching", "subscription", "membership", "consulting", "agency", "on-demand", "delivery", "booking"]
+    },
+    {
+      "name": "Process / Method",
+      "description": "New methods, workflows, techniques, or processes",
+      "keywords": ["method", "process", "technique", "workflow", "framework", "approach", "system", "procedure", "protocol", "recipe", "formula", "strategy"]
+    },
+    {
+      "name": "Content / Media",
+      "description": "Content formats, media products, educational materials, entertainment",
+      "keywords": ["content", "media", "video", "podcast", "course", "book", "game", "entertainment", "education", "training", "curriculum", "format"]
+    },
+    {
+      "name": "Biotech / Health",
+      "description": "Health, medical, biotech, wellness, or nutrition inventions",
+      "keywords": ["health", "medical", "biotech", "wellness", "nutrition", "supplement", "diagnostic", "therapeutic", "pharma", "clinical", "wearable health", "fitness"]
+    },
+    {
+      "name": "Combination / System",
+      "description": "Multi-component systems that span hardware + software + service",
+      "keywords": ["ecosystem", "system", "integrated", "end-to-end", "full stack", "hardware+software", "IoT", "smart home", "connected"]
+    }
+  ]
+}

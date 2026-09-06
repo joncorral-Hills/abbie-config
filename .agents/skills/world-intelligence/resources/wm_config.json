@@ -1,0 +1,38 @@
+{
+  "_comment": "World Monitor integration configuration for Allie",
+  "mcp_endpoint": "https://worldmonitor.app/mcp",
+  "default_jmespath": true,
+  "cache_ttl_minutes": 15,
+  "alert_thresholds": {
+    "cii_delta_trigger": 5,
+    "chokepoint_disruption_change": true,
+    "fear_greed_extreme_low": 20,
+    "fear_greed_extreme_high": 80
+  },
+  "modules": {
+    "daily_pulse": {
+      "tools": ["get_world_brief", "get_country_risk", "get_chokepoint_status", "get_market_data", "get_conflict_events"],
+      "output": "telegram"
+    },
+    "country_risk": {
+      "tools": ["get_country_risk", "get_country_brief", "get_sanctions_data"],
+      "output": "telegram_on_alert"
+    },
+    "cyber_threats": {
+      "tools": ["get_cyber_threats", "get_infrastructure_status"],
+      "output": "telegram_weekly"
+    },
+    "situation_analysis": {
+      "tools": ["analyze_situation", "get_country_risk", "get_chokepoint_status", "get_market_data"],
+      "output": "inline_response"
+    },
+    "market_correlation": {
+      "tools": ["get_market_data", "get_chokepoint_status", "get_energy_intelligence", "get_conflict_events"],
+      "output": "json_artifact"
+    },
+    "travel_safety": {
+      "tools": ["get_country_risk", "get_health_signals", "get_climate_data", "get_natural_disasters"],
+      "output": "inline_response"
+    }
+  }
+}

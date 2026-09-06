@@ -1,0 +1,154 @@
+{
+  "title_rules": {
+    "max_length": 140,
+    "keyword_position": "front_load",
+    "separator": " | ",
+    "structure": "[Primary Keyword] [Secondary Keyword] | [Descriptive Phrase] | [Style/Use Case]",
+    "example": "Budget Planner Printable | Monthly Finance Tracker | Minimalist Money Organizer PDF",
+    "scoring": {
+      "max_points": 25,
+      "criteria": {
+        "primary_keyword_in_first_3_words": 8,
+        "uses_all_140_characters": 5,
+        "includes_product_type": 4,
+        "includes_style_descriptor": 4,
+        "no_keyword_stuffing": 4
+      }
+    },
+    "best_practices": [
+      "Front-load the most important keywords — Etsy weighs the beginning of titles more heavily",
+      "Use natural language that reads well to humans, not just search engines",
+      "Include the product format (PDF, printable, digital download, template)",
+      "Add style descriptors (minimalist, boho, modern, vintage) that buyers search for",
+      "Use pipes (|) or dashes (-) as separators for readability",
+      "Never repeat the same keyword more than twice",
+      "Include seasonal or occasion keywords when relevant (Christmas, wedding, back to school)"
+    ],
+    "avoid": [
+      "ALL CAPS words (except acronyms like PDF)",
+      "Excessive punctuation (!!!, ???)",
+      "Competitor brand names",
+      "Misleading keywords unrelated to the product",
+      "Generic filler words that waste character space"
+    ]
+  },
+  "tag_rules": {
+    "max_tags": 13,
+    "max_tag_length": 20,
+    "strategy": [
+      "Use all 13 available tags — every unused tag is a missed opportunity",
+      "Mix broad and specific keywords (e.g., 'planner' + 'weekly meal planner')",
+      "Include multi-word phrases as single tags — Etsy matches phrases, not individual words",
+      "Add seasonal and occasion tags when relevant",
+      "Include style-based tags (minimalist, boho, aesthetic)",
+      "Use buyer-intent phrases (gift for her, new mom gift, teacher appreciation)",
+      "Include use-case tags (home office, dorm room, wedding planning)",
+      "Mirror the exact phrases buyers type in search"
+    ],
+    "avoid": [
+      "Single common words (art, design, cool)",
+      "Repeating words already in the title — tags and title work together",
+      "Misspellings (unless intentionally targeting common misspellings)",
+      "Trademarked or copyrighted terms",
+      "Tags that don't match the actual product",
+      "Plural AND singular of the same word — Etsy handles stemming automatically"
+    ],
+    "scoring": {
+      "max_points": 20,
+      "criteria": {
+        "uses_all_13_tags": 6,
+        "multi_word_phrases": 5,
+        "mix_broad_and_specific": 5,
+        "no_title_duplication": 4
+      }
+    }
+  },
+  "description_rules": {
+    "min_words": 300,
+    "structure": [
+      "Opening hook (first 160 chars appear in search preview)",
+      "Key features / what's included (bullet points)",
+      "How to use / instructions",
+      "File format and specifications",
+      "Printing instructions (if applicable)",
+      "Keywords woven naturally into paragraphs"
+    ],
+    "scoring": {
+      "max_points": 20,
+      "criteria": {
+        "meets_min_word_count": 5,
+        "has_structured_sections": 5,
+        "keywords_in_first_paragraph": 4,
+        "includes_specs_and_instructions": 3,
+        "uses_formatting": 3
+      }
+    },
+    "best_practices": [
+      "First 160 characters are critical — they appear in search results",
+      "Use natural keyword placement, not keyword stuffing",
+      "Include all file specifications (dimensions, format, resolution)",
+      "Add clear instructions for how to access and use the digital file",
+      "Mention compatible software (Adobe Reader, GoodNotes, Excel, etc.)",
+      "Include a FAQ section addressing common buyer questions",
+      "Add a personal touch about your design process or inspiration"
+    ]
+  },
+  "image_rules": {
+    "max_images": 10,
+    "recommended_count": 8,
+    "specs": {
+      "min_width": 2000,
+      "min_height": 2000,
+      "max_file_size_mb": 20,
+      "aspect_ratio": "5:4",
+      "format": ["JPG", "PNG"],
+      "dpi": 300
+    },
+    "recommended_set": [
+      "Hero mockup showing product in use context",
+      "Full product overview (all pages/items visible)",
+      "Close-up detail shot highlighting quality",
+      "Size/dimension reference with real-world objects",
+      "Multiple color or style variations",
+      "Before/after or use-case demonstration",
+      "What's included breakdown (file list)",
+      "Lifestyle context shot (desk setup, wall display, etc.)"
+    ],
+    "scoring": {
+      "max_points": 20,
+      "criteria": {
+        "has_8_plus_images": 6,
+        "has_mockup": 5,
+        "has_detail_shot": 3,
+        "has_whats_included": 3,
+        "consistent_style": 3
+      }
+    }
+  },
+  "attribute_rules": {
+    "description": "Etsy product attributes (categories, occasion, style) improve search visibility",
+    "scoring": {
+      "max_points": 15,
+      "criteria": {
+        "correct_category": 5,
+        "all_available_attributes_filled": 5,
+        "occasion_set_when_relevant": 3,
+        "style_attributes_set": 2
+      }
+    },
+    "best_practices": [
+      "Always select the most specific category available",
+      "Fill every available attribute field — completeness improves ranking",
+      "Set occasion tags for seasonal or event products",
+      "Choose style attributes that match buyer search behavior",
+      "Review and update attributes quarterly as Etsy adds new options"
+    ]
+  },
+  "total_max_score": 100,
+  "score_interpretation": {
+    "excellent": {"min": 85, "label": "Excellent — fully optimized listing"},
+    "good": {"min": 70, "label": "Good — minor improvements possible"},
+    "needs_work": {"min": 50, "label": "Needs Work — several optimization opportunities"},
+    "poor": {"min": 0, "label": "Poor — significant SEO overhaul needed"}
+  }
+}

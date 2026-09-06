@@ -1,0 +1,236 @@
+{
+  "_meta": {
+    "description": "Recurring cash flow calendar. All inflows and outflows mapped to their calendar dates.",
+    "last_updated": "2026-06-09",
+    "rules": [
+      "Inflows are positive amounts, outflows are negative.",
+      "day_of_month is the draft/deposit date. Use 'biweekly_friday' for Jon's schedule.",
+      "For ranges (e.g., JoCo Wastewater), draft can fall anywhere in the window.",
+      "Variable amounts use amount_range [min, max]; fixed use amount."
+    ]
+  },
+
+  "inflows": [
+    {
+      "name": "Jon Paycheck",
+      "amount": 2860.00,
+      "schedule": "biweekly_friday",
+      "annual_paychecks": 26,
+      "monthly_base_equivalent": 6188.33,
+      "notes": "Every other Friday. 2 months/yr have 3 paychecks (bonus paycheck months). Next paycheck date: TBD — ask Jon for last paydate to calculate forward.",
+      "account": "US Bank Checking"
+    },
+    {
+      "name": "Jaime Paycheck",
+      "amount": 1800.00,
+      "schedule": "semimonthly",
+      "days_of_month": [1, 15],
+      "annual_paychecks": 24,
+      "monthly_base_equivalent": 3600.00,
+      "account": "US Bank Checking"
+    }
+  ],
+
+  "combined_monthly_base": 9320.00,
+  "jon_annual_bonus_paycheck_value": 5720.00,
+
+  "outflows_usb_autopay": {
+    "_note": "These draft from US Bank Checking automatically",
+    "items": [
+      {
+        "name": "Mortgage",
+        "amount": -2160.57,
+        "day_of_month": 1,
+        "payee": "Mortgage Servicer",
+        "category": "housing",
+        "notes": "Includes escrow (taxes + insurance). Consider bi-weekly payment for accelerated payoff."
+      },
+      {
+        "name": "AT&T Wireless",
+        "amount": -280.00,
+        "day_of_month": 1,
+        "payee": "AT&T",
+        "category": "utilities"
+      },
+      {
+        "name": "JoCo Wastewater",
+        "amount": -111.13,
+        "day_of_month_range": [1, 15],
+        "payee": "Johnson County Wastewater",
+        "category": "utilities",
+        "notes": "Drafts somewhere in the 1st-15th window. Check exact date."
+      },
+      {
+        "name": "Honda Car Note",
+        "amount": -670.00,
+        "day_of_month": 16,
+        "payee": "Honda Financial Services",
+        "category": "auto_loan",
+        "notes": "Rate and remaining balance TBD — ask Jon"
+      },
+      {
+        "name": "Jaime's Loan",
+        "amount": -312.00,
+        "day_of_month": 16,
+        "payee": "Loan Servicer",
+        "category": "personal_loan",
+        "notes": "Type, rate, and remaining balance TBD — ask Jon"
+      },
+      {
+        "name": "Tesla Car Note",
+        "amount": -435.00,
+        "day_of_month": 19,
+        "payee": "Tesla Finance",
+        "category": "auto_loan",
+        "notes": "Rate and remaining balance TBD — ask Jon"
+      },
+      {
+        "name": "Northwestern Mutual",
+        "amount": -95.46,
+        "day_of_month": 19,
+        "payee": "Northwestern Mutual",
+        "category": "insurance_investment",
+        "notes": "Whole life / IBC policy. $1M/30yr. Has cash value component."
+      },
+      {
+        "name": "WaterOne",
+        "amount": -150.00,
+        "day_of_month": 19,
+        "payee": "WaterOne",
+        "category": "utilities"
+      },
+      {
+        "name": "Progressive Auto Insurance",
+        "amount": -441.00,
+        "day_of_month": 20,
+        "payee": "Progressive",
+        "category": "insurance",
+        "notes": "Multi-vehicle auto insurance"
+      }
+    ]
+  },
+
+  "outflows_flex_autopay": {
+    "_note": "These charge to Chase Freedom Flex — paid in full monthly",
+    "items": [
+      {
+        "name": "YouTube TV",
+        "amount": -73.00,
+        "day_of_month": 2,
+        "category": "streaming",
+        "notes": "Currently paused per approved_subscriptions. Was $90.75 before pause."
+      },
+      {
+        "name": "Google Fiber",
+        "amount": -70.00,
+        "day_of_month": 3,
+        "category": "utilities"
+      },
+      {
+        "name": "Jack IRA Auto-Invest",
+        "amount": -3.00,
+        "day_of_month": 7,
+        "category": "investment",
+        "notes": "Custodial IRA at Schwab. Contact: Kirk Schildgen 913-253-3242"
+      },
+      {
+        "name": "Pet Insurance (Pets Best)",
+        "amount": -24.00,
+        "day_of_month": 12,
+        "category": "insurance"
+      },
+      {
+        "name": "Atmos Energy",
+        "amount_range": [-224.76, -100.00],
+        "day_of_month": 13,
+        "category": "utilities",
+        "notes": "Variable — seasonal. Higher in winter."
+      },
+      {
+        "name": "Choice Home Warranty",
+        "amount": -55.55,
+        "day_of_month": 14,
+        "category": "insurance",
+        "notes": "2-3 claims/yr makes it worthwhile"
+      },
+      {
+        "name": "Schwab Auto-Invest",
+        "amount": -10.00,
+        "day_of_month": 15,
+        "category": "investment",
+        "notes": "Account type TBD"
+      },
+      {
+        "name": "B'nai Jehudah",
+        "amount": -162.50,
+        "day_of_month": 24,
+        "category": "community",
+        "notes": "Synagogue commitment"
+      },
+      {
+        "name": "KCP&L (Evergy)",
+        "amount": -150.00,
+        "day_of_month": 27,
+        "category": "utilities",
+        "notes": "Electric — may be on budget billing"
+      },
+      {
+        "name": "Spotify + Hulu Bundle",
+        "amount": -12.00,
+        "day_of_month": 28,
+        "category": "streaming"
+      },
+      {
+        "name": "Netflix",
+        "amount": -15.00,
+        "day_of_month": 30,
+        "category": "streaming"
+      },
+      {
+        "name": "SimpliSafe",
+        "amount": -32.00,
+        "day_of_month": 30,
+        "category": "security"
+      }
+    ]
+  },
+
+  "outflows_other": {
+    "_note": "Charges on various cards or direct debits not in the two autopay buckets above",
+    "items": [
+      {
+        "name": "ER Payment",
+        "amount": -150.00,
+        "day_of_month": null,
+        "source": "US Bank Savings (auto-draft)",
+        "category": "medical_debt",
+        "notes": "0% interest. ~$2,400 remaining (~16 months as of June 2026). Drafts from savings."
+      },
+      {
+        "name": "Sterling Wellness / Ozempic",
+        "amount": -216.67,
+        "day_of_month": null,
+        "source": "Chase Flex",
+        "category": "medical",
+        "notes": "Jaime's medical — non-negotiable. Exact draft date varies."
+      },
+      {
+        "name": "Student Loan",
+        "amount": -217.00,
+        "day_of_month": null,
+        "source": "TBD",
+        "category": "student_loan",
+        "notes": "Rate, balance, and servicer TBD — ask Jon"
+      }
+    ]
+  },
+
+  "monthly_totals": {
+    "total_inflows_base": 9320.00,
+    "total_fixed_outflows_estimate": -5931.88,
+    "total_flex_outflows_estimate": -607.05,
+    "total_other_outflows_estimate": -583.67,
+    "estimated_discretionary_margin": 2197.40,
+    "notes": "Discretionary margin = inflows - all fixed/flex/other. This is what's available for variable budget categories (dining, groceries, gas, etc.) and savings."
+  }
+}

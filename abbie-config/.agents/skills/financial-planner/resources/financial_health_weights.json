@@ -1,0 +1,166 @@
+{
+  "_meta": {
+    "description": "Financial Health Score — composite 0-100 rating with weighted metrics and thresholds.",
+    "last_updated": "2026-06-09",
+    "formula": "FHS = Σ (metric_score × weight) where each metric_score is 0-100",
+    "interpretation": {
+      "90-100": "Excellent — all systems optimal",
+      "75-89": "Good — minor areas for improvement",
+      "60-74": "Fair — several areas need attention",
+      "40-59": "Needs Work — significant financial stress indicators",
+      "0-39": "Critical — immediate intervention required"
+    }
+  },
+
+  "metrics": {
+    "budget_adherence": {
+      "weight": 0.20,
+      "description": "How well actual spending matches budget targets across all variable categories.",
+      "formula": "100 - (total_overspend / total_budget × 100). Floor at 0.",
+      "scoring": {
+        "green": { "range": [90, 100], "label": "On track", "criteria": "Total variable spend within 10% of targets" },
+        "yellow": { "range": [70, 89], "label": "Drifting", "criteria": "10-30% over budget in aggregate" },
+        "red": { "range": [0, 69], "label": "Off track", "criteria": "More than 30% over budget" }
+      },
+      "data_source": "financial-automation Budgets DB: compare Spent rollup vs Budget Amount",
+      "calculation_details": {
+        "per_category_score": "max(0, 100 - ((actual - target) / target × 100)) for each category",
+        "aggregate_score": "weighted average of per-category scores, weighted by budget amount"
+      }
+    },
+
+    "emergency_fund_progress": {
+      "weight": 0.20,
+      "description": "Emergency fund balance as a percentage of the target (3 months essential expenses).",
+      "formula": "(current_ef_balance / ef_target) × 100. Cap at 100.",
+      "target_calculation": {
+        "monthly_essential_expenses": 7122,
+        "three_month_target": 21366,
+        "six_month_target": 42732,
+        "essential_expenses_breakdown": {
+          "mortgage": 2160.57,
+          "auto_loans": 1105.00,
+          "insurance": 441.00,
+          "utilities": 761.13,
+          "food_minimum": 800.00,
+          "medical": 366.67,
+          "loans": 529.00,
+          "minimum_other": 958.63
+        }
+      },
+      "scoring": {
+        "green": { "range": [80, 100], "label": "Healthy", "criteria": "EF ≥ 80% of 3-month target (~$17,000+)" },
+        "yellow": { "range": [40, 79], "label": "Building", "criteria": "EF is 40-79% of target ($8,500-$17,000)" },
+        "red": { "range": [0, 39], "label": "Critical", "criteria": "EF < 40% of target (< $8,500)" }
+      },
+      "data_source": "financial-automation Accounts DB: Emergency Savings balance"
+    },
+
+    "debt_to_income_ratio": {
+      "weight": 0.15,
+      "description": "Total monthly debt payments as a percentage of gross monthly income. Lower is better.",
+      "formula": "score = max(0, 100 - ((dti_percent - 20) × 2.5)). DTI% = total_debt_payments / gross_monthly_income × 100.",
+      "household_gross_monthly": 9320,
+      "total_monthly_debt_payments": 3944.57,
+      "current_dti_estimate": 42.3,
+      "scoring": {
+        "green": { "range": [80, 100], "label": "Low DTI", "criteria": "DTI ≤ 28% (housing) or ≤ 36% (total)" },
+        "yellow": { "range": [50, 79], "label": "Moderate DTI", "criteria": "DTI 36-43%" },
+        "red": { "range": [0, 49], "label": "High DTI", "criteria": "DTI > 43% (exceeds QM threshold)" }
+      },
+      "benchmarks": {
+        "housing_ratio": "Mortgage / gross income ≤ 28% (current: ~23.2% ✓)",
+        "total_dti": "All debt / gross income ≤ 36% ideal, 43% max QM",
+        "notes": "Current estimated DTI of 42.3% is borderline — need actual data to confirm"
+      },
+      "data_source": "debt_inventory.json total payments / budget_targets.json income"
+    },
+
+    "savings_rate": {
+      "weight": 0.15,
+      "description": "Percentage of take-home pay directed to savings and investments (not debt payments).",
+      "formula": "(monthly_savings + monthly_investments) / net_monthly_income × 100. Score = min(100, savings_rate / 20 × 100).",
+      "scoring": {
+        "green": { "range": [75, 100], "label": "Strong saver", "criteria": "Saving ≥ 15% of take-home" },
+        "yellow": { "range": [35, 74], "label": "Building", "criteria": "Saving 7-14% of take-home" },
+        "red": { "range": [0, 34], "label": "Minimal", "criteria": "Saving < 7% of take-home" }
+      },
+      "includes": ["Emergency fund contributions", "401k contributions", "IRA contributions", "Schwab auto-invest", "NW Mutual cash value portion", "I-Bond purchases"],
+      "excludes": ["Debt principal payments (those reduce debt, not savings)", "Employer 401k match (not from your income)"],
+      "target": "20% of take-home (the 50/30/20 rule target)",
+      "data_source": "investment_accounts.json contributions + Accounts DB savings growth"
+    },
+
+    "net_worth_trajectory": {
+      "weight": 0.15,
+      "description": "Month-over-month net worth change direction and magnitude.",
+      "formula": "Score based on 3-month rolling average MoM change. Positive trend = higher score.",
+      "scoring": {
+        "green": { "range": [70, 100], "label": "Growing", "criteria": "Net worth increasing ≥ $500/mo average over 3 months" },
+        "yellow": { "range": [40, 69], "label": "Flat", "criteria": "Net worth flat or growing < $500/mo" },
+        "red": { "range": [0, 39], "label": "Declining", "criteria": "Net worth decreasing over 3 months" }
+      },
+      "calculation": {
+        "positive_3mo_avg_gte_1000": 100,
+        "positive_3mo_avg_500_999": 85,
+        "positive_3mo_avg_1_499": 70,
+        "flat_or_slight_negative": 50,
+        "negative_3mo_avg_gte_500": 25,
+        "negative_3mo_avg_gte_1000": 10
+      },
+      "data_source": "Net Worth Snapshots Notion DB (created by this skill)"
+    },
+
+    "credit_utilization": {
+      "weight": 0.10,
+      "description": "Total credit card balances as a percentage of total credit limits. Measured at statement close.",
+      "formula": "score = max(0, 100 - (utilization_percent × 3.33)). 0% util = 100, 30% util = 0.",
+      "scoring": {
+        "green": { "range": [80, 100], "label": "Optimal", "criteria": "Utilization ≤ 10% at statement close" },
+        "yellow": { "range": [50, 79], "label": "Acceptable", "criteria": "Utilization 10-30%" },
+        "red": { "range": [0, 49], "label": "High", "criteria": "Utilization > 30%" }
+      },
+      "notes": "Since all cards are paid in full monthly, utilization should always be green. Monitor statement close dates — high mid-cycle balance can still report to bureaus.",
+      "optimization": "If a large purchase spikes utilization, pay it down before statement close date.",
+      "data_source": "credit_cards.json balances vs limits"
+    },
+
+    "rewards_efficiency": {
+      "weight": 0.05,
+      "description": "How well the household uses the optimal card for each purchase category.",
+      "formula": "actual_rewards_earned / maximum_possible_rewards × 100",
+      "scoring": {
+        "green": { "range": [85, 100], "label": "Optimized", "criteria": "≥ 85% of purchases on the optimal card" },
+        "yellow": { "range": [60, 84], "label": "Good", "criteria": "60-84% optimal card usage" },
+        "red": { "range": [0, 59], "label": "Leaving money", "criteria": "< 60% optimal card usage" }
+      },
+      "key_mistakes_to_detect": [
+        "Dining on Amazon card instead of Sapphire Reserve",
+        "Amazon purchases on Freedom Unlimited instead of Amazon Prime card",
+        "Forgetting to activate Freedom Flex quarterly categories",
+        "Using Sapphire Reserve for non-bonus general spend",
+        "Booking travel outside Chase portal"
+      ],
+      "data_source": "Transaction categorization from financial-automation + chase_rewards.json optimal rules"
+    }
+  },
+
+  "composite_score_formula": "FHS = (budget_adherence × 0.20) + (emergency_fund × 0.20) + (dti × 0.15) + (savings_rate × 0.15) + (net_worth × 0.15) + (credit_util × 0.10) + (rewards × 0.05)",
+
+  "reporting": {
+    "frequency": "Monthly (1st of month)",
+    "format": {
+      "overall_score": "XX / 100 [emoji]",
+      "trend": "↑ / → / ↓ vs last month",
+      "per_metric_breakdown": "table with score, weight, weighted contribution, and status emoji",
+      "top_recommendation": "Single most impactful action to improve score"
+    },
+    "emojis": {
+      "90_plus": "🏆",
+      "75_89": "✅",
+      "60_74": "⚠️",
+      "40_59": "🔶",
+      "below_40": "🚨"
+    }
+  }
+}

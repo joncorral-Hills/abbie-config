@@ -1,0 +1,128 @@
+{
+  "approval_gates": {
+    "create_product": {
+      "requires_approval": true,
+      "approval_channel": "telegram",
+      "timeout_hours": 48,
+      "timeout_action": "skip",
+      "description": "Creating a new digital product requires Jon's approval before generation begins",
+      "approval_message_template": "🏭 *Product Creation Request*\n\nProduct: {product_name}\nType: {product_type}\nNiche: {niche}\nEstimated Price: ${estimated_price}\nNiche Score: {niche_score}/100\n\nApprove? Reply YES or NO."
+    },
+    "publish_listing": {
+      "requires_approval": true,
+      "approval_channel": "telegram",
+      "timeout_hours": 48,
+      "timeout_action": "skip",
+      "description": "Publishing a new listing to Etsy requires Jon's review and approval",
+      "approval_message_template": "📋 *Listing Ready for Review*\n\nProduct: {product_name}\nTitle: {listing_title}\nPrice: ${price}\nSEO Score: {seo_score}/100\nMockup: {mockup_url}\n\nApprove for publishing? Reply YES or NO."
+    },
+    "price_change": {
+      "requires_approval": false,
+      "auto_approve_condition": "abs(change_pct) <= 20",
+      "approval_channel": "telegram",
+      "description": "Price changes under 20% are auto-approved; larger changes require approval",
+      "auto_approve_message": "💰 *Auto-Approved Price Change*\n\n{product_name}: ${old_price} → ${new_price} ({change_pct}%)\nReason: {reason}",
+      "approval_message_template": "⚠️ *Large Price Change Request*\n\n{product_name}: ${old_price} → ${new_price} ({change_pct}%)\nReason: {reason}\n\nApprove? Reply YES or NO."
+    },
+    "sunset_product": {
+      "requires_approval": true,
+      "approval_channel": "telegram",
+      "timeout_hours": 72,
+      "timeout_action": "skip",
+      "description": "Removing a product from the store requires explicit approval",
+      "approval_message_template": "🌅 *Product Sunset Request*\n\nProduct: {product_name}\nTotal Sales: {total_sales}\nLast Sale: {last_sale_date}\nReason: {reason}\nHealth Score: {health_score}/100\n\nApprove removal? Reply YES or NO."
+    }
+  },
+  "loop_settings": {
+    "max_products_per_cycle": 2,
+    "min_niche_score": 60,
+    "min_days_before_sunset": 90,
+    "min_seo_score_for_publish": 70,
+    "cooldown_between_cycles_hours": 168,
+    "max_active_products": 50,
+    "review_period_days": 30,
+    "performance_check_interval_days": 14
+  },
+  "growth_loop_pipeline": {
+    "steps": [
+      {
+        "step": 1,
+        "name": "niche_scan",
+        "description": "Scan and score trending niches for digital products",
+        "script": "niche_researcher.py --scan",
+        "output": "ranked_niches",
+        "gate": null
+      },
+      {
+        "step": 2,
+        "name": "product_ideation",
+        "description": "Generate product concepts for top-scoring niches",
+        "script": "niche_researcher.py --score",
+        "output": "product_concepts",
+        "gate": null
+      },
+      {
+        "step": 3,
+        "name": "feasibility_check",
+        "description": "Score feasibility and filter to top candidates",
+        "script": "pricing_engine.py --analyze",
+        "output": "feasible_products",
+        "gate": null
+      },
+      {
+        "step": 4,
+        "name": "create_product",
+        "description": "Generate the digital product files and mockups",
+        "script": "product_creator.py --create",
+        "output": "product_files",
+        "gate": "create_product"
+      },
+      {
+        "step": 5,
+        "name": "optimize_listing",
+        "description": "Generate SEO-optimized title, tags, and description",
+        "script": "seo_optimizer.py --optimize",
+        "output": "listing_data",
+        "gate": null
+      },
+      {
+        "step": 6,
+        "name": "set_price",
+        "description": "Determine optimal price based on market analysis",
+        "script": "pricing_engine.py --recommend",
+        "output": "pricing_data",
+        "gate": null
+      },
+      {
+        "step": 7,
+        "name": "publish_listing",
+        "description": "Create draft listing on Etsy for review",
+        "script": null,
+        "output": "listing_draft",
+        "gate": "publish_listing"
+      },
+      {
+        "step": 8,
+        "name": "monitor_performance",
+        "description": "Track sales, views, and conversion for the new listing",
+        "script": null,
+        "output": "performance_data",
+        "gate": null
+      }
+    ]
+  },
+  "notification_settings": {
+    "growth_loop_start": {
+      "channel": "google_chat",
+      "template": "🔄 *Growth Loop Cycle Started*\nTime: {timestamp}\nTarget Niches: {niche_count}\nMax New Products: {max_products}"
+    },
+    "growth_loop_complete": {
+      "channel": "google_chat",
+      "template": "✅ *Growth Loop Cycle Complete*\nProducts Created: {created_count}\nListings Published: {published_count}\nPending Approval: {pending_count}\nNext Cycle: {next_cycle_date}"
+    },
+    "approval_timeout": {
+      "channel": "google_chat",
+      "template": "⏰ *Approval Timeout*\nAction: {action}\nProduct: {product_name}\nStatus: Skipped (no response in {timeout_hours}h)"
+    }
+  }
+}

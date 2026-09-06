@@ -1,0 +1,435 @@
+{
+  "_description": "Notion database schemas for all 7 databases in the Digital Storefront automation system.",
+  "_last_updated": "2026-07-14",
+  "_parent_page": "BUSINESS (top-level Notion page)",
+  "databases": {
+    "shop_config": {
+      "name": "Shop Config",
+      "icon": "⚙️",
+      "description": "Etsy shop configuration and credentials reference.",
+      "properties": {
+        "Key": {
+          "type": "title",
+          "description": "Configuration key name"
+        },
+        "Value": {
+          "type": "rich_text",
+          "description": "Configuration value"
+        },
+        "Category": {
+          "type": "select",
+          "options": [
+            {"name": "API", "color": "blue"},
+            {"name": "Shop", "color": "green"},
+            {"name": "Billing", "color": "orange"},
+            {"name": "Notifications", "color": "purple"},
+            {"name": "Sync", "color": "gray"}
+          ]
+        },
+        "Sensitive": {
+          "type": "checkbox",
+          "description": "If true, value is stored as reference pointer, not plaintext"
+        },
+        "Last Updated": {
+          "type": "date",
+          "description": "When this config was last modified"
+        },
+        "Updated By": {
+          "type": "select",
+          "options": [
+            {"name": "Allie", "color": "pink"},
+            {"name": "Jon", "color": "blue"},
+            {"name": "System", "color": "gray"}
+          ]
+        },
+        "Notes": {
+          "type": "rich_text",
+          "description": "Additional context or usage notes"
+        }
+      },
+      "initial_rows": [
+        {"Key": "etsy_shop_id", "Category": "API", "Sensitive": true},
+        {"Key": "etsy_api_key", "Category": "API", "Sensitive": true},
+        {"Key": "shop_name", "Category": "Shop", "Sensitive": false},
+        {"Key": "shop_currency", "Category": "Shop", "Sensitive": false, "Value": "USD"},
+        {"Key": "offsite_ads_enrolled", "Category": "Billing", "Sensitive": false},
+        {"Key": "last_full_sync", "Category": "Sync", "Sensitive": false},
+        {"Key": "alert_channel_webhook", "Category": "Notifications", "Sensitive": true}
+      ]
+    },
+    "product_ideas": {
+      "name": "Product Ideas",
+      "icon": "💡",
+      "description": "Idea backlog for new digital products. Triaged and prioritized before moving to Products.",
+      "properties": {
+        "Idea": {
+          "type": "title",
+          "description": "Short name for the product idea"
+        },
+        "Description": {
+          "type": "rich_text",
+          "description": "Detailed description of the product concept"
+        },
+        "Category": {
+          "type": "select",
+          "options": [
+            {"name": "Printable Art", "color": "pink"},
+            {"name": "Planner", "color": "blue"},
+            {"name": "SVG/Cut File", "color": "orange"},
+            {"name": "Template", "color": "green"},
+            {"name": "Stickers", "color": "purple"},
+            {"name": "Font", "color": "yellow"},
+            {"name": "Preset/Brush", "color": "red"},
+            {"name": "Spreadsheet", "color": "gray"},
+            {"name": "Other", "color": "default"}
+          ]
+        },
+        "Priority": {
+          "type": "select",
+          "options": [
+            {"name": "🔴 High", "color": "red"},
+            {"name": "🟡 Medium", "color": "yellow"},
+            {"name": "🟢 Low", "color": "green"}
+          ]
+        },
+        "Status": {
+          "type": "select",
+          "options": [
+            {"name": "💭 Brainstorm", "color": "gray"},
+            {"name": "📋 Researching", "color": "blue"},
+            {"name": "✅ Approved", "color": "green"},
+            {"name": "🚀 In Production", "color": "orange"},
+            {"name": "❌ Rejected", "color": "red"}
+          ]
+        },
+        "Market Research": {
+          "type": "rich_text",
+          "description": "Competitor analysis, demand signals, keyword data"
+        },
+        "Target Price": {
+          "type": "number",
+          "format": "dollar",
+          "description": "Estimated selling price"
+        },
+        "Estimated Effort": {
+          "type": "select",
+          "options": [
+            {"name": "< 1 hour", "color": "green"},
+            {"name": "1-4 hours", "color": "yellow"},
+            {"name": "4-8 hours", "color": "orange"},
+            {"name": "> 8 hours", "color": "red"}
+          ]
+        },
+        "Source": {
+          "type": "select",
+          "options": [
+            {"name": "Jon", "color": "blue"},
+            {"name": "Allie Research", "color": "pink"},
+            {"name": "Trend Alert", "color": "purple"},
+            {"name": "Customer Request", "color": "green"}
+          ]
+        },
+        "Created": {
+          "type": "created_time"
+        }
+      }
+    },
+    "products": {
+      "name": "Products",
+      "icon": "📦",
+      "description": "Master product catalog. Each row = one digital product with its files, metadata, and status.",
+      "properties": {
+        "Name": {
+          "type": "title",
+          "description": "Product display name"
+        },
+        "Slug": {
+          "type": "rich_text",
+          "description": "URL-safe identifier, matches filesystem directory name"
+        },
+        "Category": {
+          "type": "select",
+          "options": [
+            {"name": "Printable Art", "color": "pink"},
+            {"name": "Planner", "color": "blue"},
+            {"name": "SVG/Cut File", "color": "orange"},
+            {"name": "Template", "color": "green"},
+            {"name": "Stickers", "color": "purple"},
+            {"name": "Font", "color": "yellow"},
+            {"name": "Preset/Brush", "color": "red"},
+            {"name": "Spreadsheet", "color": "gray"},
+            {"name": "Other", "color": "default"}
+          ]
+        },
+        "Status": {
+          "type": "select",
+          "options": [
+            {"name": "🛠️ Draft", "color": "gray"},
+            {"name": "📸 Needs Mockup", "color": "yellow"},
+            {"name": "✅ Ready", "color": "green"},
+            {"name": "🚀 Listed", "color": "blue"},
+            {"name": "⏸️ Paused", "color": "orange"},
+            {"name": "🗄️ Archived", "color": "red"}
+          ]
+        },
+        "File Path": {
+          "type": "rich_text",
+          "description": "Absolute path to product directory on filesystem"
+        },
+        "File Hash": {
+          "type": "rich_text",
+          "description": "SHA-256 hash of the deliverable ZIP for change detection"
+        },
+        "Etsy Listing ID": {
+          "type": "number",
+          "description": "Linked Etsy listing ID (null if not yet listed)"
+        },
+        "Price": {
+          "type": "number",
+          "format": "dollar",
+          "description": "Current selling price"
+        },
+        "Tags": {
+          "type": "multi_select",
+          "description": "Product tags for search and categorization"
+        },
+        "Last Modified": {
+          "type": "last_edited_time"
+        }
+      }
+    },
+    "listings": {
+      "name": "Listings",
+      "icon": "🏪",
+      "description": "Etsy listing mirror. Each row = one Etsy listing with full field mapping.",
+      "properties": {
+        "Title": {
+          "type": "title",
+          "description": "Etsy listing title (max 140 chars)"
+        },
+        "Listing ID": {
+          "type": "number",
+          "description": "Etsy listing_id"
+        },
+        "Product": {
+          "type": "relation",
+          "related_database": "Products",
+          "description": "Link to the Products database"
+        },
+        "Status": {
+          "type": "select",
+          "options": [
+            {"name": "draft", "color": "gray"},
+            {"name": "active", "color": "green"},
+            {"name": "inactive", "color": "yellow"},
+            {"name": "sold_out", "color": "orange"},
+            {"name": "expired", "color": "red"},
+            {"name": "removed", "color": "brown"}
+          ]
+        },
+        "Price": {
+          "type": "number",
+          "format": "dollar"
+        },
+        "Views": {
+          "type": "number",
+          "description": "Total listing views from Etsy"
+        },
+        "Favorites": {
+          "type": "number",
+          "description": "Total favorites/hearts"
+        },
+        "Sales": {
+          "type": "number",
+          "description": "Total units sold"
+        },
+        "Conversion Rate": {
+          "type": "number",
+          "format": "percent",
+          "description": "Sales / Views"
+        },
+        "Tags": {
+          "type": "rich_text",
+          "description": "Comma-separated Etsy tags (max 13)"
+        },
+        "Taxonomy ID": {
+          "type": "number",
+          "description": "Etsy taxonomy category ID"
+        },
+        "Last Synced": {
+          "type": "date",
+          "description": "Last time this listing was synced from Etsy"
+        },
+        "Health Score": {
+          "type": "select",
+          "options": [
+            {"name": "🟢 Good", "color": "green"},
+            {"name": "🟡 Needs Attention", "color": "yellow"},
+            {"name": "🔴 Poor", "color": "red"}
+          ]
+        }
+      }
+    },
+    "orders": {
+      "name": "Orders",
+      "icon": "🧾",
+      "description": "Etsy order/receipt mirror with fee breakdown.",
+      "properties": {
+        "Order ID": {
+          "type": "title",
+          "description": "Etsy receipt_id as string"
+        },
+        "Receipt ID": {
+          "type": "number",
+          "description": "Etsy receipt_id (numeric)"
+        },
+        "Listing": {
+          "type": "relation",
+          "related_database": "Listings",
+          "description": "Link to the Listings database"
+        },
+        "Buyer": {
+          "type": "rich_text",
+          "description": "Buyer display name"
+        },
+        "Gross Revenue": {
+          "type": "number",
+          "format": "dollar",
+          "description": "Total amount paid by buyer"
+        },
+        "Etsy Fees": {
+          "type": "number",
+          "format": "dollar",
+          "description": "Total fees (transaction + processing + regulatory + listing)"
+        },
+        "Net Revenue": {
+          "type": "number",
+          "format": "dollar",
+          "description": "Gross - Fees"
+        },
+        "Offsite Ad": {
+          "type": "checkbox",
+          "description": "Whether this sale came from an offsite ad"
+        },
+        "Order Date": {
+          "type": "date",
+          "description": "When the order was placed"
+        },
+        "Status": {
+          "type": "select",
+          "options": [
+            {"name": "Paid", "color": "green"},
+            {"name": "Completed", "color": "blue"},
+            {"name": "Refunded", "color": "red"},
+            {"name": "Cancelled", "color": "gray"}
+          ]
+        },
+        "Country": {
+          "type": "rich_text",
+          "description": "Buyer's country for international fee calculation"
+        }
+      }
+    },
+    "seo_keywords": {
+      "name": "SEO Keywords",
+      "icon": "🔍",
+      "description": "Keyword research and performance tracking for Etsy search optimization.",
+      "properties": {
+        "Keyword": {
+          "type": "title",
+          "description": "The search keyword or phrase"
+        },
+        "Category": {
+          "type": "select",
+          "options": [
+            {"name": "Primary", "color": "green"},
+            {"name": "Secondary", "color": "blue"},
+            {"name": "Long Tail", "color": "purple"},
+            {"name": "Trending", "color": "orange"},
+            {"name": "Competitor", "color": "red"}
+          ]
+        },
+        "Search Volume": {
+          "type": "select",
+          "options": [
+            {"name": "🔥 High", "color": "red"},
+            {"name": "📈 Medium", "color": "yellow"},
+            {"name": "📉 Low", "color": "green"}
+          ]
+        },
+        "Competition": {
+          "type": "select",
+          "options": [
+            {"name": "High", "color": "red"},
+            {"name": "Medium", "color": "yellow"},
+            {"name": "Low", "color": "green"}
+          ]
+        },
+        "Used In Listings": {
+          "type": "relation",
+          "related_database": "Listings",
+          "description": "Listings using this keyword"
+        },
+        "Performance Notes": {
+          "type": "rich_text",
+          "description": "Observations on keyword performance"
+        },
+        "Last Reviewed": {
+          "type": "date",
+          "description": "When this keyword was last evaluated"
+        }
+      }
+    },
+    "business_snapshots": {
+      "name": "Business Snapshots",
+      "icon": "📊",
+      "description": "Daily/weekly/monthly aggregated business metrics.",
+      "properties": {
+        "Period": {
+          "type": "title",
+          "description": "Date or date range string (e.g., '2026-07-14' or '2026-W28')"
+        },
+        "Period Type": {
+          "type": "select",
+          "options": [
+            {"name": "Daily", "color": "blue"},
+            {"name": "Weekly", "color": "green"},
+            {"name": "Monthly", "color": "purple"}
+          ]
+        },
+        "Total Orders": {
+          "type": "number"
+        },
+        "Gross Revenue": {
+          "type": "number",
+          "format": "dollar"
+        },
+        "Total Fees": {
+          "type": "number",
+          "format": "dollar"
+        },
+        "Net Revenue": {
+          "type": "number",
+          "format": "dollar"
+        },
+        "Total Views": {
+          "type": "number"
+        },
+        "Total Favorites": {
+          "type": "number"
+        },
+        "Conversion Rate": {
+          "type": "number",
+          "format": "percent"
+        },
+        "Active Listings": {
+          "type": "number"
+        },
+        "Top Product": {
+          "type": "rich_text",
+          "description": "Best selling product for the period"
+        }
+      }
+    }
+  }
+}

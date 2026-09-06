@@ -1,0 +1,98 @@
+{
+  "product_types": {
+    "printable_planner": {
+      "display_name": "Printable Planner / Organizer",
+      "tools": ["fpdf2"],
+      "output_format": "PDF",
+      "complexity": "medium",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 3.0,
+      "typical_price_range": {"min": 3.99, "max": 12.99},
+      "description": "Daily, weekly, monthly planners and organizers in printable PDF format. Includes cover pages, interior spreads, and section dividers.",
+      "supported_layouts": ["daily", "weekly", "monthly", "habit_tracker", "goal_setting", "meal_planner"],
+      "supported_sizes": ["us_letter", "a4", "a5", "half_letter"],
+      "supported_styles": ["minimalist", "modern", "colorful", "botanical", "geometric"]
+    },
+    "svg_design": {
+      "display_name": "SVG Cut File / Design",
+      "tools": ["svgwrite"],
+      "output_format": "SVG",
+      "complexity": "low",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 1.5,
+      "typical_price_range": {"min": 1.99, "max": 5.99},
+      "description": "Vector designs for cutting machines (Cricut, Silhouette) or print-on-demand. Clean paths suitable for vinyl and paper cutting.",
+      "supported_categories": ["quotes", "monograms", "seasonal", "wedding", "baby", "pets"]
+    },
+    "spreadsheet_template": {
+      "display_name": "Excel / Google Sheets Template",
+      "tools": ["openpyxl"],
+      "output_format": "XLSX",
+      "complexity": "medium",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 4.0,
+      "typical_price_range": {"min": 5.99, "max": 19.99},
+      "description": "Pre-built spreadsheets with formulas, conditional formatting, and charts. Business trackers, budgets, inventory managers.",
+      "supported_categories": ["budget_tracker", "inventory_manager", "project_planner", "invoice_template", "habit_tracker", "meal_planner"]
+    },
+    "social_media_template": {
+      "display_name": "Social Media Template Pack",
+      "tools": ["Pillow"],
+      "output_format": "PNG",
+      "complexity": "medium",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 3.5,
+      "typical_price_range": {"min": 4.99, "max": 14.99},
+      "description": "Branded social media post and story templates. Instagram, Pinterest, Facebook formats with editable text areas.",
+      "supported_platforms": ["instagram_post", "instagram_story", "pinterest_pin", "facebook_post", "twitter_header"],
+      "supported_styles": ["minimalist", "bold", "elegant", "playful", "professional"]
+    },
+    "wall_art": {
+      "display_name": "Printable Wall Art",
+      "tools": ["Pillow"],
+      "output_format": "PNG",
+      "complexity": "low",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 1.0,
+      "typical_price_range": {"min": 2.99, "max": 9.99},
+      "description": "Typographic and minimal art prints for home decor. Quote art, abstract patterns, and botanical illustrations.",
+      "supported_sizes": ["5x7", "8x10", "11x14", "16x20", "18x24", "24x36"],
+      "supported_styles": ["typographic", "abstract", "botanical", "geometric", "watercolor_effect"]
+    },
+    "resume_template": {
+      "display_name": "Resume / CV Template",
+      "tools": ["weasyprint", "jinja2"],
+      "output_format": "PDF",
+      "complexity": "high",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 5.0,
+      "typical_price_range": {"min": 7.99, "max": 19.99},
+      "description": "Professional resume and CV templates rendered from HTML/CSS. ATS-friendly with clean typography and modern layouts.",
+      "supported_styles": ["modern", "classic", "creative", "executive", "tech"],
+      "supported_formats": ["one_page", "two_page", "cover_letter", "full_package"]
+    },
+    "checklist": {
+      "display_name": "Printable Checklist / Worksheet",
+      "tools": ["fpdf2"],
+      "output_format": "PDF",
+      "complexity": "low",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 1.5,
+      "typical_price_range": {"min": 1.99, "max": 5.99},
+      "description": "Task checklists, worksheets, and trackers in printable PDF. Clean layouts with checkboxes, tables, and sections.",
+      "supported_categories": ["cleaning", "travel", "wedding", "moving", "baby", "school", "project"]
+    },
+    "digital_sticker": {
+      "display_name": "Digital Sticker Pack",
+      "tools": ["Pillow"],
+      "output_format": "PNG",
+      "complexity": "medium",
+      "etsy_taxonomy_id": 69,
+      "avg_creation_hours": 4.0,
+      "typical_price_range": {"min": 2.99, "max": 7.99},
+      "description": "Digital stickers for GoodNotes, Notability, and other digital planning apps. Transparent PNGs with cohesive style.",
+      "supported_styles": ["kawaii", "minimalist", "watercolor", "functional", "vintage"],
+      "supported_categories": ["planner_functional", "decorative", "seasonal", "motivational", "school"]
+    }
+  }
+}

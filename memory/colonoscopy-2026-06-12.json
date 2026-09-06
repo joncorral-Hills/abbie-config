@@ -1,0 +1,33 @@
+{
+  "procedure": "colonoscopy",
+  "date": "2026-06-12",
+  "time": "10:00 AM",
+  "check_in": "9:00 AM",
+  "location": "Endoscopic Imaging Center, 10200 W. 105th St, Overland Park, KS 66212",
+  "phone": "(913) 495-9600",
+  "prep": "SUPREP",
+  "reminders": [
+    {"when": "2026-06-02T09:00:00", "label": "10 days before", "action": "Review medication guidelines. Consult prescribing physicians about blood thinners and diabetic medications."},
+    {"when": "2026-06-05T09:00:00", "label": "7 days before", "action": "STOP blood thinners (Coumadin, Plavix, Effient), weight-loss meds (Ozempic, Wegovy, Mounjaro, etc.), vitamins/supplements (fish oil, iron, multivitamins, Vitamin E, St. John's Wort)."},
+    {"when": "2026-06-09T09:00:00", "label": "3 days before", "action": "Start LOW FIBER/LOW RESIDUE diet. Stop nuts, seeds, corn, popcorn, raw fruits, raw vegetables, whole wheat, multi-grain, bran, fiber supplements."},
+    {"when": "2026-06-10T09:00:00", "label": "2 days before", "action": "Continue low-fiber diet. Confirm adult driver (18+). Take meds as usual unless directed otherwise."},
+    {"when": "2026-06-11T08:00:00", "label": "1 day before", "action": "Start CLEAR LIQUID DIET. NO solid foods. Drink plenty of clear liquids throughout the day."},
+    {"when": "2026-06-11T18:00:00", "label": "1 day before — 6 PM", "action": "First SUPREP dose: Pour 6oz bottle into mixing container, add plain water to 16oz line, mix well, drink within 30 min. Then drink TWO additional 16oz containers of clear liquid within 30 min."},
+    {"when": "2026-06-12T04:00:00", "label": "Day of — 6 hours before", "action": "Second SUPREP dose: Same as first dose (6oz + water to 16oz, drink within 30 min, then 2 more 16oz of clear liquid over next hour). Prepare to wake up for this."},
+    {"when": "2026-06-12T06:00:00", "label": "Day of — 4 hours before", "action": "STOP all liquids. Nothing by mouth. Brush teeth OK but don't swallow. Blood pressure/anti-seizure meds ONLY with small sip of water if needed."},
+    {"when": "2026-06-12T08:30:00", "label": "Day of — leave for procedure", "action": "Leave for Endoscopic Imaging Center. Bring photo ID, insurance card, medication list. Driver must be present."},
+    {"when": "2026-06-12T17:00:00", "label": "Post-procedure", "action": "NO driving, alcohol, legal decisions, or strenuous activity for remainder of day. Rest."}
+  ],
+  "diet": {
+    "low_fiber_start": "2026-06-09",
+    "clear_liquid_start": "2026-06-11",
+    "nothing_by_mouth": "2026-06-12T06:00:00"
+  },
+  "medication_stops": {
+    "7_days_before": ["Coumadin (warfarin)", "Plavix (clopidogrel)", "Effient (prasugrel)", "Phentermine", "Mounjaro", "Ozempic", "Trulicity", "Wegovy", "Zepbound", "Belviq", "Contrave", "Saxenda", "Phendimetrazine", "Diethylproprion", "Bontril", "fish oil", "iron", "multivitamins", "St. John's Wort", "Vitamin E"],
+    "5_days_before": ["Coumadin", "Plavix", "Effient"],
+    "3_days_before": ["Brilinta", "Invokana", "Invokamet", "Jardiance", "Glyxambi", "Farxiga", "Xigduo"],
+    "2_days_before": ["Aggrenox", "Arixtra", "Eliquis", "Persantine", "Pletal", "Savaysa", "Xarelto", "Pradaxa"],
+    "24_hours_before": ["Rybelsus", "Victoza"]
+  }
+}

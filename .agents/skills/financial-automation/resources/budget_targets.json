@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "description": "Budget targets, recovery roadmap, and household income model. Allie seeds new months from this file.",
+    "last_updated": "2026-06-09",
+    "source": "Reconciled from Notion Budgets DB + Bills & Budget DB + Financial Roadmap"
+  },
+
+  "household_income": {
+    "jon": {
+      "per_paycheck": 2860,
+      "schedule": "biweekly_friday",
+      "annual_paychecks": 26,
+      "annual_gross": 74360,
+      "notes": "2 bonus-paycheck months per year (~$5,720 extra annually). Identify those months."
+    },
+    "wife": {
+      "per_paycheck": 1800,
+      "schedule": "semimonthly_1st_15th",
+      "annual_paychecks": 24,
+      "annual_gross": 43200
+    },
+    "combined_monthly_base": 9320,
+    "combined_annual": 117560
+  },
+
+  "fixed_obligations_monthly": {
+    "usb_autopay": {
+      "mortgage": 2160.57,
+      "honda": 670,
+      "tesla": 435,
+      "progressive_auto": 441,
+      "jaimes_loan": 312,
+      "att": 280,
+      "waterone": 150,
+      "joco_wastewater": 111.13,
+      "northwestern_mutual": 95.46,
+      "subtotal": 4655.16
+    },
+    "flex_autopay": {
+      "sterling_wellness": 216.67,
+      "bnai_jehudah": 162.50,
+      "kcpl_arcadia": 150,
+      "atmos_energy_avg": 140,
+      "google_fiber": 70,
+      "choice_home_warranty": 55.55,
+      "simplisafe": 32,
+      "pet_insurance": 24,
+      "netflix": 17.99,
+      "abacus_ai": 20,
+      "spotify_hulu": 12,
+      "google_one": 1.99,
+      "subtotal": 902.70
+    },
+    "other_fixed": {
+      "er_payment_plan": 150,
+      "schwab_investment": 10,
+      "jack_ira": 3,
+      "subtotal": 163
+    },
+    "total_fixed": 5720.86
+  },
+
+  "variable_targets": {
+    "Groceries": 1000,
+    "Dining / Takeout": 500,
+    "Household / Target / Walmart": 300,
+    "Gas": 250,
+    "Kids Extras / Activities": 200,
+    "Shopping / Personal": 200,
+    "Entertainment / Random": 0
+  },
+  "variable_total_target": 2450,
+
+  "sinking_fund_targets": {
+    "Home + Auto Buffer": 0,
+    "Kids + Irregular": 0,
+    "Wellness + Pet": 0,
+    "Travel / Fun Fund": 0,
+    "notes": "All sinking funds at $0 through August 2026 (recovery phase). Resume September."
+  },
+
+  "monthly_summary": {
+    "total_income": 9320,
+    "total_fixed": 5720.86,
+    "total_variable_target": 2450,
+    "total_sinking": 0,
+    "remaining_margin": 1149.14,
+    "notes": "Margin is tighter than previously assumed ($2,096). AT&T ($280), Jaime's Loan ($312), utilities ($411), and Northwestern Mutual ($95) were not in the original model."
+  },
+
+  "recovery_roadmap": {
+    "2026-06": {
+      "emergency_fund_target": 13000,
+      "sinking_funds": 0,
+      "notes": "Clean recovery month. No bar mitzvah payments. Hit variable targets. Margin ~$1,149."
+    },
+    "2026-07": {
+      "emergency_fund_target": 8900,
+      "sinking_funds": 0,
+      "major_expenses": [
+        { "name": "Bar mitzvah balance", "amount": 6141 },
+        { "name": "Colgate-Palmolive (pet food)", "amount": 90 }
+      ],
+      "notes": "Bar mitzvah absorption month. EF drops significantly."
+    },
+    "2026-08": {
+      "emergency_fund_target": 11000,
+      "sinking_funds": 0,
+      "notes": "Full margin month. Consider resuming 1 streaming sub."
+    },
+    "2026-09": {
+      "emergency_fund_target": 12400,
+      "sinking_funds": 500,
+      "sinking_breakdown": {
+        "Home + Auto Buffer": 150,
+        "Kids + Irregular": 125,
+        "Wellness + Pet": 125,
+        "Travel / Fun Fund": 100
+      },
+      "notes": "Blue Valley Food resumes ($96). Sinking funds restart at 50%."
+    },
+    "2026-10": {
+      "emergency_fund_target": 13800,
+      "sinking_funds": 1000,
+      "sinking_breakdown": {
+        "Home + Auto Buffer": 300,
+        "Kids + Irregular": 250,
+        "Wellness + Pet": 250,
+        "Travel / Fun Fund": 200
+      },
+      "notes": "Fully recovered. All systems nominal."
+    }
+  },
+
+  "red_lines": [
+    "No credit card interest — all cards paid in full monthly",
+    "No new subscriptions — cancel free trials immediately",
+    "No discretionary travel until July",
+    "No delivery app orders in June — delete apps",
+    "48-hour rule on purchases over $50",
+    "Use optimal credit card for every purchase (see rewards_optimizer)"
+  ],
+
+  "bonus_paycheck_months_2026": {
+    "notes": "Jon gets 26 biweekly paychecks/year. 2 months will have 3 paychecks instead of 2. Identify by finding months with 3 Fridays that are pay Fridays. Allocate: 50% emergency fund, 30% debt acceleration, 20% sinking funds.",
+    "identification_method": "Given a known pay date, count forward by 14 days to find all 2026 pay dates. Months with 3 = bonus months."
+  }
+}

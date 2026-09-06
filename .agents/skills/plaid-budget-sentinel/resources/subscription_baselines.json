@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "description": "Baseline amounts for recurring subscription streams. Updated by subscription_sentinel.py after each scan.",
+    "last_updated": null,
+    "scan_count": 0
+  },
+  "streams": {}
+}

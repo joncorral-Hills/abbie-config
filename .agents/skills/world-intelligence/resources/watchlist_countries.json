@@ -1,0 +1,15 @@
+{
+  "_comment": "Countries to monitor for risk changes. Baselines are updated by the WI2 cron.",
+  "watchlist": [
+    {"code": "US", "name": "United States", "reason": "Home country, portfolio base", "baseline_cii": null},
+    {"code": "CN", "name": "China", "reason": "Major trade partner, tech exposure", "baseline_cii": null},
+    {"code": "IR", "name": "Iran", "reason": "Hormuz chokepoint, oil prices", "baseline_cii": null},
+    {"code": "RU", "name": "Russia", "reason": "Ukraine conflict, energy markets", "baseline_cii": null},
+    {"code": "UA", "name": "Ukraine", "reason": "Active conflict zone", "baseline_cii": null},
+    {"code": "TW", "name": "Taiwan", "reason": "Semiconductor supply, China tension", "baseline_cii": null},
+    {"code": "SA", "name": "Saudi Arabia", "reason": "Oil production, OPEC influence", "baseline_cii": null},
+    {"code": "IL", "name": "Israel", "reason": "Middle East stability", "baseline_cii": null},
+    {"code": "MX", "name": "Mexico", "reason": "Trade neighbor, supply chain", "baseline_cii": null},
+    {"code": "KR", "name": "South Korea", "reason": "Tech sector, North Korea risk", "baseline_cii": null}
+  ]
+}

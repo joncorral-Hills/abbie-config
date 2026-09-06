@@ -1,0 +1,56 @@
+🏋️ Training Intelligence — Week of July 6–12, 2026
+
+📊 Volume Summary:
+
+  Week              Session  Vol (lbs)
+  Jul 6–12 (this)    1      10,720
+  Jun 29–Jul 5       1       8,840
+  Jun 22–28          1       9,630
+  Jun 15–21          2      11,820
+  Jun 8–14           3      29,945
+
+  4-week rolling avg: 15,059 lbs
+  Current vs avg: 10,720 lbs (⬇️ 29%)
+
+📈 Notable PR:
+
+  • Seated Row (Machine) — 125 lbs × 14 reps
+    e1RM 183 lbs (+18 lbs vs previous best) 🔥
+
+  Chest Press (Machine) matched the all-time best:
+    150 lbs × 15 reps (e1RM 225 lbs) — ties May 6 PR
+
+📌 Sessions:
+
+  Wed Jul 8 — 29 min, 7 working sets, 10,720 lbs
+    Chest Press (Machine): 130×17 → 150×15 → 150×8
+    Seated Row (Machine): 110×17 → 120×12 → 125×14 🏆
+    Treadmill: cardio cooldown
+
+📐 Muscle Groups Hit:
+
+  Chest   — 5,660 lbs
+  Back    — 5,060 lbs
+
+✔️ Volume Trends:
+
+  Prior 4 weeks trended down (3→2→1→1 sessions/wk),
+  but this week's single session was efficient —
+  10,720 lbs in 29 min, second-highest single-session
+  volume of the past month.
+
+⚠️ Notion Sync Alert:
+
+  The daily hevy-daily-sync cron hasn't logged workouts
+  since Jun 29 — the Jul 1 and Jul 8 sessions exist in
+  Hevy but haven't reached Notion. May want to check
+  the cron if historical tracking is needed.
+
+🔄 Focus Next Week:
+
+  Chest/shoulders push work held strong — back strength
+  hit a new PR on seated row. Good balance between
+  horizontal push and pull. Consider adding a dedicated
+  vertical pull (lat pulldown) and a compound leg movement
+  (leg press or squat machine) next session for overall
+  balance.

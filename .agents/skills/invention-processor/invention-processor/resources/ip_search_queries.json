@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "description": "Search query templates for IP novelty screening. Replace {{KEYWORDS}}, {{DOMAIN}}, {{PROBLEM}}, {{SOLUTION}} with idea-specific terms.",
+    "usage": "The LLM should generate 3-5 search queries by filling in these templates based on the invention idea."
+  },
+
+  "patent_searches": [
+    {
+      "name": "google_patents_broad",
+      "template": "site:patents.google.com {{KEYWORDS}} {{SOLUTION}}",
+      "purpose": "Find directly related patents"
+    },
+    {
+      "name": "google_patents_problem",
+      "template": "site:patents.google.com {{PROBLEM}} device OR method OR system",
+      "purpose": "Find patents addressing the same problem"
+    },
+    {
+      "name": "uspto_search",
+      "template": "site:patft.uspto.gov {{KEYWORDS}} {{DOMAIN}}",
+      "purpose": "Search USPTO full-text patent database"
+    },
+    {
+      "name": "patent_landscape",
+      "template": "\"{{SOLUTION}}\" patent OR patented OR \"patent pending\"",
+      "purpose": "Find patent mentions across the web"
+    }
+  ],
+
+  "product_searches": [
+    {
+      "name": "existing_products",
+      "template": "{{SOLUTION}} buy OR product OR review -patent",
+      "purpose": "Find existing products in the space"
+    },
+    {
+      "name": "kickstarter_indiegogo",
+      "template": "site:kickstarter.com OR site:indiegogo.com {{KEYWORDS}} {{DOMAIN}}",
+      "purpose": "Check crowdfunding platforms for similar products"
+    },
+    {
+      "name": "amazon_search",
+      "template": "site:amazon.com {{KEYWORDS}} {{SOLUTION}}",
+      "purpose": "Find existing retail products"
+    },
+    {
+      "name": "startup_search",
+      "template": "{{SOLUTION}} startup OR \"founded\" OR \"launched\" {{DOMAIN}}",
+      "purpose": "Find startups working on similar solutions"
+    }
+  ],
+
+  "market_searches": [
+    {
+      "name": "market_size",
+      "template": "{{DOMAIN}} market size 2025 OR 2026 OR forecast OR \"billion\"",
+      "purpose": "Find market sizing data"
+    },
+    {
+      "name": "competitor_landscape",
+      "template": "{{DOMAIN}} competitors OR \"competitive landscape\" OR \"market leaders\"",
+      "purpose": "Map the competitive landscape"
+    },
+    {
+      "name": "industry_trends",
+      "template": "{{DOMAIN}} trends 2026 OR emerging OR growing OR disrupting",
+      "purpose": "Identify industry trends and timing"
+    },
+    {
+      "name": "target_audience",
+      "template": "\"{{PROBLEM}}\" consumer OR user OR customer survey OR research",
+      "purpose": "Understand who has this problem"
+    }
+  ],
+
+  "academic_searches": [
+    {
+      "name": "arxiv_preprints",
+      "template": "site:arxiv.org {{KEYWORDS}} {{SOLUTION}}",
+      "purpose": "Check academic preprints for prior research"
+    },
+    {
+      "name": "google_scholar",
+      "template": "site:scholar.google.com {{KEYWORDS}} {{DOMAIN}}",
+      "purpose": "Find academic papers on the topic"
+    }
+  ]
+}

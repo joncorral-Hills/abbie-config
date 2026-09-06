@@ -1,0 +1,81 @@
+{
+  "entries": [
+    {
+      "name": "Jon Paycheck",
+      "amount": 2860,
+      "type": "income",
+      "category": "salary",
+      "schedule": { "type": "biweekly", "anchor": "2026-06-05" }
+    },
+    {
+      "name": "Wife Paycheck",
+      "amount": 1800,
+      "type": "income",
+      "category": "salary",
+      "schedule": { "type": "semi_monthly", "days": [1, 15] }
+    },
+    {
+      "name": "Mortgage",
+      "amount": 2161,
+      "type": "expense",
+      "category": "housing",
+      "schedule": { "type": "monthly", "day": 1 }
+    },
+    {
+      "name": "Honda Payment",
+      "amount": 670,
+      "type": "expense",
+      "category": "auto",
+      "schedule": { "type": "monthly", "day": 5 }
+    },
+    {
+      "name": "Tesla Payment",
+      "amount": 435,
+      "type": "expense",
+      "category": "auto",
+      "schedule": { "type": "monthly", "day": 10 }
+    },
+    {
+      "name": "Student Loan",
+      "amount": 217,
+      "type": "expense",
+      "category": "debt",
+      "schedule": { "type": "monthly", "day": 15 }
+    },
+    {
+      "name": "Jaime Loan",
+      "amount": 312,
+      "type": "expense",
+      "category": "debt",
+      "schedule": { "type": "monthly", "day": 20 }
+    },
+    {
+      "name": "ER Payment",
+      "amount": 150,
+      "type": "expense",
+      "category": "medical",
+      "schedule": { "type": "monthly", "day": 25 }
+    },
+    {
+      "name": "Google Fiber",
+      "amount": 70,
+      "type": "expense",
+      "category": "utilities",
+      "schedule": { "type": "monthly", "day": 3 }
+    },
+    {
+      "name": "Atmos Energy",
+      "amount": 85,
+      "type": "expense",
+      "category": "utilities",
+      "schedule": { "type": "monthly", "day": 12 }
+    },
+    {
+      "name": "Car Insurance",
+      "amount": 280,
+      "type": "expense",
+      "category": "insurance",
+      "schedule": { "type": "monthly", "day": 18 }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+# Model Routing — Post-Consolidation (Sep 1, 2026)
+#
+# Policy: gemini-local is default. deepseek for finance, personal health, and complex synthesis.
+# All crons run on the default profile. No bot profiles.
+
+crons:
+  # ── Finance (deepseek — financial data) ──
+  - name: "[FIN] Plaid Daily Sync"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Financial transaction data
+    frequency: Daily @ 7am
+    estimated_tokens_per_run: 500
+
+  - name: "[FIN] Weekly Cost Review"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Financial spending data
+    frequency: Mon @ 7:30am
+    estimated_tokens_per_run: 1500
+
+  - name: "[FIN] Monthly Financial Update"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Financial PII — budget, net worth, debt
+    frequency: 1st @ 9am
+    estimated_tokens_per_run: 2000
+
+  - name: "[FIN] TX2 Quarterly Tax Estimate"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Tax calculations with income data
+    frequency: 15th Mar/Jun/Sep/Dec @ 10am
+    estimated_tokens_per_run: 3000
+
+  - name: "[FIN] TX3 Annual Tax Prep"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Tax document compilation
+    frequency: Jan 15 @ 10am
+    estimated_tokens_per_run: 3000
+
+  # ── Health (deepseek — personal health data) ──
+  - name: "[HEALTH] Hevy Daily Sync"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Personal workout data
+    frequency: Daily @ 10am
+    estimated_tokens_per_run: 500
+
+  - name: "[HEALTH] Body Metrics Sync"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Personal body weight/composition
+    frequency: Sun @ 8am
+    estimated_tokens_per_run: 500
+
+  - name: "[HEALTH] Weekly Fitness & Training Report"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Personal health analysis and trends
+    frequency: Mon @ 7:15am
+    estimated_tokens_per_run: 2500
+
+  # ── Home (gemini-local — no PII) ──
+  - name: "[HOME] Travel Price Watch"
+    model: gemini-local
+    fallback: openrouter/deepseek/deepseek-v4-flash
+    reason: No personal data, price comparison
+    frequency: Daily @ 6am
+    estimated_tokens_per_run: 500
+
+  - name: "[HOME] Weekly Home Maintenance"
+    model: gemini-local
+    fallback: openrouter/deepseek/deepseek-v4-flash
+    reason: No personal data, simple checklist
+    frequency: Mon @ 7am
+    estimated_tokens_per_run: 500
+
+  - name: "[HOME] Seasonal Home Prep"
+    model: gemini-local
+    fallback: openrouter/deepseek/deepseek-v4-flash
+    reason: No personal data, quarterly planning
+    frequency: Quarterly 1st Mar/Jun/Sep/Dec @ 9am
+    estimated_tokens_per_run: 2000
+
+  # ── Market (deepseek — complex analysis) ──
+  - name: "[MKT] Stock Weekly Briefing"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Complex multi-step market analysis
+    frequency: Tue/Thu @ 8:30am
+    estimated_tokens_per_run: 3000
+
+  # ── Ops (gemini-local — system monitoring) ──
+  - name: "[OPS] Daily System Health Check"
+    model: gemini-local
+    fallback: openrouter/deepseek/deepseek-v4-flash
+    reason: Infrastructure monitoring, no personal data
+    frequency: Daily @ 5am
+    estimated_tokens_per_run: 1500
+
+  - name: "[OPS] Weekly Ops Report"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Complex synthesis and scoring
+    frequency: Sun @ 6pm
+    estimated_tokens_per_run: 2500
+
+  # ── Default ──
+  - name: "[DEFAULT] LS1 Monthly Life Score"
+    model: openrouter/deepseek/deepseek-v4-flash
+    fallback: null
+    reason: Complex multi-domain synthesis
+    frequency: 3rd @ 9pm
+    estimated_tokens_per_run: 3500
+
+  - name: "[DEFAULT] CAL2 Calendar Intelligence"
+    model: gemini-local
+    fallback: openrouter/deepseek/deepseek-v4-flash
+    reason: No PII, conflict detection only (n8n handles raw events)
+    frequency: Daily @ 8am
+    estimated_tokens_per_run: 600
+
+# ── System crontab (non-Hermes, zero tokens) ──
+# 0 */6 * * * — stale-exec sweeper (Python)
+# 0 */4 * * * — heartbeat.sh (bash)
+
+# ── Summary ──
+# Total Hermes crons: 17 (down from 23)
+# gemini-local crons: 6 (free)
+# deepseek crons: 11
+# Estimated deepseek tokens/month: ~160K (~$0.01/month at $0.07/M input)
+# System crontab jobs: 2 (zero token cost)

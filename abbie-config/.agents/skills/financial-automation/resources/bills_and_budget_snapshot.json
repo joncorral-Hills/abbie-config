@@ -1,0 +1,776 @@
+{
+  "_meta": {
+    "description": "Machine-readable snapshot of the Bills & Budget Notion database.",
+    "source_db": "5225799b-f83b-4d75-86ba-d23094cb2835",
+    "exported_at": "2026-06-09T17:44:58.298737",
+    "total_entries": 41
+  },
+  "entries": [
+    {
+      "name": "Joey Hockey 2025-2026 | $275",
+      "monthly_payment": null,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "23d63d55-66c5-80b0-8230-dcfe60dd889b"
+    },
+    {
+      "name": "NFM ",
+      "monthly_payment": null,
+      "payment_group": null,
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "11b63d55-66c5-8025-a4b3-d2f68d7abe59"
+    },
+    {
+      "name": "MONTHLY TOTAL \u2013\u00a0$1385",
+      "monthly_payment": null,
+      "payment_group": "Sapphire",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "131ab384-2a31-4871-9b0c-bc3112012f31"
+    },
+    {
+      "name": "15th \u2013\u00a030th SUBTOTAL: $535",
+      "monthly_payment": null,
+      "payment_group": "Sapphire",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "73d01ea4-e3bb-4ee0-a86e-fbb033cd7264"
+    },
+    {
+      "name": "1st \u2013\u00a015th SUBTOTAL: $550",
+      "monthly_payment": null,
+      "payment_group": "Sapphire",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "54ee2de1-612e-439d-a927-8bd6f62c79fd"
+    },
+    {
+      "name": "Tesla | $435 | 19th",
+      "monthly_payment": 435,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "1f857313-8501-4fce-b210-8834896ca9c2"
+    },
+    {
+      "name": "Groceries ($1000)",
+      "monthly_payment": 1000,
+      "payment_group": "Sapphire",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "ce95a8f8-067d-4790-a250-181bdba7fb5c"
+    },
+    {
+      "name": "Jaime 401k",
+      "monthly_payment": null,
+      "payment_group": "Investments",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "72b48e51-b50d-4629-bce2-83803f4e78b7"
+    },
+    {
+      "name": "Jaime\u2019s Loan | $312 | 16th",
+      "monthly_payment": 312,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "88bd6a36-ed58-4d85-9c48-302cdda37a81"
+    },
+    {
+      "name": "Scout Dues | $360",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "d35d8b87-658c-4751-8c9b-3eb68589b644"
+    },
+    {
+      "name": "Charles Schwab | $10 | 15th",
+      "monthly_payment": null,
+      "payment_group": "Investments",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "be91b3ed-aa39-4c75-b413-e4b7bda17130"
+    },
+    {
+      "name": "Alight",
+      "monthly_payment": null,
+      "payment_group": "Investments",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "14fc8e3a-91f1-469a-ada7-a0e0c5a00493"
+    },
+    {
+      "name": "Vehicle Dues | $598",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "096d61d4-f302-4152-99e2-807b5a7c3bfe",
+      "due": "2022-06-22T12:00:00.000-05:00"
+    },
+    {
+      "name": "HOA Dues | $550",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "915fdad7-f37d-495a-b572-775a0e139939",
+      "due": "2020-01-01T12:00:00.000-06:00"
+    },
+    {
+      "name": "PTO dues | $175",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [
+        "Finance"
+      ],
+      "phase": "Backlog",
+      "page_id": "49e253dd-a48c-4128-a647-000f54f4215c"
+    },
+    {
+      "name": "Amazon Prime",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "5df15e61-0c7d-4ca8-8a21-e112da8dc047",
+      "due": "2019-12-12T10:04:00.000-06:00"
+    },
+    {
+      "name": "GoDaddy | $20",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "e457768f-3650-4b5d-9231-edf36b9cba8f"
+    },
+    {
+      "name": "Bitwarden | $14 | Jan 1st",
+      "monthly_payment": null,
+      "payment_group": "Annual",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "cbd95d89-c9ec-4c96-baf6-057d2061b01b"
+    },
+    {
+      "name": "B\u2019nai Jehudah | $200 | 24th",
+      "monthly_payment": 162.5,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "fb72dfb2-3683-4b22-a2e5-690ad3885b22"
+    },
+    {
+      "name": "TOTAL MONTH CAP 1 | $1156",
+      "monthly_payment": null,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "e60232b4-b86b-4790-96c0-8f7c44f4400d"
+    },
+    {
+      "name": "Netflix | $15 | 30th",
+      "monthly_payment": 15,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "06546a81-d6c6-422e-859d-9517843aff12"
+    },
+    {
+      "name": "KCP&L/Arcadia l $150 | 27th",
+      "monthly_payment": 150,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "180a48ce-9589-4b32-8353-9df46e82489d"
+    },
+    {
+      "name": "SimpliSafe | $32 | 30th",
+      "monthly_payment": 32,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "071155b2-9be6-4442-a665-7fb72d1b3668"
+    },
+    {
+      "name": "2nd Half Total: $427",
+      "monthly_payment": null,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "bb9ee0bd-0c6b-4805-a415-878293e242e0"
+    },
+    {
+      "name": "Choice Home Warranty $56 | 14th",
+      "monthly_payment": 55.55,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "Home",
+        "Finance"
+      ],
+      "phase": "Backlog",
+      "page_id": "0593aa8b-7dba-4973-b772-8dedcbf13fea"
+    },
+    {
+      "name": "Google Fiber | $70 | 3rd",
+      "monthly_payment": 70,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "bad56712-3da6-4922-b9c6-b9bf0db0820e"
+    },
+    {
+      "name": "Atmos Energy | $100 | 13th",
+      "monthly_payment": 100,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "ec27c3c0-af59-4ffe-806d-301b6184ed20"
+    },
+    {
+      "name": "Spotify & Hulu | $12 | 28th",
+      "monthly_payment": 12,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "055affc1-5830-43af-922b-836c073f6ffa"
+    },
+    {
+      "name": "Pet Insurance | $9 | 12th",
+      "monthly_payment": 24,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "Family",
+        "Finance"
+      ],
+      "phase": "Backlog",
+      "page_id": "357a0404-c875-4e22-a0b8-a3f1148b2895"
+    },
+    {
+      "name": "AT&T \u2013 $170 | 1st",
+      "monthly_payment": 280,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "b2215a8d-dc55-441a-bda8-f9076038fbf6"
+    },
+    {
+      "name": "YouTube TV | $73 | 2nd",
+      "monthly_payment": 73,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "82f23301-97b5-4bb4-a5cd-1efb5d8a32e1"
+    },
+    {
+      "name": "1st \u2013 15th SUBTOTAL: $743",
+      "monthly_payment": null,
+      "payment_group": "Flex Autopay | $992",
+      "labels": [
+        "1st half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "5ca9adcc-b524-41a1-9c5f-352db497724c"
+    },
+    {
+      "name": "TOTAL MONTH USB | $4520",
+      "monthly_payment": null,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [],
+      "phase": "Backlog",
+      "page_id": "bc7f8259-85d6-49b7-b87f-a81729a94a6d"
+    },
+    {
+      "name": "Northwestern Mutual | $104 | 19th",
+      "monthly_payment": 95,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "127f0c6c-0657-466f-b5d3-b07f2eb0f591"
+    },
+    {
+      "name": "Progressive Auto | $200 | 20th",
+      "monthly_payment": 441,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "73e6fecc-f003-4f58-b8c8-aa4965f98486"
+    },
+    {
+      "name": "WaterOne Bill | $150 | 19th",
+      "monthly_payment": 150,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "d252cf1d-833f-4ad0-84a5-ec8e26dfdc61"
+    },
+    {
+      "name": "Honda Financial | $604 | 16th",
+      "monthly_payment": 670,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "0b287cdd-3729-44e1-ad08-85620e4ca95a"
+    },
+    {
+      "name": "15th \u2013 30th SUBTOTAL: $2077",
+      "monthly_payment": 0,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "2nd half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "75a82e7a-c207-41b3-8d58-971a295f337e"
+    },
+    {
+      "name": "JoCo Wastewater | $111.13",
+      "monthly_payment": 111.13,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "1st half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "59a78f70-61f9-4678-a989-705ac3aa5e4c"
+    },
+    {
+      "name": "Mortgage | 1st | $2160.57",
+      "monthly_payment": 2160.57,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "1st half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "c7648427-6fcf-4bad-9e07-ee7b22f38256"
+    },
+    {
+      "name": "1st \u2013 15th SUBTOTAL: $2443",
+      "monthly_payment": 0,
+      "payment_group": "USB Autopay | $3586",
+      "labels": [
+        "1st half of month"
+      ],
+      "phase": "Backlog",
+      "page_id": "e495eb7b-faa9-4b70-a0ae-c5efb52b0214"
+    }
+  ],
+  "by_group": {
+    "USB Autopay | $3586": {
+      "items": [
+        {
+          "name": "Joey Hockey 2025-2026 | $275",
+          "monthly_payment": null,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "23d63d55-66c5-80b0-8230-dcfe60dd889b"
+        },
+        {
+          "name": "Tesla | $435 | 19th",
+          "monthly_payment": 435,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "1f857313-8501-4fce-b210-8834896ca9c2"
+        },
+        {
+          "name": "Jaime\u2019s Loan | $312 | 16th",
+          "monthly_payment": 312,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "88bd6a36-ed58-4d85-9c48-302cdda37a81"
+        },
+        {
+          "name": "AT&T \u2013 $170 | 1st",
+          "monthly_payment": 280,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "b2215a8d-dc55-441a-bda8-f9076038fbf6"
+        },
+        {
+          "name": "TOTAL MONTH USB | $4520",
+          "monthly_payment": null,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "bc7f8259-85d6-49b7-b87f-a81729a94a6d"
+        },
+        {
+          "name": "Northwestern Mutual | $104 | 19th",
+          "monthly_payment": 95,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "127f0c6c-0657-466f-b5d3-b07f2eb0f591"
+        },
+        {
+          "name": "Progressive Auto | $200 | 20th",
+          "monthly_payment": 441,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "73e6fecc-f003-4f58-b8c8-aa4965f98486"
+        },
+        {
+          "name": "WaterOne Bill | $150 | 19th",
+          "monthly_payment": 150,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "d252cf1d-833f-4ad0-84a5-ec8e26dfdc61"
+        },
+        {
+          "name": "Honda Financial | $604 | 16th",
+          "monthly_payment": 670,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "0b287cdd-3729-44e1-ad08-85620e4ca95a"
+        },
+        {
+          "name": "15th \u2013 30th SUBTOTAL: $2077",
+          "monthly_payment": 0,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "75a82e7a-c207-41b3-8d58-971a295f337e"
+        },
+        {
+          "name": "JoCo Wastewater | $111.13",
+          "monthly_payment": 111.13,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "1st half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "59a78f70-61f9-4678-a989-705ac3aa5e4c"
+        },
+        {
+          "name": "Mortgage | 1st | $2160.57",
+          "monthly_payment": 2160.57,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "1st half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "c7648427-6fcf-4bad-9e07-ee7b22f38256"
+        },
+        {
+          "name": "1st \u2013 15th SUBTOTAL: $2443",
+          "monthly_payment": 0,
+          "payment_group": "USB Autopay | $3586",
+          "labels": [
+            "1st half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "e495eb7b-faa9-4b70-a0ae-c5efb52b0214"
+        }
+      ],
+      "count": 13
+    },
+    "Ungrouped": {
+      "items": [
+        {
+          "name": "NFM ",
+          "monthly_payment": null,
+          "payment_group": null,
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "11b63d55-66c5-8025-a4b3-d2f68d7abe59"
+        }
+      ],
+      "count": 1
+    },
+    "Sapphire": {
+      "items": [
+        {
+          "name": "MONTHLY TOTAL \u2013\u00a0$1385",
+          "monthly_payment": null,
+          "payment_group": "Sapphire",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "131ab384-2a31-4871-9b0c-bc3112012f31"
+        },
+        {
+          "name": "15th \u2013\u00a030th SUBTOTAL: $535",
+          "monthly_payment": null,
+          "payment_group": "Sapphire",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "73d01ea4-e3bb-4ee0-a86e-fbb033cd7264"
+        },
+        {
+          "name": "1st \u2013\u00a015th SUBTOTAL: $550",
+          "monthly_payment": null,
+          "payment_group": "Sapphire",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "54ee2de1-612e-439d-a927-8bd6f62c79fd"
+        },
+        {
+          "name": "Groceries ($1000)",
+          "monthly_payment": 1000,
+          "payment_group": "Sapphire",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "ce95a8f8-067d-4790-a250-181bdba7fb5c"
+        }
+      ],
+      "count": 4
+    },
+    "Investments": {
+      "items": [
+        {
+          "name": "Jaime 401k",
+          "monthly_payment": null,
+          "payment_group": "Investments",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "72b48e51-b50d-4629-bce2-83803f4e78b7"
+        },
+        {
+          "name": "Charles Schwab | $10 | 15th",
+          "monthly_payment": null,
+          "payment_group": "Investments",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "be91b3ed-aa39-4c75-b413-e4b7bda17130"
+        },
+        {
+          "name": "Alight",
+          "monthly_payment": null,
+          "payment_group": "Investments",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "14fc8e3a-91f1-469a-ada7-a0e0c5a00493"
+        }
+      ],
+      "count": 3
+    },
+    "Annual": {
+      "items": [
+        {
+          "name": "Scout Dues | $360",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "d35d8b87-658c-4751-8c9b-3eb68589b644"
+        },
+        {
+          "name": "Vehicle Dues | $598",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "096d61d4-f302-4152-99e2-807b5a7c3bfe",
+          "due": "2022-06-22T12:00:00.000-05:00"
+        },
+        {
+          "name": "HOA Dues | $550",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "915fdad7-f37d-495a-b572-775a0e139939",
+          "due": "2020-01-01T12:00:00.000-06:00"
+        },
+        {
+          "name": "PTO dues | $175",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [
+            "Finance"
+          ],
+          "phase": "Backlog",
+          "page_id": "49e253dd-a48c-4128-a647-000f54f4215c"
+        },
+        {
+          "name": "Amazon Prime",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "5df15e61-0c7d-4ca8-8a21-e112da8dc047",
+          "due": "2019-12-12T10:04:00.000-06:00"
+        },
+        {
+          "name": "GoDaddy | $20",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "e457768f-3650-4b5d-9231-edf36b9cba8f"
+        },
+        {
+          "name": "Bitwarden | $14 | Jan 1st",
+          "monthly_payment": null,
+          "payment_group": "Annual",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "cbd95d89-c9ec-4c96-baf6-057d2061b01b"
+        }
+      ],
+      "count": 7
+    },
+    "Flex Autopay | $992": {
+      "items": [
+        {
+          "name": "B\u2019nai Jehudah | $200 | 24th",
+          "monthly_payment": 162.5,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "fb72dfb2-3683-4b22-a2e5-690ad3885b22"
+        },
+        {
+          "name": "TOTAL MONTH CAP 1 | $1156",
+          "monthly_payment": null,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "e60232b4-b86b-4790-96c0-8f7c44f4400d"
+        },
+        {
+          "name": "Netflix | $15 | 30th",
+          "monthly_payment": 15,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "06546a81-d6c6-422e-859d-9517843aff12"
+        },
+        {
+          "name": "KCP&L/Arcadia l $150 | 27th",
+          "monthly_payment": 150,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "180a48ce-9589-4b32-8353-9df46e82489d"
+        },
+        {
+          "name": "SimpliSafe | $32 | 30th",
+          "monthly_payment": 32,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "071155b2-9be6-4442-a665-7fb72d1b3668"
+        },
+        {
+          "name": "2nd Half Total: $427",
+          "monthly_payment": null,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "bb9ee0bd-0c6b-4805-a415-878293e242e0"
+        },
+        {
+          "name": "Choice Home Warranty $56 | 14th",
+          "monthly_payment": 55.55,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "Home",
+            "Finance"
+          ],
+          "phase": "Backlog",
+          "page_id": "0593aa8b-7dba-4973-b772-8dedcbf13fea"
+        },
+        {
+          "name": "Google Fiber | $70 | 3rd",
+          "monthly_payment": 70,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "bad56712-3da6-4922-b9c6-b9bf0db0820e"
+        },
+        {
+          "name": "Atmos Energy | $100 | 13th",
+          "monthly_payment": 100,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "ec27c3c0-af59-4ffe-806d-301b6184ed20"
+        },
+        {
+          "name": "Spotify & Hulu | $12 | 28th",
+          "monthly_payment": 12,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "2nd half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "055affc1-5830-43af-922b-836c073f6ffa"
+        },
+        {
+          "name": "Pet Insurance | $9 | 12th",
+          "monthly_payment": 24,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "Family",
+            "Finance"
+          ],
+          "phase": "Backlog",
+          "page_id": "357a0404-c875-4e22-a0b8-a3f1148b2895"
+        },
+        {
+          "name": "YouTube TV | $73 | 2nd",
+          "monthly_payment": 73,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [],
+          "phase": "Backlog",
+          "page_id": "82f23301-97b5-4bb4-a5cd-1efb5d8a32e1"
+        },
+        {
+          "name": "1st \u2013 15th SUBTOTAL: $743",
+          "monthly_payment": null,
+          "payment_group": "Flex Autopay | $992",
+          "labels": [
+            "1st half of month"
+          ],
+          "phase": "Backlog",
+          "page_id": "5ca9adcc-b524-41a1-9c5f-352db497724c"
+        }
+      ],
+      "count": 13
+    }
+  }
+}
